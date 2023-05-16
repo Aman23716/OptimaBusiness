@@ -28,6 +28,8 @@ public abstract class BaseUiTests {
 
     MoreCallCenter moreCallCenter;
 
+    Staff staff;
+
     @BeforeClass
     public void setUpUiTest(){
         loginPage=new LoginPage();
@@ -39,6 +41,7 @@ public abstract class BaseUiTests {
         imports= new  Imports();
         settings= new Settings();
         moreCallCenter= new MoreCallCenter();
+        staff = new Staff();
 
     }
 }

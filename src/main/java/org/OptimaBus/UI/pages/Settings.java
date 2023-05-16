@@ -6,14 +6,14 @@ import org.openqa.selenium.support.FindBy;
 public class Settings extends BasePage{
 
 
-    @FindBy(xpath = ".//a[@class='nav-item'][4]")
+    @FindBy(xpath = ".//a[@class='nav-item'][5]")
     public WebElement ClickTo5BTN;
 
 
 
 
 
-    public Settings BTN5(){
+    public Settings BTN6(){
         elementActions.click(ClickTo5BTN);
 
         return this;
