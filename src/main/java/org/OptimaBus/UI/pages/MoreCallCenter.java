@@ -7,8 +7,8 @@ public class MoreCallCenter extends BasePage {
 
 
 
-    @FindBy(xpath = ".//a[@class='nav-item'][5]")
-     public WebElement ClickTo6BTN;
+    @FindBy(xpath = ".//a[@class='nav-item'][6]")
+     public WebElement ClickTo7BTN;
 
 
 
@@ -18,8 +18,8 @@ public class MoreCallCenter extends BasePage {
 
 
 
-    public MoreCallCenter BTN6(){
-        elementActions.click(ClickTo6BTN);
+    public MoreCallCenter BTN7(){
+        elementActions.click(ClickTo7BTN);
 
         return this;
     }

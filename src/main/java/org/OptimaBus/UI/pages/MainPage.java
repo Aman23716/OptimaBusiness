@@ -32,13 +32,18 @@ public class MainPage extends BasePage{
    @FindBy(xpath = ".//a[@class='router-link-active router-link-exact-active nav-item active']")
    public WebElement clickMainBTN;
 
-
+   @FindBy(xpath = ".//div[@class='logo-wrap']")
+   public WebElement MAINBTN;
 
 
    @FindBy(xpath = "(.//div[@class='account-header p2'])[1]")
    public WebElement HUI;
 
+   @FindBy(xpath = ".//a[@class='user-toggle no-caret']")
+   public WebElement chooseCompany;
 
+   @FindBy(xpath = ".//button[@class='aside-dropdown-item dropdown-item user-text text-dark'][3]")
+   public WebElement chooseUtes;
 
 
 
@@ -70,6 +75,16 @@ public class MainPage extends BasePage{
     public MainPage clickMNPage(){
         elementActions.click(clickMainBTN);
 
+
+        return this;
+    }
+    public MainPage ChooseUtes(){
+       elementActions.click(chooseCompany).click(chooseUtes);
+
+       return this;
+    }
+    public MainPage MAINBTN1(){
+       elementActions.click(MAINBTN);
 
         return this;
     }
