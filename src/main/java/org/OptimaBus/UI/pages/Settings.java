@@ -4,6 +4,8 @@ import org.OptimaBus.UI.dataProvider.ConfigReader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import static org.testng.AssertJUnit.assertEquals;
+
 public class Settings extends BasePage{
 
 
@@ -37,6 +39,17 @@ public class Settings extends BasePage{
     public WebElement newPassword;
     @FindBy(xpath = "(.//input[@class='q-field__native q-placeholder'])[3]")
     public WebElement newPasswordRepeat;
+    @FindBy(xpath = "(.//input[@class='q-field__native q-placeholder'])[4]")
+    public WebElement newPassTOTP;
+    @FindBy(xpath = "(.//div[@class='q-field__label no-pointer-events absolute ellipsis'])[1]")
+    public WebElement text1;
+    @FindBy(xpath = "(.//div[@class='q-field__label no-pointer-events absolute ellipsis'])[2]")
+    public WebElement text2;
+    @FindBy(xpath = "(.//div[@class='q-field__label no-pointer-events absolute ellipsis'])[3]")
+    public WebElement text3;
+    @FindBy(xpath = "(.//div[@class='q-field__label no-pointer-events absolute ellipsis'])[4]")
+    public WebElement text4;
+
 
 
     public Settings BTN6(){
@@ -70,7 +83,15 @@ public class Settings extends BasePage{
        public Settings changePass() {
         elementActions.sendKeys(currentPassword, ConfigReader.getProperty("password"))
         .sendKeys(newPassword, ConfigReader.getProperty("password1"))
-        .sendKeys(newPasswordRepeat,ConfigReader.getProperty("password1"));
+        .sendKeys(newPasswordRepeat,ConfigReader.getProperty("password1"))
+                .sendKeys(newPassTOTP,ConfigReader.getProperty("TOTP"));
+        return this;
+    }
+    public Settings assertTextSettings() {
+        assertEquals(text1.getText(),"Текущий пароль");
+        assertEquals(text2.getText(),"Новый пароль");
+        assertEquals(text3.getText(),"Повторите новый пароль");
+        assertEquals(text4.getText(),"TOTP-код");
         return this;
     }
 
