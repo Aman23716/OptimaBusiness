@@ -1,7 +1,9 @@
 package org.OptimaBusTests.uiTests;
 
 import org.OptimaBus.UI.dataProvider.ConfigReader;
+import org.OptimaBus.UI.pages.MainPage;
 import org.OptimaBus.UI.pages.Settings;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -13,6 +15,7 @@ public class SettingsTests extends BaseUiTests {
     public void openLoginPage() {
         driver.navigate().to(ConfigReader.getProperty("qa_env"));
         loginPage.fillUpUsernameAndPass();
+        mainPage.ChooseUtes();
     }
 
     @Test(priority = 1, description = "check settings (information)")
@@ -31,6 +34,7 @@ public class SettingsTests extends BaseUiTests {
     @Test(priority = 3, description = "check change password")
     public void ChangePassword() {
         settings.cngPassBTN();
+//        settings.assertTextSettings();
         settings.changePass();
 
     }
