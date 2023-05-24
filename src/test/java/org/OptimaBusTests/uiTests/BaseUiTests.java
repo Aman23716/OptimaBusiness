@@ -1,4 +1,4 @@
-package uiTests;
+package org.OptimaBusTests.uiTests;
 
 import org.OptimaBus.UI.driverFactory.Driver;
 import org.OptimaBus.UI.helper.WebElementActions;
@@ -30,6 +30,8 @@ public abstract class BaseUiTests {
 
     Staff staff;
 
+    Converting converting;
+
     @BeforeClass
     public void setUpUiTest(){
         loginPage=new LoginPage();
@@ -42,6 +44,7 @@ public abstract class BaseUiTests {
         settings= new Settings();
         moreCallCenter= new MoreCallCenter();
         staff = new Staff();
+        converting= new Converting();
 
     }
 }

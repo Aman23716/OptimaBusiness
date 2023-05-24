@@ -1,4 +1,4 @@
-package uiTests;
+package org.OptimaBusTests.uiTests;
 
 import org.OptimaBus.UI.dataProvider.ConfigReader;
 import org.OptimaBus.UI.pages.Settings;
