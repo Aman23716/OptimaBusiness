@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage {
 
-
+// Maksat byl tut
   @FindBy(xpath = "(.//input[@class=\"q-field__native q-placeholder\"])[1]")
     public WebElement usernameInput;
 
