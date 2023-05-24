@@ -16,7 +16,7 @@ public class MainPageTest extends BaseUiTests{
 
     }
 
-    @Test(priority = 1, description = "check navigation bar" )
+    @Test( description = "check navigation bar" )
     public void checkTheMPBar(){
         MainPage mainPage1 = mainPage.clickMNPage();
         Assert.assertEquals(mainPage1.clickMainBTN.getText(),"Главная");

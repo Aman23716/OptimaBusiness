@@ -14,7 +14,7 @@ public class OperationHisTests extends BaseUiTests{
 
     }
 
-    @Test(priority = 1,description = "Click to История операции in Main Page")
+    @Test(description = "Click to История операции in Main Page")
     public void checkThe2BTN(){
  //       System.out.println( calk(2,1));
         operationHistory.BTN2();

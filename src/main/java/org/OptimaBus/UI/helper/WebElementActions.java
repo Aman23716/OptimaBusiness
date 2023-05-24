@@ -5,25 +5,39 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
+
 
 import static org.testng.Assert.assertEquals;
 
 public class WebElementActions {
 
+    private static Logger logger = LogManager.getLogger(WebElementActions.class);
 
+    public  static void  waitElementToBeDisplayed(WebElement element){
 
-    public WebElementActions waitElementToBeDisplayed(WebElement element){
+         new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(element));
 
-        new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(element));
-        return this;
+    }
+    public static void waitForElementVisibilityOf(WebElement element){
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+    public static void waitForElementToBeClickable(WebElement element) {
+        logger.info("Waiting for element to be clickable");
+        new WebDriverWait(Driver.getDriver(),Duration.ofSeconds(10))
+                .until(ExpectedConditions.elementToBeClickable(element));
+        logger.info("Element is clickable");
     }
 
 
     public WebElementActions click (WebElement element){
         waitElementToBeDisplayed(element);
+        waitForElementToBeClickable(element);
+        waitForElementVisibilityOf(element);
         element.click();
         pause(2000);
 
@@ -70,6 +84,11 @@ public class WebElementActions {
         return a * b;
     }
 
-
+    public static String getTextValue(WebElement element){
+        logger.info("Trying to get text value");
+        waitElementToBeDisplayed(element);
+        String text = element.getText();
+        return text;
+    }
 
 }
