@@ -5,7 +5,11 @@
     </listeners>
     <test name="SmokeTest">
         <classes>
-            <class name="org.OptimaBusTests.uiTests.CalcTests"></class>
+            <class name="org.OptimaBusTests.uiTests.LoginTests"/>
+<!--            <class name="org.OptimaBusTests.uiTests.CalcTests"/>-->
+<!--            <class name="org.OptimaBusTests.uiTests.SettingsTests"/>-->
+<!--            <class name="org.OptimaBusTests.uiTests.MainPageTest"/>-->
+<!--            <class name="org.OptimaBusTests.uiTests.OperationHisTests"/>-->
         </classes>
     </test>
     <test name="Regression">

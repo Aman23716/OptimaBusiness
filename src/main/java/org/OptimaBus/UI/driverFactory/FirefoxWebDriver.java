@@ -8,16 +8,12 @@ import java.time.Duration;
 
 public class FirefoxWebDriver {
 
-
-
-
     public static WebDriver loadFirefoxDriver(){
         WebDriverManager.edgedriver().setup();
         WebDriver driver = new EdgeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().deleteAllCookies();
-
         return driver;
     }
 }

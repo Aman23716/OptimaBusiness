@@ -15,7 +15,7 @@ public class SettingsTests extends BaseUiTests {
     public void openLoginPage() {
         driver.navigate().to(ConfigReader.getProperty("qa_env"));
         loginPage.fillUpUsernameAndPass();
-        mainPage.ChooseUtes();
+        mainPage.ChooseAltynken1();
     }
 
     @Test(priority = 1, description = "check settings (information)")

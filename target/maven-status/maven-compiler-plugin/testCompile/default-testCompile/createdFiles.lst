@@ -1,0 +1,6 @@
+org\OptimaBusTests\uiTests\LoginTests.class
+org\OptimaBusTests\uiTests\SettingsTests.class
+org\OptimaBusTests\uiTests\BaseUiTests.class
+org\OptimaBusTests\uiTests\MainPageTest.class
+org\OptimaBusTests\uiTests\CalcTests.class
+org\OptimaBusTests\uiTests\OperationHisTests.class

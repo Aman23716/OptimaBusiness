@@ -3,18 +3,16 @@ package org.OptimaBus.UI.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-
-
 import java.util.List;
 
 public class MainPage extends BasePage{
-
 
     @FindBy(xpath = "(.//span[@class='q-btn__content text-center col items-center q-anchor--skip justify-center row'])[3]")
     public WebElement calcBTN;
 
     @FindBy(xpath = "(.//div[@class=\"q-field__control relative-position row no-wrap\"])[3]")
     public WebElement VidKursov ;
+
 
    @FindBy(xpath = "(.//div[@class='ob-select'])[2]")
    public WebElement clickOnKPK;
@@ -47,7 +45,7 @@ public class MainPage extends BasePage{
    @FindBy(xpath = ".//button[@class='aside-dropdown-item dropdown-item user-text text-dark'][2]")
    public WebElement chooseUtes;
 
-    @FindBy(xpath = ".//section[@class='aside']")
+    @FindBy(xpath = ".//span[@class='company-name']")
     public List<WebElement> chooseAltynken;
    @FindBy(xpath = "(.//span[@class='q-ml-auto'])[1]")
    public WebElement KURSSOM;
@@ -68,7 +66,7 @@ public class MainPage extends BasePage{
         for (WebElement list1 : chooseAltynken){
             System.out.println(list1);
             if (list1.getText().equals("ОсОО \"АЛТЫНКЕН\"")){
-
+                list1.click();
             }
         }
         return this;

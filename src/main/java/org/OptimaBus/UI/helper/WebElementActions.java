@@ -39,7 +39,7 @@ public class WebElementActions {
         waitForElementToBeClickable(element);
         waitForElementVisibilityOf(element);
         element.click();
-        pause(2000);
+        pause(500);
 
         return this;
     }

@@ -4,6 +4,7 @@ import org.OptimaBus.UI.driverFactory.Driver;
 import org.OptimaBus.UI.helper.WebElementActions;
 import org.OptimaBus.UI.pages.*;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public abstract class BaseUiTests {
@@ -46,5 +47,9 @@ public abstract class BaseUiTests {
         staff = new Staff();
         converting= new Converting();
 
+    }
+    @AfterClass
+    public void tearDown() {
+        Driver.closeDriver();
     }
 }

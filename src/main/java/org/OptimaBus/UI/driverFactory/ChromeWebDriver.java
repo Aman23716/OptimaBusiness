@@ -17,8 +17,6 @@ public class ChromeWebDriver {
         options.addArguments("--start-maximized");
         options.addArguments("--window-size=1920,1080");
         options.addArguments("--remote-allow-origins=*");
-
-
         if (Boolean.parseBoolean(ConfigReader.getProperty("headless"))){
             options.addArguments("--headless");
         }
@@ -29,11 +27,5 @@ public class ChromeWebDriver {
         return driver;
 
     }
-
-
-
-
-
-
 
 }
