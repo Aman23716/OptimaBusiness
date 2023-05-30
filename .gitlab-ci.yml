@@ -11,7 +11,7 @@ Regression tests with Allure:
     - mvn clean test
     - mvn allure:report
 
- artifacts:
+  artifacts:
    paths:
      - target/allure-results/*
 
