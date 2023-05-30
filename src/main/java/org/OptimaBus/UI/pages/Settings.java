@@ -5,14 +5,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import static org.testng.AssertJUnit.assertEquals;
+import java.util.List;
 
 public class Settings extends BasePage{
 
 
-    @FindBy(xpath = ".//a[@class='nav-item'][4]")
+    @FindBy(xpath = ".//a[@class='nav-item'][5]")
     public WebElement ClickTo5BTN;
-    @FindBy(xpath = "(.//div[@class='q-tab__label'])[2]")
-    public WebElement accountVisibilityBTN;
+
+
+    @FindBy(xpath = ".//div[@class='tabs']")
+    public List <WebElement> accountVisibilityBTN1;
+
+//    @FindBy(xpath = "(.//div[@class='q-tab__label'])[2]")
+//    public WebElement accountVisibilityBTN;
     @FindBy(xpath = "(.//div[@class='q-tab__label'])[3]")
     public WebElement changePasswordBTN;
     @FindBy(xpath = "(.//div[@class='q-tab__label'])[4]")
@@ -57,10 +63,22 @@ public class Settings extends BasePage{
         return this;
     }
 
-    public Settings accVisBTN() {
-        elementActions.click(accountVisibilityBTN);
+
+    public Settings accVisBTN(){
+        for (WebElement list1 : accountVisibilityBTN1){
+            System.out.println(list1);
+            if (list1.getText().equals("Видимость счетов")){
+                list1.click();
+                System.out.println(list1);
+            }
+        }
         return this;
     }
+
+//    public Settings accVisBTN() {
+//        elementActions.click(accountVisibilityBTN);
+//        return this;
+//    }
     public Settings cngPassBTN() {
         elementActions.click(changePasswordBTN);
         return this;

@@ -1,0 +1,17 @@
+image: maven:4.0-openjdk-11
+default:
+  tags:
+    -shellocal
+
+stages:
+  - test
+Regression tests with Allure:
+  stage: test
+  script:
+    - mvn clean test
+    - mvn allure:report
+
+ artifacts:
+   paths:
+     - target/allure-results/*
+

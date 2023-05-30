@@ -1,5 +1,7 @@
 package org.OptimaBusTests.uiTests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Owner;
 import org.OptimaBus.UI.dataProvider.ConfigReader;
 import org.OptimaBus.UI.helper.WebElementActions;
 import org.OptimaBus.UI.pages.MainPage;
@@ -14,8 +16,8 @@ public class CalcTests extends BaseUiTests{
     public void openLoginPage() {
         driver.navigate().to(ConfigReader.getProperty("qa_env"));
         loginPage.fillUpUsernameAndPass();
-        mainPage.ChooseUtes();
-//        mainPage.ChooseAltynken1();
+//        mainPage.ChooseUtes();
+        mainPage.ChooseAltynken1();
    }
 
     @Test(priority = 1,description = "Verify that user can login with valid credentials")
@@ -24,6 +26,8 @@ public class CalcTests extends BaseUiTests{
     }
 
     @Test(priority = 2,description = "Change the currency  " )
+    @Owner("Aman")
+    @Description("")
     public void chooseUSD(){
         Assert.assertEquals(driver.getCurrentUrl(),"https://test-ob.optimabank.kg/accounts");
         WebElementActions webElementActions1=new WebElementActions();
@@ -34,4 +38,6 @@ public class CalcTests extends BaseUiTests{
         mainPage.CreateBTN();
         converting.CheckCalcValue();
     }
+
+
 }
