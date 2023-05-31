@@ -5,7 +5,7 @@ default:
 
 stages:
   - test
-Regression tests with Allure:
+test:
   stage: test
   script:
     - mvn clean test
@@ -13,5 +13,5 @@ Regression tests with Allure:
 
   artifacts:
    paths:
-     - target/allure-results/*
+     - target/site/allure-maven-plugin
 
