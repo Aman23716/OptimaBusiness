@@ -1,0 +1,130 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-9FFHNT2",
+    "children" : [ {
+      "name" : "13272@DESKTOP-9FFHNT2.main(1)",
+      "children" : [ {
+        "name" : "check settings (information)",
+        "uid" : "d27be5a01c7df404",
+        "parentUid" : "41b9953762ef45083abcfe7149e07fb2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1685434302622,
+          "stop" : 1685434303286,
+          "duration" : 664
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "check change password",
+        "uid" : "92814ffc591368aa",
+        "parentUid" : "41b9953762ef45083abcfe7149e07fb2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1685434348358,
+          "stop" : 1685434378399,
+          "duration" : 30041
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Click to История операции in Main Page",
+        "uid" : "2ae5098a21090298",
+        "parentUid" : "41b9953762ef45083abcfe7149e07fb2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1685434293443,
+          "stop" : 1685434294148,
+          "duration" : 705
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Verify that user can login with valid credentials",
+        "uid" : "87fa23410956517a",
+        "parentUid" : "41b9953762ef45083abcfe7149e07fb2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1685434238573,
+          "stop" : 1685434240311,
+          "duration" : 1738
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check other buttons",
+        "uid" : "6053f8cf8ae1d75d",
+        "parentUid" : "41b9953762ef45083abcfe7149e07fb2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1685434283333,
+          "stop" : 1685434284646,
+          "duration" : 1313
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "check navigation bar",
+        "uid" : "54efd46596a8aab2",
+        "parentUid" : "41b9953762ef45083abcfe7149e07fb2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1685434249402,
+          "stop" : 1685434283323,
+          "duration" : 33921
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Change the currency  ",
+        "uid" : "6ad5415de74d99a",
+        "parentUid" : "41b9953762ef45083abcfe7149e07fb2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1685434229420,
+          "stop" : 1685434234226,
+          "duration" : 4806
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Verify that user can login with valid credentials",
+        "uid" : "fed1baa238d684a4",
+        "parentUid" : "41b9953762ef45083abcfe7149e07fb2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1685434227316,
+          "stop" : 1685434229333,
+          "duration" : 2017
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "check account visibility",
+        "uid" : "5ec75508c6ab90a2",
+        "parentUid" : "41b9953762ef45083abcfe7149e07fb2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1685434303288,
+          "stop" : 1685434348355,
+          "duration" : 45067
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "41b9953762ef45083abcfe7149e07fb2"
+    } ],
+    "uid" : "1c733cf7bc318840dbc0df7735a73d0a"
+  } ]
+}

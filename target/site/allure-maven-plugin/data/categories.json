@@ -1,0 +1,60 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: .//a[@class='nav-item'][6]' (tried for 10 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "check navigation bar",
+        "uid" : "54efd46596a8aab2",
+        "parentUid" : "e493366062341c66cf08c2bb7db90366",
+        "status" : "broken",
+        "time" : {
+          "start" : 1685434249402,
+          "stop" : 1685434283323,
+          "duration" : 33921
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e493366062341c66cf08c2bb7db90366"
+    }, {
+      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: (.//button[@class=\"q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text-red q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase q-btn--dense action-btn\"])[1]' (tried for 10 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "check account visibility",
+        "uid" : "5ec75508c6ab90a2",
+        "parentUid" : "d8df1d03b746dcdc55087ac891e46c22",
+        "status" : "broken",
+        "time" : {
+          "start" : 1685434303288,
+          "stop" : 1685434348355,
+          "duration" : 45067
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d8df1d03b746dcdc55087ac891e46c22"
+    }, {
+      "name" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: (.//div[@class='q-tab__label'])[3]' (tried for 10 second(s) with 500 milliseconds interval)",
+      "children" : [ {
+        "name" : "check change password",
+        "uid" : "92814ffc591368aa",
+        "parentUid" : "db387d2724f956bec85a172a1c64e983",
+        "status" : "broken",
+        "time" : {
+          "start" : 1685434348358,
+          "stop" : 1685434378399,
+          "duration" : 30041
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "db387d2724f956bec85a172a1c64e983"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

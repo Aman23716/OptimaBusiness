@@ -1,0 +1,146 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "org.OptimaBusTests.uiTests",
+    "children" : [ {
+      "name" : "CalcTests",
+      "children" : [ {
+        "name" : "loginWithValidCredentials",
+        "uid" : "fed1baa238d684a4",
+        "parentUid" : "006e127294989f644743d5b3b50868cb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1685434227316,
+          "stop" : 1685434229333,
+          "duration" : 2017
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "chooseUSD",
+        "uid" : "6ad5415de74d99a",
+        "parentUid" : "006e127294989f644743d5b3b50868cb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1685434229420,
+          "stop" : 1685434234226,
+          "duration" : 4806
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "006e127294989f644743d5b3b50868cb"
+    }, {
+      "name" : "LoginTests",
+      "children" : [ {
+        "name" : "loginWithValidCredentials",
+        "uid" : "87fa23410956517a",
+        "parentUid" : "16d93c559f1fde7944122b3a7ae20411",
+        "status" : "passed",
+        "time" : {
+          "start" : 1685434238573,
+          "stop" : 1685434240311,
+          "duration" : 1738
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "16d93c559f1fde7944122b3a7ae20411"
+    }, {
+      "name" : "MainPageTest",
+      "children" : [ {
+        "name" : "checkTheMPBar",
+        "uid" : "54efd46596a8aab2",
+        "parentUid" : "2ec33601be6f33cc04b3229562cacb1a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1685434249402,
+          "stop" : 1685434283323,
+          "duration" : 33921
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "checkOtherBTNS",
+        "uid" : "6053f8cf8ae1d75d",
+        "parentUid" : "2ec33601be6f33cc04b3229562cacb1a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1685434283333,
+          "stop" : 1685434284646,
+          "duration" : 1313
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2ec33601be6f33cc04b3229562cacb1a"
+    }, {
+      "name" : "OperationHisTests",
+      "children" : [ {
+        "name" : "checkThe2BTN",
+        "uid" : "2ae5098a21090298",
+        "parentUid" : "79f971ca905be8f1ab2ccdead2153c7a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1685434293443,
+          "stop" : 1685434294148,
+          "duration" : 705
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "79f971ca905be8f1ab2ccdead2153c7a"
+    }, {
+      "name" : "SettingsTests",
+      "children" : [ {
+        "name" : "CheckSettings",
+        "uid" : "d27be5a01c7df404",
+        "parentUid" : "27aba89de27806540d194c1e0c42d2b7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1685434302622,
+          "stop" : 1685434303286,
+          "duration" : 664
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "AccountVisibility",
+        "uid" : "5ec75508c6ab90a2",
+        "parentUid" : "27aba89de27806540d194c1e0c42d2b7",
+        "status" : "broken",
+        "time" : {
+          "start" : 1685434303288,
+          "stop" : 1685434348355,
+          "duration" : 45067
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "ChangePassword",
+        "uid" : "92814ffc591368aa",
+        "parentUid" : "27aba89de27806540d194c1e0c42d2b7",
+        "status" : "broken",
+        "time" : {
+          "start" : 1685434348358,
+          "stop" : 1685434378399,
+          "duration" : 30041
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "27aba89de27806540d194c1e0c42d2b7"
+    } ],
+    "uid" : "org.OptimaBusTests.uiTests"
+  } ]
+}
