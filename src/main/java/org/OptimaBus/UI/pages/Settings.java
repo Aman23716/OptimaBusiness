@@ -4,6 +4,8 @@ import org.OptimaBus.UI.dataProvider.ConfigReader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 import static org.testng.AssertJUnit.assertEquals;
 import java.util.List;
 
@@ -14,15 +16,16 @@ public class Settings extends BasePage{
     public WebElement ClickTo5BTN;
 
 
-    @FindBy(xpath = ".//div[@class='tabs']")
-    public List <WebElement> accountVisibilityBTN1;
-
-//    @FindBy(xpath = "(.//div[@class='q-tab__label'])[2]")
-//    public WebElement accountVisibilityBTN;
+    @FindBy(xpath = "(.//div[@class='q-tab__label'])[2]")
+    public WebElement payControlBTN;
     @FindBy(xpath = "(.//div[@class='q-tab__label'])[3]")
-    public WebElement changePasswordBTN;
+    public WebElement accountVisibilityBTN;
     @FindBy(xpath = "(.//div[@class='q-tab__label'])[4]")
+    public WebElement changePasswordBTN;
+    @FindBy(xpath = "(.//div[@class='q-tab__label'])[5]")
     public WebElement changeNumberBTN;
+    @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text-red q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase q-btn--dense action-btn']")
+    public List<WebElement> changeVisibilityList;
     @FindBy(xpath = "(.//button[@class=\"q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text-red q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase q-btn--dense action-btn\"])[1]")
     public WebElement changeVisibility1;
     @FindBy(xpath = "(.//button[@class=\"q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text-red q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase q-btn--dense action-btn\"])[2]")
@@ -55,30 +58,35 @@ public class Settings extends BasePage{
     public WebElement text3;
     @FindBy(xpath = "(.//div[@class='q-field__label no-pointer-events absolute ellipsis'])[4]")
     public WebElement text4;
+    @FindBy(xpath = ".//a[@class='nav-item']")
+    public List<WebElement> navigationList;
 
 
 
-    public Settings BTN6(){
-        elementActions.click(ClickTo5BTN);
-        return this;
-    }
 
-
-    public Settings accVisBTN(){
-        for (WebElement list1 : accountVisibilityBTN1){
-            System.out.println(list1);
-            if (list1.getText().equals("Видимость счетов")){
+    public Settings chooseSettings() {
+        for (WebElement list1 : navigationList) {
+            if (list1.getText().equals("Настройки")){
+                System.out.println(list1.getText());
                 list1.click();
-                System.out.println(list1);
             }
         }
         return this;
     }
+    public Settings BTN6(){
+        elementActions.click(ClickTo5BTN);
+        return this;
+    }
+    public Settings payControlBTN() {
+        elementActions.click(payControlBTN);
+        return this;
+    }
 
-//    public Settings accVisBTN() {
-//        elementActions.click(accountVisibilityBTN);
-//        return this;
-//    }
+
+    public Settings accVisBTN() {
+        elementActions.click(accountVisibilityBTN);
+        return this;
+    }
     public Settings cngPassBTN() {
         elementActions.click(changePasswordBTN);
         return this;
@@ -88,14 +96,17 @@ public class Settings extends BasePage{
         return this;
     }
     public Settings cngVis() {
-        elementActions.click(changeVisibility1);
-        elementActions.click(changeVisibility2);
-        elementActions.click(changeVisibility3);
-        elementActions.click(changeVisibility4);
-        elementActions.click(changeVisibility5);
-        elementActions.click(changeVisibility6);
-        elementActions.click(changeVisibility7);
-        elementActions.click(changeVisibility8);
+//        elementActions.click(changeVisibility1);
+//        elementActions.click(changeVisibility2);
+//        elementActions.click(changeVisibility3);
+//        elementActions.click(changeVisibility4);
+//        elementActions.click(changeVisibility5);
+//        elementActions.click(changeVisibility6);
+//        elementActions.click(changeVisibility7);
+//        elementActions.click(changeVisibility8);
+        for (WebElement list : changeVisibilityList) {
+            elementActions.click(list);
+        }
         return this;
     }
        public Settings changePass() {
