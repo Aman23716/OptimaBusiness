@@ -48,8 +48,8 @@ public abstract class BaseUiTests {
         converting= new Converting();
 
     }
-    @AfterClass
-    public void tearDown() {
-        Driver.closeDriver();
-    }
+//    @AfterClass
+//    public void tearDown() {
+//        Driver.closeDriver();
+//    }
 }
