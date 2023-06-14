@@ -4,6 +4,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import org.OptimaBus.UI.dataProvider.ConfigReader;
 import org.OptimaBus.UI.helper.WebElementActions;
+import org.OptimaBus.UI.pages.Converting;
 import org.OptimaBus.UI.pages.MainPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -29,7 +30,7 @@ public class CalcTests extends BaseUiTests{
     @Owner("Aman")
     @Description("")
     public void chooseUSD(){
-        Assert.assertEquals(driver.getCurrentUrl(),"https://test-ob.optimabank.kg/accounts");
+        softAssert.assertEquals(driver.getCurrentUrl(),"https://test-ob.optimabank.kg/accounts");
         WebElementActions webElementActions1=new WebElementActions();
 //        System.out.println(webElementActions1.calk());
         MainPage mainPage1 = mainPage.GetValueSomSum(); /*Потом написать код для сравнения значений из Конвертаций*/
@@ -37,6 +38,10 @@ public class CalcTests extends BaseUiTests{
         softAssert.assertEquals(mainPage1,114.19);
         mainPage.CreateBTN();
         converting.CheckCalcValue();
+        converting.CalcResult();
+        Converting converting2 = converting.LOL();
+        Converting converting1 = converting.GetDocumValue();
+        Assert.assertEquals(converting1,converting2);
     }
 
 

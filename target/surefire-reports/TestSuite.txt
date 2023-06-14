@@ -1,49 +1,62 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 168.155 s <<< FAILURE! - in TestSuite
-checkTheMPBar(org.OptimaBusTests.uiTests.MainPageTest)  Time elapsed: 33.931 s  <<< FAILURE!
+Tests run: 10, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 177.03 s <<< FAILURE! - in TestSuite
+checkTheMPBar(org.OptimaBusTests.uiTests.MainPageTest)  Time elapsed: 33.871 s  <<< FAILURE!
 org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: .//a[@class='nav-item'][6]' (tried for 10 second(s) with 500 milliseconds interval)
 	at org.OptimaBusTests.uiTests.MainPageTest.checkTheMPBar(MainPageTest.java:27)
 Caused by: org.openqa.selenium.NoSuchElementException: 
 no such element: Unable to locate element: {"method":"xpath","selector":".//a[@class='nav-item'][6]"}
-  (Session info: headless chrome=113.0.5672.127)
+  (Session info: chrome=113.0.5672.127)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.8.0', revision: '267030adea'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c2130df154867419f99c868c148b42f9, findElement {using=xpath, value=.//a[@class='nav-item'][6]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50016}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50016/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c2130df154867419f99c868c148b42f9
+Command: [512fa64149956441c01668d4aabaf148, findElement {using=xpath, value=.//a[@class='nav-item'][6]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52042}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52042/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 512fa64149956441c01668d4aabaf148
 	at org.OptimaBusTests.uiTests.MainPageTest.checkTheMPBar(MainPageTest.java:27)
 
-AccountVisibility(org.OptimaBusTests.uiTests.SettingsTests)  Time elapsed: 45.069 s  <<< FAILURE!
+visibilityBellBtn(org.OptimaBusTests.uiTests.MainPageTest)  Time elapsed: 15.025 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense icon-notification lite-shadow payment__btn']"}
+  (Session info: chrome=113.0.5672.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [512fa64149956441c01668d4aabaf148, findElement {using=xpath, value=.//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense icon-notification lite-shadow payment__btn']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52042}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52042/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 512fa64149956441c01668d4aabaf148
+	at org.OptimaBusTests.uiTests.MainPageTest.visibilityBellBtn(MainPageTest.java:39)
+
+AccountVisibility(org.OptimaBusTests.uiTests.SettingsTests)  Time elapsed: 45.131 s  <<< FAILURE!
 org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: (.//button[@class="q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text-red q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase q-btn--dense action-btn"])[1]' (tried for 10 second(s) with 500 milliseconds interval)
 	at org.OptimaBusTests.uiTests.SettingsTests.AccountVisibility(SettingsTests.java:30)
 Caused by: org.openqa.selenium.NoSuchElementException: 
 no such element: Unable to locate element: {"method":"xpath","selector":"(.//button[@class="q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text-red q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase q-btn--dense action-btn"])[1]"}
-  (Session info: headless chrome=113.0.5672.127)
+  (Session info: chrome=113.0.5672.127)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.8.0', revision: '267030adea'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fb3844e9336165cd272a4e9d3e3ed471, findElement {using=xpath, value=(.//button[@class="q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text-red q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase q-btn--dense action-btn"])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50073}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50073/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: fb3844e9336165cd272a4e9d3e3ed471
+Command: [dd2ada049e44a96f33ed58d160ab1a6f, findElement {using=xpath, value=(.//button[@class="q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text-red q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase q-btn--dense action-btn"])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52132}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52132/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dd2ada049e44a96f33ed58d160ab1a6f
 	at org.OptimaBusTests.uiTests.SettingsTests.AccountVisibility(SettingsTests.java:30)
 
-ChangePassword(org.OptimaBusTests.uiTests.SettingsTests)  Time elapsed: 30.044 s  <<< FAILURE!
+ChangePassword(org.OptimaBusTests.uiTests.SettingsTests)  Time elapsed: 30.066 s  <<< FAILURE!
 org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: (.//div[@class='q-tab__label'])[3]' (tried for 10 second(s) with 500 milliseconds interval)
 	at org.OptimaBusTests.uiTests.SettingsTests.ChangePassword(SettingsTests.java:36)
 Caused by: org.openqa.selenium.NoSuchElementException: 
 no such element: Unable to locate element: {"method":"xpath","selector":"(.//div[@class='q-tab__label'])[3]"}
-  (Session info: headless chrome=113.0.5672.127)
+  (Session info: chrome=113.0.5672.127)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.8.0', revision: '267030adea'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fb3844e9336165cd272a4e9d3e3ed471, findElement {using=xpath, value=(.//div[@class='q-tab__label'])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50073}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50073/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: fb3844e9336165cd272a4e9d3e3ed471
+Command: [dd2ada049e44a96f33ed58d160ab1a6f, findElement {using=xpath, value=(.//div[@class='q-tab__label'])[3]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52132}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52132/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dd2ada049e44a96f33ed58d160ab1a6f
 	at org.OptimaBusTests.uiTests.SettingsTests.ChangePassword(SettingsTests.java:36)
 

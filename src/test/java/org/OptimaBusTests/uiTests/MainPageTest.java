@@ -33,12 +33,22 @@ public class MainPageTest extends BaseUiTests{
         Assert.assertEquals(moreCallCenter1.ClickTo7BTN.getText(),"Настройки");
 
     }
-    @Test(priority = 2, description = "Check other buttons")
-    public void checkOtherBTNS(){
-        mainPage.MAINBTN1();
-        Assert.assertEquals(driver.getCurrentUrl(),"https://test-ob.optimabank.kg/accounts");
+
+    @Test(priority = 2)
+    public void visibilityBellBtn(){
+        mainPage.checkBellBtn();
     }
 
+
+    @Test(priority = 3, description = "Check other buttons")
+    public void checkOtherBTNS(){
+        mainPage.MAINBTN1();
+        Assert.assertEquals(driver.getCurrentUrl(),"https://test-ob.optimabank.kg/");
+    }
+    @Test(priority = 4, description = "Check the importBTN")
+    public void importCheckBTN(){
+
+    }
 
 
 

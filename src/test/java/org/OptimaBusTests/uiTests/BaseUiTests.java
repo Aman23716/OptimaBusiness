@@ -1,5 +1,6 @@
 package org.OptimaBusTests.uiTests;
 
+import org.OptimaBus.UI.dataProvider.MockDataGenerator;
 import org.OptimaBus.UI.driverFactory.Driver;
 import org.OptimaBus.UI.helper.WebElementActions;
 import org.OptimaBus.UI.pages.*;
@@ -11,6 +12,8 @@ public abstract class BaseUiTests {
 
 
 
+
+    MockDataGenerator mockDataGenerator;
 
 
     WebElementActions webElementActions;
@@ -48,8 +51,8 @@ public abstract class BaseUiTests {
         converting= new Converting();
 
     }
-//    @AfterClass
-//    public void tearDown() {
-//        Driver.closeDriver();
-//    }
+    @AfterClass
+    public void tearDown() {
+        Driver.closeDriver();
+    }
 }

@@ -30,9 +30,13 @@ public class MockDataGenerator {
         return faker.number().numberBetween(1,100000);
 
     }
+//    public Integer generateMockValue2(){
+//        return faker.number().randomDouble(1,100000,11111);
+//
+//    }
 
     public double generateMockValue1(){
-        return faker.number().randomDouble(99,1, 10009);
+        return faker.number().randomDouble(99,1,1000);
 
     }
 
