@@ -3,7 +3,7 @@ package org.OptimaBus.UI.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class MoreCallCenter extends BasePage {
+public class More extends BasePage {
 
 
 
@@ -18,7 +18,7 @@ public class MoreCallCenter extends BasePage {
 
 
 
-    public MoreCallCenter BTN7(){
+    public More BTN7(){
         elementActions.click(ClickTo7BTN);
 
         return this;

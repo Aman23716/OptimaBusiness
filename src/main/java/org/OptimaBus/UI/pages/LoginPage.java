@@ -19,7 +19,7 @@ public WebElement submitLogin;
   @FindBy(xpath = ".//input[@class='form-control']")
   public WebElement inputTOTP;
 
-  @FindBy(xpath = ".//button")
+  @FindBy(xpath = "(.//button)[2]")
   public WebElement enterBTN;
 
 

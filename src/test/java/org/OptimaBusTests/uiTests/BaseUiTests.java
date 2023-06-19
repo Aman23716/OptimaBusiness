@@ -27,7 +27,7 @@ public abstract class BaseUiTests {
 
     Settings settings;
 
-    MoreCallCenter moreCallCenter;
+    More more;
 
     Staff staff;
 
@@ -43,13 +43,13 @@ public abstract class BaseUiTests {
         documents = new Documents();
         imports= new  Imports();
         settings= new Settings();
-        moreCallCenter= new MoreCallCenter();
+        more = new More();
         staff = new Staff();
         converting= new Converting();
 
     }
-//    @AfterClass
-//    public void tearDown() {
-//        Driver.closeDriver();
-//    }
+    @AfterClass
+    public void tearDown() {
+        Driver.closeDriver();
+    }
 }

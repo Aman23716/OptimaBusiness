@@ -19,7 +19,7 @@ public class WebElementActions {
 
     public  static void  waitElementToBeDisplayed(WebElement element){
 
-         new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(element));
+        new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(6)).until(ExpectedConditions.visibilityOf(element));
 
     }
     public static void waitForElementVisibilityOf(WebElement element){
@@ -28,7 +28,7 @@ public class WebElementActions {
     }
     public static void waitForElementToBeClickable(WebElement element) {
         logger.info("Waiting for element to be clickable");
-        new WebDriverWait(Driver.getDriver(),Duration.ofSeconds(10))
+        new WebDriverWait(Driver.getDriver(),Duration.ofSeconds(4))
                 .until(ExpectedConditions.elementToBeClickable(element));
         logger.info("Element is clickable");
     }
@@ -39,10 +39,24 @@ public class WebElementActions {
         waitForElementToBeClickable(element);
         waitForElementVisibilityOf(element);
         element.click();
-        pause(500);
+        pause(200);
 
         return this;
     }
+    public boolean isClickAble(WebElement element){
+        element.isSelected();
+
+        return true;
+    }
+    public WebElementActions sendKeysDouble(WebElement element, Double f){
+        waitElementToBeDisplayed(element);
+        element.sendKeys(Double.toString(f));
+        return this;
+    }
+
+
+
+
     public WebElementActions sendKeysInt(WebElement element, Integer f){
         waitElementToBeDisplayed(element);
         element.sendKeys(Integer.toString(f));

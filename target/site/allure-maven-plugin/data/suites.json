@@ -9,26 +9,26 @@
         "name" : "org.OptimaBusTests.uiTests.CalcTests",
         "children" : [ {
           "name" : "Verify that user can login with valid credentials",
-          "uid" : "fed1baa238d684a4",
+          "uid" : "4f7fcc7d2dfd83e8",
           "parentUid" : "7430e6dc843f92d3ece814a852e0012d",
           "status" : "passed",
           "time" : {
-            "start" : 1685434227316,
-            "stop" : 1685434229333,
-            "duration" : 2017
+            "start" : 1687174095773,
+            "stop" : 1687174097552,
+            "duration" : 1779
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "Change the currency  ",
-          "uid" : "6ad5415de74d99a",
+          "uid" : "8982ddead0cabb5a",
           "parentUid" : "7430e6dc843f92d3ece814a852e0012d",
           "status" : "passed",
           "time" : {
-            "start" : 1685434229420,
-            "stop" : 1685434234226,
-            "duration" : 4806
+            "start" : 1687174097663,
+            "stop" : 1687174100746,
+            "duration" : 3083
           },
           "flaky" : false,
           "newFailed" : false,
@@ -39,13 +39,13 @@
         "name" : "org.OptimaBusTests.uiTests.LoginTests",
         "children" : [ {
           "name" : "Verify that user can login with valid credentials",
-          "uid" : "87fa23410956517a",
+          "uid" : "bb751634339176c2",
           "parentUid" : "5b046df5f8b6e443803aa9af6fb998f5",
           "status" : "passed",
           "time" : {
-            "start" : 1685434238573,
-            "stop" : 1685434240311,
-            "duration" : 1738
+            "start" : 1687174106212,
+            "stop" : 1687174107554,
+            "duration" : 1342
           },
           "flaky" : false,
           "newFailed" : false,
@@ -56,26 +56,26 @@
         "name" : "org.OptimaBusTests.uiTests.MainPageTest",
         "children" : [ {
           "name" : "check navigation bar",
-          "uid" : "54efd46596a8aab2",
+          "uid" : "2d0d134891d40d88",
           "parentUid" : "9224699df0a6cf1ef8268a51a72b683c",
-          "status" : "broken",
+          "status" : "passed",
           "time" : {
-            "start" : 1685434249402,
-            "stop" : 1685434283323,
-            "duration" : 33921
+            "start" : 1687174115883,
+            "stop" : 1687174118256,
+            "duration" : 2373
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "Check other buttons",
-          "uid" : "6053f8cf8ae1d75d",
+          "uid" : "42c787cd84a5cc80",
           "parentUid" : "9224699df0a6cf1ef8268a51a72b683c",
-          "status" : "passed",
+          "status" : "failed",
           "time" : {
-            "start" : 1685434283333,
-            "stop" : 1685434284646,
-            "duration" : 1313
+            "start" : 1687174118258,
+            "stop" : 1687174118993,
+            "duration" : 735
           },
           "flaky" : false,
           "newFailed" : false,
@@ -86,13 +86,13 @@
         "name" : "org.OptimaBusTests.uiTests.OperationHisTests",
         "children" : [ {
           "name" : "Click to История операции in Main Page",
-          "uid" : "2ae5098a21090298",
+          "uid" : "a6b9260153afc9e6",
           "parentUid" : "8d103e2082d461bb182b68e04872c89a",
           "status" : "passed",
           "time" : {
-            "start" : 1685434293443,
-            "stop" : 1685434294148,
-            "duration" : 705
+            "start" : 1687174127462,
+            "stop" : 1687174127822,
+            "duration" : 360
           },
           "flaky" : false,
           "newFailed" : false,
@@ -103,39 +103,65 @@
         "name" : "org.OptimaBusTests.uiTests.SettingsTests",
         "children" : [ {
           "name" : "check settings (information)",
-          "uid" : "d27be5a01c7df404",
+          "uid" : "b4f8343450b4500",
           "parentUid" : "7220873aef198f9c7430c52da6ef8f4f",
           "status" : "passed",
           "time" : {
-            "start" : 1685434302622,
-            "stop" : 1685434303286,
-            "duration" : 664
+            "start" : 1687174136283,
+            "stop" : 1687174136397,
+            "duration" : 114
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "check PayControl",
+          "uid" : "c6eef7f039bbe8d7",
+          "parentUid" : "7220873aef198f9c7430c52da6ef8f4f",
+          "status" : "passed",
+          "time" : {
+            "start" : 1687174136401,
+            "stop" : 1687174136862,
+            "duration" : 461
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "check account visibility",
-          "uid" : "5ec75508c6ab90a2",
+          "uid" : "de5b8b5ff3aca36c",
           "parentUid" : "7220873aef198f9c7430c52da6ef8f4f",
-          "status" : "broken",
+          "status" : "passed",
           "time" : {
-            "start" : 1685434303288,
-            "stop" : 1685434348355,
-            "duration" : 45067
+            "start" : 1687174136864,
+            "stop" : 1687174141601,
+            "duration" : 4737
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "check change password",
-          "uid" : "92814ffc591368aa",
+          "uid" : "2c390cb49579763",
           "parentUid" : "7220873aef198f9c7430c52da6ef8f4f",
-          "status" : "broken",
+          "status" : "passed",
           "time" : {
-            "start" : 1685434348358,
-            "stop" : 1685434378399,
-            "duration" : 30041
+            "start" : 1687174141604,
+            "stop" : 1687174142236,
+            "duration" : 632
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "check change telephone number",
+          "uid" : "3d7e2484d45db609",
+          "parentUid" : "7220873aef198f9c7430c52da6ef8f4f",
+          "status" : "passed",
+          "time" : {
+            "start" : 1687174142238,
+            "stop" : 1687174142558,
+            "duration" : 320
           },
           "flaky" : false,
           "newFailed" : false,

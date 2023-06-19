@@ -9,129 +9,23 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Surefire suite</th></tr>
-<tr><td><a href="#t0">Surefire test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">166 628</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">10</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">58 547</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">org.OptimaBusTests.uiTests.MainPageTest</td><td><a href="#m0">checkTheMPBar</a></td><td rowspan="1">1685434249401</td><td rowspan="1">33920</td></tr><tr class="failedodd"><td rowspan="2">org.OptimaBusTests.uiTests.SettingsTests</td><td><a href="#m1">AccountVisibility</a></td><td rowspan="1">1685434303287</td><td rowspan="1">45067</td></tr><tr class="failedodd"><td><a href="#m2">ChangePassword</a></td><td rowspan="1">1685434348356</td><td rowspan="1">30042</td></tr><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">org.OptimaBusTests.uiTests.CalcTests</td><td><a href="#m3">chooseUSD</a></td><td rowspan="1">1685434229417</td><td rowspan="1">4808</td></tr><tr class="passedeven"><td><a href="#m4">loginWithValidCredentials</a></td><td rowspan="1">1685434227277</td><td rowspan="1">2053</td></tr><tr class="passedodd"><td rowspan="1">org.OptimaBusTests.uiTests.LoginTests</td><td><a href="#m5">loginWithValidCredentials</a></td><td rowspan="1">1685434238571</td><td rowspan="1">1740</td></tr><tr class="passedeven"><td rowspan="1">org.OptimaBusTests.uiTests.MainPageTest</td><td><a href="#m6">checkOtherBTNS</a></td><td rowspan="1">1685434283332</td><td rowspan="1">1314</td></tr><tr class="passedodd"><td rowspan="1">org.OptimaBusTests.uiTests.OperationHisTests</td><td><a href="#m7">checkThe2BTN</a></td><td rowspan="1">1685434293442</td><td rowspan="1">706</td></tr><tr class="passedeven"><td rowspan="1">org.OptimaBusTests.uiTests.SettingsTests</td><td><a href="#m8">CheckSettings</a></td><td rowspan="1">1685434302621</td><td rowspan="1">664</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">org.OptimaBusTests.uiTests.MainPageTest</td><td><a href="#m0">checkOtherBTNS</a></td><td rowspan="1">1687174118257</td><td rowspan="1">734</td></tr><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">org.OptimaBusTests.uiTests.CalcTests</td><td><a href="#m1">chooseUSD</a></td><td rowspan="1">1687174097660</td><td rowspan="1">3086</td></tr><tr class="passedeven"><td><a href="#m2">loginWithValidCredentials</a></td><td rowspan="1">1687174095737</td><td rowspan="1">1809</td></tr><tr class="passedodd"><td rowspan="1">org.OptimaBusTests.uiTests.LoginTests</td><td><a href="#m3">loginWithValidCredentials</a></td><td rowspan="1">1687174106210</td><td rowspan="1">1344</td></tr><tr class="passedeven"><td rowspan="1">org.OptimaBusTests.uiTests.MainPageTest</td><td><a href="#m4">checkTheMPBar</a></td><td rowspan="1">1687174115881</td><td rowspan="1">2375</td></tr><tr class="passedodd"><td rowspan="1">org.OptimaBusTests.uiTests.OperationHisTests</td><td><a href="#m5">checkThe2BTN</a></td><td rowspan="1">1687174127460</td><td rowspan="1">362</td></tr><tr class="passedeven"><td rowspan="5">org.OptimaBusTests.uiTests.SettingsTests</td><td><a href="#m6">AccountVisibility</a></td><td rowspan="1">1687174136863</td><td rowspan="1">4738</td></tr><tr class="passedeven"><td><a href="#m7">ChangeNumber</a></td><td rowspan="1">1687174142237</td><td rowspan="1">321</td></tr><tr class="passedeven"><td><a href="#m8">ChangePassword</a></td><td rowspan="1">1687174141602</td><td rowspan="1">634</td></tr><tr class="passedeven"><td><a href="#m9">CheckSettings</a></td><td rowspan="1">1687174136281</td><td rowspan="1">116</td></tr><tr class="passedeven"><td><a href="#m10">PayControl</a></td><td rowspan="1">1687174136399</td><td rowspan="1">463</td></tr></tbody>
 </table>
-<h2>Surefire test</h2><h3 id="m0">org.OptimaBusTests.uiTests.MainPageTest#checkTheMPBar</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: .//a[@class=&apos;nav-item&apos;][6]&apos; (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at org.OptimaBus.UI.helper.WebElementActions.waitElementToBeDisplayed(WebElementActions.java:22)
-	at org.OptimaBus.UI.helper.WebElementActions.click(WebElementActions.java:38)
-	at org.OptimaBus.UI.pages.MoreCallCenter.BTN7(MoreCallCenter.java:22)
-	at org.OptimaBusTests.uiTests.MainPageTest.checkTheMPBar(MainPageTest.java:27)
+<h2>Surefire test</h2><h3 id="m0">org.OptimaBusTests.uiTests.MainPageTest#checkOtherBTNS</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [https://test-ob.optimabank.kg/accounts] but found [https://test-ob.optimabank.kg/]
+	at org.OptimaBusTests.uiTests.MainPageTest.checkOtherBTNS(MainPageTest.java:39)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//a[@class=&apos;nav-item&apos;][6]&quot;}
-  (Session info: headless chrome=113.0.5672.127)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.16.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c2130df154867419f99c868c148b42f9, findElement {using=xpath, value=.//a[@class=&apos;nav-item&apos;][6]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50016}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50016/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c2130df154867419f99c868c148b42f9
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy31.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 37 more
-... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">org.OptimaBusTests.uiTests.SettingsTests#AccountVisibility</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (.//button[@class=&quot;q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text-red q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase q-btn--dense action-btn&quot;])[1]&apos; (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at org.OptimaBus.UI.helper.WebElementActions.waitElementToBeDisplayed(WebElementActions.java:22)
-	at org.OptimaBus.UI.helper.WebElementActions.click(WebElementActions.java:38)
-	at org.OptimaBus.UI.pages.Settings.cngVis(Settings.java:91)
-	at org.OptimaBusTests.uiTests.SettingsTests.AccountVisibility(SettingsTests.java:30)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(.//button[@class=&quot;q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text-red q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase q-btn--dense action-btn&quot;])[1]&quot;}
-  (Session info: headless chrome=113.0.5672.127)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.16.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fb3844e9336165cd272a4e9d3e3ed471, findElement {using=xpath, value=(.//button[@class=&quot;q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text-red q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase q-btn--dense action-btn&quot;])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50073}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50073/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: fb3844e9336165cd272a4e9d3e3ed471
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy31.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 37 more
-... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">org.OptimaBusTests.uiTests.SettingsTests#ChangePassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (.//div[@class=&apos;q-tab__label&apos;])[3]&apos; (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at org.OptimaBus.UI.helper.WebElementActions.waitElementToBeDisplayed(WebElementActions.java:22)
-	at org.OptimaBus.UI.helper.WebElementActions.click(WebElementActions.java:38)
-	at org.OptimaBus.UI.pages.Settings.cngPassBTN(Settings.java:83)
-	at org.OptimaBusTests.uiTests.SettingsTests.ChangePassword(SettingsTests.java:36)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(.//div[@class=&apos;q-tab__label&apos;])[3]&quot;}
-  (Session info: headless chrome=113.0.5672.127)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.16.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fb3844e9336165cd272a4e9d3e3ed471, findElement {using=xpath, value=(.//div[@class=&apos;q-tab__label&apos;])[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50073}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50073/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: fb3844e9336165cd272a4e9d3e3ed471
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy31.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 37 more
-... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">org.OptimaBusTests.uiTests.CalcTests#chooseUSD</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">org.OptimaBusTests.uiTests.CalcTests#loginWithValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">org.OptimaBusTests.uiTests.LoginTests#loginWithValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">org.OptimaBusTests.uiTests.MainPageTest#checkOtherBTNS</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">org.OptimaBusTests.uiTests.OperationHisTests#checkThe2BTN</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">org.OptimaBusTests.uiTests.SettingsTests#CheckSettings</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 38 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">org.OptimaBusTests.uiTests.CalcTests#chooseUSD</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">org.OptimaBusTests.uiTests.CalcTests#loginWithValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">org.OptimaBusTests.uiTests.LoginTests#loginWithValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">org.OptimaBusTests.uiTests.MainPageTest#checkTheMPBar</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">org.OptimaBusTests.uiTests.OperationHisTests#checkThe2BTN</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">org.OptimaBusTests.uiTests.SettingsTests#AccountVisibility</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">org.OptimaBusTests.uiTests.SettingsTests#ChangeNumber</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">org.OptimaBusTests.uiTests.SettingsTests#ChangePassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">org.OptimaBusTests.uiTests.SettingsTests#CheckSettings</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">org.OptimaBusTests.uiTests.SettingsTests#PayControl</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

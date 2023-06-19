@@ -1,90 +1,110 @@
 [ {
-  "uid" : "54efd46596a8aab2",
+  "uid" : "c6eef7f039bbe8d7",
+  "name" : "check PayControl",
+  "time" : {
+    "start" : 1687174136401,
+    "stop" : 1687174136862,
+    "duration" : 461
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bb751634339176c2",
+  "name" : "Verify that user can login with valid credentials",
+  "time" : {
+    "start" : 1687174106212,
+    "stop" : 1687174107554,
+    "duration" : 1342
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3d7e2484d45db609",
+  "name" : "check change telephone number",
+  "time" : {
+    "start" : 1687174142238,
+    "stop" : 1687174142558,
+    "duration" : 320
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2d0d134891d40d88",
   "name" : "check navigation bar",
   "time" : {
-    "start" : 1685434249402,
-    "stop" : 1685434283323,
-    "duration" : 33921
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "d27be5a01c7df404",
-  "name" : "check settings (information)",
-  "time" : {
-    "start" : 1685434302622,
-    "stop" : 1685434303286,
-    "duration" : 664
+    "start" : 1687174115883,
+    "stop" : 1687174118256,
+    "duration" : 2373
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "6053f8cf8ae1d75d",
-  "name" : "Check other buttons",
-  "time" : {
-    "start" : 1685434283333,
-    "stop" : 1685434284646,
-    "duration" : 1313
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "5ec75508c6ab90a2",
-  "name" : "check account visibility",
-  "time" : {
-    "start" : 1685434303288,
-    "stop" : 1685434348355,
-    "duration" : 45067
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "92814ffc591368aa",
-  "name" : "check change password",
-  "time" : {
-    "start" : 1685434348358,
-    "stop" : 1685434378399,
-    "duration" : 30041
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "fed1baa238d684a4",
-  "name" : "Verify that user can login with valid credentials",
-  "time" : {
-    "start" : 1685434227316,
-    "stop" : 1685434229333,
-    "duration" : 2017
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "2ae5098a21090298",
-  "name" : "Click to История операции in Main Page",
-  "time" : {
-    "start" : 1685434293443,
-    "stop" : 1685434294148,
-    "duration" : 705
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "6ad5415de74d99a",
+  "uid" : "8982ddead0cabb5a",
   "name" : "Change the currency  ",
   "time" : {
-    "start" : 1685434229420,
-    "stop" : 1685434234226,
-    "duration" : 4806
+    "start" : 1687174097663,
+    "stop" : 1687174100746,
+    "duration" : 3083
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "87fa23410956517a",
+  "uid" : "b4f8343450b4500",
+  "name" : "check settings (information)",
+  "time" : {
+    "start" : 1687174136283,
+    "stop" : 1687174136397,
+    "duration" : 114
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "42c787cd84a5cc80",
+  "name" : "Check other buttons",
+  "time" : {
+    "start" : 1687174118258,
+    "stop" : 1687174118993,
+    "duration" : 735
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "2c390cb49579763",
+  "name" : "check change password",
+  "time" : {
+    "start" : 1687174141604,
+    "stop" : 1687174142236,
+    "duration" : 632
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "de5b8b5ff3aca36c",
+  "name" : "check account visibility",
+  "time" : {
+    "start" : 1687174136864,
+    "stop" : 1687174141601,
+    "duration" : 4737
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a6b9260153afc9e6",
+  "name" : "Click to История операции in Main Page",
+  "time" : {
+    "start" : 1687174127462,
+    "stop" : 1687174127822,
+    "duration" : 360
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4f7fcc7d2dfd83e8",
   "name" : "Verify that user can login with valid credentials",
   "time" : {
-    "start" : 1685434238573,
-    "stop" : 1685434240311,
-    "duration" : 1738
+    "start" : 1687174095773,
+    "stop" : 1687174097552,
+    "duration" : 1779
   },
   "status" : "passed",
   "severity" : "normal"

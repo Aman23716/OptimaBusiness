@@ -4,11 +4,13 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import org.OptimaBus.UI.dataProvider.ConfigReader;
 import org.OptimaBus.UI.helper.WebElementActions;
+import org.OptimaBus.UI.pages.Converting;
 import org.OptimaBus.UI.pages.MainPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+//import ru.testit.annotations.WorkItemIds;
 
 public class CalcTests extends BaseUiTests{
     SoftAssert softAssert = new SoftAssert();
@@ -18,9 +20,10 @@ public class CalcTests extends BaseUiTests{
         loginPage.fillUpUsernameAndPass();
 //        mainPage.ChooseUtes();
         mainPage.ChooseAltynken1();
-   }
+    }
 
     @Test(priority = 1,description = "Verify that user can login with valid credentials")
+//    @WorkItemIds("1695")
     public void loginWithValidCredentials() {
         mainPage.chooseKurs();
     }
@@ -29,7 +32,7 @@ public class CalcTests extends BaseUiTests{
     @Owner("Aman")
     @Description("")
     public void chooseUSD(){
-        Assert.assertEquals(driver.getCurrentUrl(),"https://test-ob.optimabank.kg/accounts");
+        softAssert.assertEquals(driver.getCurrentUrl(),"https://test-ob.optimabank.kg/accounts1");
         WebElementActions webElementActions1=new WebElementActions();
 //        System.out.println(webElementActions1.calk());
         MainPage mainPage1 = mainPage.GetValueSomSum(); /*Потом написать код для сравнения значений из Конвертаций*/
@@ -37,6 +40,10 @@ public class CalcTests extends BaseUiTests{
         softAssert.assertEquals(mainPage1,114.19);
         mainPage.CreateBTN();
         converting.CheckCalcValue();
+        converting.CalcResult();
+        Converting converting2 = converting.LOL();
+        Converting converting1 = converting.GetDocumValue();
+        Assert.assertEquals(converting1,converting2);
     }
 
 
