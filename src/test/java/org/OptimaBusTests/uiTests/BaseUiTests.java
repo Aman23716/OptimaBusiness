@@ -1,18 +1,23 @@
 package org.OptimaBusTests.uiTests;
 
 import org.OptimaBus.UI.driverFactory.Driver;
+import org.OptimaBus.UI.helper.CustomAssertions;
 import org.OptimaBus.UI.helper.WebElementActions;
 import org.OptimaBus.UI.pages.*;
+import org.OptimaBus.UI.pages.createBTN.Converting;
+import org.OptimaBus.UI.pages.createBTN.Intra_bank_transfer;
+import org.OptimaBus.UI.pages.createBTN.MBPerevodSom;
+import org.OptimaBus.UI.pages.createBTN.MBPerevodVal;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public abstract class BaseUiTests {
 
-
-
-
-
+    MBPerevodVal mbPerevodVal;
+    MBPerevodSom mbPerevodSom;
+    Intra_bank_transfer intra_bank_transfer;
+    CustomAssertions customAssertions;
     WebElementActions webElementActions;
     WebDriver driver;
     LoginPage loginPage;
@@ -46,7 +51,10 @@ public abstract class BaseUiTests {
         more = new More();
         staff = new Staff();
         converting= new Converting();
-
+        customAssertions = new CustomAssertions();
+        intra_bank_transfer=new Intra_bank_transfer();
+        mbPerevodSom=new MBPerevodSom();
+        mbPerevodVal=new MBPerevodVal();
     }
     @AfterClass
     public void tearDown() {

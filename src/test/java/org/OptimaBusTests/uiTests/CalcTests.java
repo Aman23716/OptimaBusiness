@@ -4,7 +4,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import org.OptimaBus.UI.dataProvider.ConfigReader;
 import org.OptimaBus.UI.helper.WebElementActions;
-import org.OptimaBus.UI.pages.Converting;
+import org.OptimaBus.UI.pages.createBTN.Converting;
 import org.OptimaBus.UI.pages.MainPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -19,7 +19,7 @@ public class CalcTests extends BaseUiTests{
         driver.navigate().to(ConfigReader.getProperty("qa_env"));
         loginPage.fillUpUsernameAndPass();
 //        mainPage.ChooseUtes();
-        mainPage.ChooseAltynken1();
+        mainPage.ChooseDentTrade();
     }
 
     @Test(priority = 1,description = "Verify that user can login with valid credentials")

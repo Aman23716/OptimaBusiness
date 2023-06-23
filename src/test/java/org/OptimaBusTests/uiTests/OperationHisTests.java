@@ -11,7 +11,7 @@ public class OperationHisTests extends BaseUiTests {
     public void openLoginPage() {
         driver.navigate().to(ConfigReader.getProperty("qa_env"));
         loginPage.fillUpUsernameAndPass();
-        mainPage.ChooseAltynken1();
+        mainPage.ChooseDentTrade();
     }
 
     @Test(priority = 0, description = "Click to История операции in Main Page")

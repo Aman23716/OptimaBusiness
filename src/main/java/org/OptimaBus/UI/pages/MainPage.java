@@ -78,7 +78,7 @@ public class MainPage extends BasePage {
 //        }
     }
 
-    public void ChooseAltynken1(){
+    public void ChooseDentTrade(){
         elementActions.click(chooseCompany);
         for (WebElement list1 : chooseAltynken){
             System.out.println(list1);
@@ -90,6 +90,23 @@ public class MainPage extends BasePage {
             }
         }
     }
+    public void ChooseImaratStroi(){
+        elementActions.click(chooseCompany);
+        for (WebElement list1 : chooseAltynken){
+            System.out.println(list1);
+            if (list1.getText().equals("ОсОО \"Имарат Строй\"")){
+                list1.click();
+//                if (list1.getText().equals(ConfigReader.getProperty("CompName"))){
+//                    list1.click();
+//
+            }
+        }
+    }
+
+
+
+
+
     public void listOfCurr() {
         for (WebElement list : listOfcurency) {
             System.out.println(list.getText());

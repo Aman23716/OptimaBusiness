@@ -1,5 +1,6 @@
-package org.OptimaBus.UI.pages;
+package org.OptimaBus.UI.pages.createBTN;
 
+import org.OptimaBus.UI.pages.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

@@ -12,7 +12,7 @@ public class MainPageTest extends BaseUiTests{
     public void openLoginPage() {
         driver.navigate().to(ConfigReader.getProperty("qa_env"));
         loginPage.fillUpUsernameAndPass();
-        mainPage.ChooseAltynken1();
+        mainPage.ChooseDentTrade();
     }
     @Test( description = "check navigation bar" )
     public void checkTheMPBar(){
