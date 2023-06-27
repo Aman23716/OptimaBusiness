@@ -10,7 +10,7 @@ public class MainPageTest extends BaseUiTests{
 
     @BeforeClass
     public void openLoginPage() {
-//        driver.navigate().to(ConfigReader.getProperty("qa_env"));
+        driver.navigate().to(ConfigReader.getProperty("qa_env"));
         loginPage.fillUpUsernameAndPass();
         mainPage.ChooseDentTrade();
     }

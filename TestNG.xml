@@ -10,6 +10,7 @@
             <class name="org.OptimaBusTests.uiTests.SettingsTests"/>
             <class name="org.OptimaBusTests.uiTests.MainPageTest"/>
             <class name="org.OptimaBusTests.uiTests.OperationHisTests"/>
+            <class name="org.OptimaBusTests.uiTests.IntraBankTest"/>
         </classes>
     </test>
 <!--    <test name="Regression">-->

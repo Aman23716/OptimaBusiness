@@ -1,5 +1,6 @@
 package org.OptimaBusTests.uiTests;
 
+import org.OptimaBus.UI.dataProvider.ConfigReader;
 import org.OptimaBus.UI.driverFactory.Driver;
 import org.OptimaBus.UI.helper.CustomAssertions;
 import org.OptimaBus.UI.helper.WebElementActions;
@@ -40,6 +41,10 @@ public abstract class BaseUiTests {
 
     @BeforeClass
     public void setUpUiTest(){
+//        driver.navigate().to(ConfigReader.getProperty("qa_env"));
+//        loginPage.fillUpUsernameAndPass();
+
+
         loginPage=new LoginPage();
         webElementActions = new WebElementActions();
         driver= Driver.getDriver();

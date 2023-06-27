@@ -9,6 +9,7 @@ public class LoginTests extends BaseUiTests {
     @BeforeClass
     public void openLoginPage() {
         driver.navigate().to(ConfigReader.getProperty("qa_env"));
+        loginPage.fillUpUsernameAndPass();
 
     }
 

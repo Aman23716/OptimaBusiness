@@ -2,6 +2,7 @@ package org.OptimaBusTests.uiTests;
 
 import org.OptimaBus.UI.dataProvider.ConfigReader;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class IntraBankTest extends BaseUiTests{
@@ -14,8 +15,30 @@ public class IntraBankTest extends BaseUiTests{
         loginPage.fillUpUsernameAndPass();
         mainPage.ChooseImaratStroi();
     }
+    @BeforeMethod
+    public void refreshPage(){
+        webElementActions.refreshPage();
+    }
 
-//    @Test(description = "")
+    @Test(description = "Check 'На подпись' button ")
+    public void naPodpisBTNCheck(){
+        intra_bank_transfer.CheckNaPodpisBTN();
+    }
+    @Test(description = "Check the wrong schet")
+    public void wrongSchetZachisleniyaError(){
+        intra_bank_transfer.TestTheWrongSchet();
+    customAssertions.asserText("Счет не найден!", intra_bank_transfer.schetPoluchatelyaError, "alert");
+    }
+    @Test(description = "Check the wrong schet spisaniya")
+    public void wrongSchetSpisaniyaError(){
+        intra_bank_transfer.TestTheWrongSchetSpisaniya();
+        customAssertions.asserText("Заполните поле!",intra_bank_transfer.zapolnitePoleError,"alert");
+    }
+    @Test(description = "Check to transfer more money then in the accaunt")
+    public void moreThenHaveError(){
+        intra_bank_transfer.TestMoreMoneyThenHave();
+        customAssertions.asserText("Сумма платежа превышает доступный баланс счета",intra_bank_transfer.summaError,"alert");
+    }
 
 
 
