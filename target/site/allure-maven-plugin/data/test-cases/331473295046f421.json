@@ -1,0 +1,110 @@
+{
+  "uid" : "331473295046f421",
+  "name" : "Click to (На редактирование) BTN",
+  "fullName" : "org.OptimaBusTests.uiTests.OperationHisTests.NaRedact",
+  "historyId" : "791c20cd8fb73f64d00ca83ea8db3fe",
+  "time" : {
+    "start" : 1687751491207,
+    "stop" : 1687751491519,
+    "duration" : 312
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUpUiTest",
+    "time" : {
+      "start" : 1687751482182,
+      "stop" : 1687751483025,
+      "duration" : 843
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "openLoginPage",
+    "time" : {
+      "start" : 1687751483026,
+      "stop" : 1687751490200,
+      "duration" : 7174
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1687751492779,
+      "stop" : 1687751492995,
+      "duration" : 216
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "org.OptimaBusTests.uiTests.OperationHisTests"
+  }, {
+    "name" : "testClass",
+    "value" : "org.OptimaBusTests.uiTests.OperationHisTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "NaRedact"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Surefire suite"
+  }, {
+    "name" : "suite",
+    "value" : "Surefire test"
+  }, {
+    "name" : "subSuite",
+    "value" : "org.OptimaBusTests.uiTests.OperationHisTests"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-9FFHNT2"
+  }, {
+    "name" : "thread",
+    "value" : "15924@DESKTOP-9FFHNT2.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "331473295046f421.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,110 @@
+{
+  "uid" : "ffa0c642c421458d",
+  "name" : "Check the importBTN",
+  "fullName" : "org.OptimaBusTests.uiTests.MainPageTest.importCheckBTN",
+  "historyId" : "31fa98218b8fd9c01a529e9d35b5f52f",
+  "time" : {
+    "start" : 1687751481984,
+    "stop" : 1687751481985,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUpUiTest",
+    "time" : {
+      "start" : 1687751455937,
+      "stop" : 1687751456693,
+      "duration" : 756
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "openLoginPage",
+    "time" : {
+      "start" : 1687751456693,
+      "stop" : 1687751463847,
+      "duration" : 7154
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1687751481986,
+      "stop" : 1687751482182,
+      "duration" : 196
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "org.OptimaBusTests.uiTests.MainPageTest"
+  }, {
+    "name" : "testClass",
+    "value" : "org.OptimaBusTests.uiTests.MainPageTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "importCheckBTN"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Surefire suite"
+  }, {
+    "name" : "suite",
+    "value" : "Surefire test"
+  }, {
+    "name" : "subSuite",
+    "value" : "org.OptimaBusTests.uiTests.MainPageTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-9FFHNT2"
+  }, {
+    "name" : "thread",
+    "value" : "15924@DESKTOP-9FFHNT2.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ffa0c642c421458d.json",
+  "parameterValues" : [ ]
+}
