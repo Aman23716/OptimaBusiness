@@ -5,9 +5,9 @@
     <classes>
       <class name="org.OptimaBusTests.uiTests.MainPageTest">
         <methods>
-          <include name="checkOtherBTNS"/>
           <include name="openLoginPage"/>
           <include name="setUpUiTest"/>
+          <include name="visibilityBellBtn"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- org.OptimaBusTests.uiTests.MainPageTest -->

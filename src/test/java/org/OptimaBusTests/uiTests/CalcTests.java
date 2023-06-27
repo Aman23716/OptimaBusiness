@@ -18,8 +18,7 @@ public class CalcTests extends BaseUiTests{
     public void openLoginPage() {
         driver.navigate().to(ConfigReader.getProperty("qa_env"));
         loginPage.fillUpUsernameAndPass();
-//        mainPage.ChooseUtes();
-        mainPage.ChooseDentTrade();
+        mainPage.ChooseImaratStroi();
     }
 
     @Test(priority = 1,description = "Verify that user can login with valid credentials")

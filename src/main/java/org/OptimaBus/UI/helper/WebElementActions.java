@@ -40,12 +40,10 @@ public class WebElementActions {
         waitForElementVisibilityOf(element);
         element.click();
         pause(200);
-
         return this;
     }
     public boolean isClickAble(WebElement element){
         element.isSelected();
-
         return true;
     }
     public WebElementActions sendKeysDouble(WebElement element, Double f){
@@ -53,16 +51,11 @@ public class WebElementActions {
         element.sendKeys(Double.toString(f));
         return this;
     }
-
-
-
-
     public WebElementActions sendKeysInt(WebElement element, Integer f){
         waitElementToBeDisplayed(element);
         element.sendKeys(Integer.toString(f));
         return this;
     }
-
     public WebElementActions sendKeys(WebElement element, String txt){
         waitElementToBeDisplayed(element);
         element.sendKeys(txt);
@@ -72,7 +65,6 @@ public class WebElementActions {
         assertEquals(Driver.getDriver().getCurrentUrl(),object);
         return this;
     }
-
     public WebElementActions pause(Integer milliSeconds){
         try {
             TimeUnit.MILLISECONDS.sleep(milliSeconds);
@@ -92,9 +84,7 @@ public class WebElementActions {
         pause(3000);
         return this;
     }
-
     public static int calk(int a, int b){
-
         return a * b;
     }
 
@@ -104,5 +94,30 @@ public class WebElementActions {
         String text = element.getText();
         return text;
     }
+    public WebElementActions inputDocumentNumber1(WebElement element){
+        waitElementToBeDisplayed(element);
+        waitForElementVisibilityOf(element);
+        element.sendKeys("Test value 307698");
+        return this;
+    }
+    public WebElementActions inputNaznachenieField1(WebElement element){
+        waitForElementVisibilityOf(element);
+        waitElementToBeDisplayed(element);
+        element.sendKeys("Test value for 'Назначение' field 1234567");
+        return this;
+    }
+    public WebElementActions inputDocumentNumber2(WebElement element){
+        waitElementToBeDisplayed(element);
+        waitForElementVisibilityOf(element);
+        element.sendKeys("Test wrong value не должно пройти");
+        return this;
+    }
+    public WebElementActions inputNaznachenieField2(WebElement element){
+        waitForElementVisibilityOf(element);
+        waitElementToBeDisplayed(element);
+        element.sendKeys("dfsggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg1");
+    return this;
+    }
+
 
 }

@@ -1,90 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="11" passed="10" failed="1" skipped="0">
+<testng-results ignored="0" total="20" passed="19" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-19T17:28:04 ALMT" name="Surefire suite" finished-at="2023-06-19T17:29:02 ALMT" duration-ms="58547">
+  <suite started-at="2023-06-26T09:50:30 ALMT" name="Surefire suite" finished-at="2023-06-26T09:51:48 ALMT" duration-ms="77070">
     <groups>
     </groups>
-    <test started-at="2023-06-19T17:28:04 ALMT" name="Surefire test" finished-at="2023-06-19T17:29:02 ALMT" duration-ms="58547">
+    <test started-at="2023-06-26T09:50:30 ALMT" name="Surefire test" finished-at="2023-06-26T09:51:48 ALMT" duration-ms="77070">
       <class name="org.OptimaBusTests.uiTests.SettingsTests">
-        <test-method is-config="true" signature="setUpUiTest()[pri:0, instance:org.OptimaBusTests.uiTests.SettingsTests@3cbcd8f3]" started-at="2023-06-19T17:28:48 ALMT" name="setUpUiTest" finished-at="2023-06-19T17:28:48 ALMT" duration-ms="832" status="PASS">
+        <test-method is-config="true" signature="setUpUiTest()[pri:0, instance:org.OptimaBusTests.uiTests.SettingsTests@44cb460e]" started-at="2023-06-26T09:51:32 ALMT" name="setUpUiTest" finished-at="2023-06-26T09:51:33 ALMT" duration-ms="829" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpUiTest -->
-        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:org.OptimaBusTests.uiTests.SettingsTests@3cbcd8f3]" started-at="2023-06-19T17:28:48 ALMT" name="openLoginPage" finished-at="2023-06-19T17:28:56 ALMT" duration-ms="7387" status="PASS">
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:org.OptimaBusTests.uiTests.SettingsTests@44cb460e]" started-at="2023-06-26T09:51:33 ALMT" name="openLoginPage" finished-at="2023-06-26T09:51:41 ALMT" duration-ms="7769" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openLoginPage -->
-        <test-method signature="CheckSettings()[pri:1, instance:org.OptimaBusTests.uiTests.SettingsTests@3cbcd8f3]" started-at="2023-06-19T17:28:56 ALMT" name="CheckSettings" description="check settings (information)" finished-at="2023-06-19T17:28:56 ALMT" duration-ms="116" status="PASS">
+        <test-method signature="CheckSettings()[pri:1, instance:org.OptimaBusTests.uiTests.SettingsTests@44cb460e]" started-at="2023-06-26T09:51:41 ALMT" name="CheckSettings" description="check settings (information)" finished-at="2023-06-26T09:51:41 ALMT" duration-ms="144" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckSettings -->
-        <test-method signature="PayControl()[pri:2, instance:org.OptimaBusTests.uiTests.SettingsTests@3cbcd8f3]" started-at="2023-06-19T17:28:56 ALMT" name="PayControl" description="check PayControl" finished-at="2023-06-19T17:28:56 ALMT" duration-ms="463" status="PASS">
+        <test-method signature="PayControl()[pri:2, instance:org.OptimaBusTests.uiTests.SettingsTests@44cb460e]" started-at="2023-06-26T09:51:41 ALMT" name="PayControl" description="check PayControl" finished-at="2023-06-26T09:51:42 ALMT" duration-ms="430" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PayControl -->
-        <test-method signature="AccountVisibility()[pri:3, instance:org.OptimaBusTests.uiTests.SettingsTests@3cbcd8f3]" started-at="2023-06-19T17:28:56 ALMT" name="AccountVisibility" description="check account visibility" finished-at="2023-06-19T17:29:01 ALMT" duration-ms="4738" status="PASS">
+        <test-method signature="AccountVisibility()[pri:3, instance:org.OptimaBusTests.uiTests.SettingsTests@44cb460e]" started-at="2023-06-26T09:51:42 ALMT" name="AccountVisibility" description="check account visibility" finished-at="2023-06-26T09:51:46 ALMT" duration-ms="4710" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AccountVisibility -->
-        <test-method signature="ChangePassword()[pri:4, instance:org.OptimaBusTests.uiTests.SettingsTests@3cbcd8f3]" started-at="2023-06-19T17:29:01 ALMT" name="ChangePassword" description="check change password" finished-at="2023-06-19T17:29:02 ALMT" duration-ms="634" status="PASS">
+        <test-method signature="ChangePassword()[pri:4, instance:org.OptimaBusTests.uiTests.SettingsTests@44cb460e]" started-at="2023-06-26T09:51:46 ALMT" name="ChangePassword" description="check change password" finished-at="2023-06-26T09:51:47 ALMT" duration-ms="649" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ChangePassword -->
-        <test-method signature="ChangeNumber()[pri:5, instance:org.OptimaBusTests.uiTests.SettingsTests@3cbcd8f3]" started-at="2023-06-19T17:29:02 ALMT" name="ChangeNumber" description="check change telephone number" finished-at="2023-06-19T17:29:02 ALMT" duration-ms="321" status="PASS">
+        <test-method signature="ChangeNumber()[pri:5, instance:org.OptimaBusTests.uiTests.SettingsTests@44cb460e]" started-at="2023-06-26T09:51:47 ALMT" name="ChangeNumber" description="check change telephone number" finished-at="2023-06-26T09:51:47 ALMT" duration-ms="312" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ChangeNumber -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.OptimaBusTests.uiTests.SettingsTests@3cbcd8f3]" started-at="2023-06-19T17:29:02 ALMT" name="tearDown" finished-at="2023-06-19T17:29:02 ALMT" duration-ms="236" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.OptimaBusTests.uiTests.SettingsTests@44cb460e]" started-at="2023-06-26T09:51:47 ALMT" name="tearDown" finished-at="2023-06-26T09:51:48 ALMT" duration-ms="202" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.OptimaBusTests.uiTests.SettingsTests -->
       <class name="org.OptimaBusTests.uiTests.OperationHisTests">
-        <test-method is-config="true" signature="setUpUiTest()[pri:0, instance:org.OptimaBusTests.uiTests.OperationHisTests@73044cdf]" started-at="2023-06-19T17:28:39 ALMT" name="setUpUiTest" finished-at="2023-06-19T17:28:39 ALMT" duration-ms="765" status="PASS">
+        <test-method is-config="true" signature="setUpUiTest()[pri:0, instance:org.OptimaBusTests.uiTests.OperationHisTests@2b556bb2]" started-at="2023-06-26T09:51:22 ALMT" name="setUpUiTest" finished-at="2023-06-26T09:51:23 ALMT" duration-ms="843" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpUiTest -->
-        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:org.OptimaBusTests.uiTests.OperationHisTests@73044cdf]" started-at="2023-06-19T17:28:39 ALMT" name="openLoginPage" finished-at="2023-06-19T17:28:47 ALMT" duration-ms="7533" status="PASS">
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:org.OptimaBusTests.uiTests.OperationHisTests@2b556bb2]" started-at="2023-06-26T09:51:23 ALMT" name="openLoginPage" finished-at="2023-06-26T09:51:30 ALMT" duration-ms="7175" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openLoginPage -->
-        <test-method signature="checkThe2BTN()[pri:0, instance:org.OptimaBusTests.uiTests.OperationHisTests@73044cdf]" started-at="2023-06-19T17:28:47 ALMT" name="checkThe2BTN" description="Click to История операции in Main Page" finished-at="2023-06-19T17:28:47 ALMT" duration-ms="362" status="PASS">
+        <test-method signature="checkThe2BTN()[pri:0, instance:org.OptimaBusTests.uiTests.OperationHisTests@2b556bb2]" started-at="2023-06-26T09:51:30 ALMT" name="checkThe2BTN" description="Click to История операции in Main Page" finished-at="2023-06-26T09:51:30 ALMT" duration-ms="360" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkThe2BTN -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.OptimaBusTests.uiTests.OperationHisTests@73044cdf]" started-at="2023-06-19T17:28:47 ALMT" name="tearDown" finished-at="2023-06-19T17:28:48 ALMT" duration-ms="238" status="PASS">
+        <test-method signature="NaPodpis()[pri:1, instance:org.OptimaBusTests.uiTests.OperationHisTests@2b556bb2]" started-at="2023-06-26T09:51:30 ALMT" name="NaPodpis" description="Click to (На Подпись) BTN" finished-at="2023-06-26T09:51:30 ALMT" duration-ms="329" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NaPodpis -->
+        <test-method signature="OjidaetOtpr()[pri:2, instance:org.OptimaBusTests.uiTests.OperationHisTests@2b556bb2]" started-at="2023-06-26T09:51:30 ALMT" name="OjidaetOtpr" description="Click to (Ожидает подписи) BTN" finished-at="2023-06-26T09:51:31 ALMT" duration-ms="313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OjidaetOtpr -->
+        <test-method signature="NaRedact()[pri:3, instance:org.OptimaBusTests.uiTests.OperationHisTests@2b556bb2]" started-at="2023-06-26T09:51:31 ALMT" name="NaRedact" description="Click to (На редактирование) BTN" finished-at="2023-06-26T09:51:31 ALMT" duration-ms="313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NaRedact -->
+        <test-method signature="Ispolnennye()[pri:4, instance:org.OptimaBusTests.uiTests.OperationHisTests@2b556bb2]" started-at="2023-06-26T09:51:31 ALMT" name="Ispolnennye" description="Click to (Исполненные) BTN" finished-at="2023-06-26T09:51:31 ALMT" duration-ms="314" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Ispolnennye -->
+        <test-method signature="Otklonennye()[pri:5, instance:org.OptimaBusTests.uiTests.OperationHisTests@2b556bb2]" started-at="2023-06-26T09:51:31 ALMT" name="Otklonennye" description="Click to (Отклоненные) BTN" finished-at="2023-06-26T09:51:32 ALMT" duration-ms="315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Otklonennye -->
+        <test-method signature="OtkazanoBankom()[pri:6, instance:org.OptimaBusTests.uiTests.OperationHisTests@2b556bb2]" started-at="2023-06-26T09:51:32 ALMT" name="OtkazanoBankom" description="Click to (Отказано Банком) BTN" finished-at="2023-06-26T09:51:32 ALMT" duration-ms="310" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OtkazanoBankom -->
+        <test-method signature="MoiChernoviki()[pri:7, instance:org.OptimaBusTests.uiTests.OperationHisTests@2b556bb2]" started-at="2023-06-26T09:51:32 ALMT" name="MoiChernoviki" description="Click to (Мои черновики) BTN" finished-at="2023-06-26T09:51:32 ALMT" duration-ms="315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MoiChernoviki -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.OptimaBusTests.uiTests.OperationHisTests@2b556bb2]" started-at="2023-06-26T09:51:32 ALMT" name="tearDown" finished-at="2023-06-26T09:51:32 ALMT" duration-ms="216" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.OptimaBusTests.uiTests.OperationHisTests -->
       <class name="org.OptimaBusTests.uiTests.MainPageTest">
-        <test-method is-config="true" signature="setUpUiTest()[pri:0, instance:org.OptimaBusTests.uiTests.MainPageTest@205b132e]" started-at="2023-06-19T17:28:27 ALMT" name="setUpUiTest" finished-at="2023-06-19T17:28:28 ALMT" duration-ms="779" status="PASS">
+        <test-method is-config="true" signature="setUpUiTest()[pri:0, instance:org.OptimaBusTests.uiTests.MainPageTest@451f87af]" started-at="2023-06-26T09:50:55 ALMT" name="setUpUiTest" finished-at="2023-06-26T09:50:56 ALMT" duration-ms="756" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpUiTest -->
-        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:org.OptimaBusTests.uiTests.MainPageTest@205b132e]" started-at="2023-06-19T17:28:28 ALMT" name="openLoginPage" finished-at="2023-06-19T17:28:35 ALMT" duration-ms="7346" status="PASS">
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:org.OptimaBusTests.uiTests.MainPageTest@451f87af]" started-at="2023-06-26T09:50:56 ALMT" name="openLoginPage" finished-at="2023-06-26T09:51:03 ALMT" duration-ms="7154" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openLoginPage -->
-        <test-method signature="checkTheMPBar()[pri:0, instance:org.OptimaBusTests.uiTests.MainPageTest@205b132e]" started-at="2023-06-19T17:28:35 ALMT" name="checkTheMPBar" description="check navigation bar" finished-at="2023-06-19T17:28:38 ALMT" duration-ms="2375" status="PASS">
+        <test-method signature="checkTheMPBar()[pri:0, instance:org.OptimaBusTests.uiTests.MainPageTest@451f87af]" started-at="2023-06-26T09:51:03 ALMT" name="checkTheMPBar" description="check navigation bar" finished-at="2023-06-26T09:51:06 ALMT" duration-ms="2375" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkTheMPBar -->
-        <test-method signature="checkOtherBTNS()[pri:2, instance:org.OptimaBusTests.uiTests.MainPageTest@205b132e]" started-at="2023-06-19T17:28:38 ALMT" name="checkOtherBTNS" description="Check other buttons" finished-at="2023-06-19T17:28:38 ALMT" duration-ms="734" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="visibilityBellBtn()[pri:2, instance:org.OptimaBusTests.uiTests.MainPageTest@451f87af]" started-at="2023-06-26T09:51:06 ALMT" name="visibilityBellBtn" finished-at="2023-06-26T09:51:21 ALMT" duration-ms="15044" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [https://test-ob.optimabank.kg/accounts] but found [https://test-ob.optimabank.kg/]]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense icon-notification lite-shadow payment__btn']"}
+  (Session info: chrome=114.0.5735.134)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fd69403acc135243a4a8efba47afd3d1, findElement {using=xpath, value=.//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense icon-notification lite-shadow payment__btn']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:60484}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60484/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fd69403acc135243a4a8efba47afd3d1]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [https://test-ob.optimabank.kg/accounts] but found [https://test-ob.optimabank.kg/]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1577)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
-at org.OptimaBusTests.uiTests.MainPageTest.checkOtherBTNS(MainPageTest.java:39)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense icon-notification lite-shadow payment__btn']"}
+  (Session info: chrome=114.0.5735.134)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fd69403acc135243a4a8efba47afd3d1, findElement {using=xpath, value=.//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense icon-notification lite-shadow payment__btn']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:60484}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60484/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fd69403acc135243a4a8efba47afd3d1
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at com.sun.proxy.$Proxy30.click(Unknown Source)
+at org.OptimaBus.UI.pages.MainPage.checkBellBtn(MainPage.java:76)
+at org.OptimaBusTests.uiTests.MainPageTest.visibilityBellBtn(MainPageTest.java:39)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -120,51 +177,59 @@ at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- visibilityBellBtn -->
+        <test-method signature="checkOtherBTNS()[pri:3, instance:org.OptimaBusTests.uiTests.MainPageTest@451f87af]" started-at="2023-06-26T09:51:21 ALMT" name="checkOtherBTNS" description="Check other buttons" finished-at="2023-06-26T09:51:21 ALMT" duration-ms="704" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkOtherBTNS -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.OptimaBusTests.uiTests.MainPageTest@205b132e]" started-at="2023-06-19T17:28:39 ALMT" name="tearDown" finished-at="2023-06-19T17:28:39 ALMT" duration-ms="162" status="PASS">
+        <test-method signature="importCheckBTN()[pri:4, instance:org.OptimaBusTests.uiTests.MainPageTest@451f87af]" started-at="2023-06-26T09:51:21 ALMT" name="importCheckBTN" description="Check the importBTN" finished-at="2023-06-26T09:51:21 ALMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- importCheckBTN -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.OptimaBusTests.uiTests.MainPageTest@451f87af]" started-at="2023-06-26T09:51:21 ALMT" name="tearDown" finished-at="2023-06-26T09:51:22 ALMT" duration-ms="196" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.OptimaBusTests.uiTests.MainPageTest -->
       <class name="org.OptimaBusTests.uiTests.LoginTests">
-        <test-method is-config="true" signature="setUpUiTest()[pri:0, instance:org.OptimaBusTests.uiTests.LoginTests@7fc645e4]" started-at="2023-06-19T17:28:20 ALMT" name="setUpUiTest" finished-at="2023-06-19T17:28:21 ALMT" duration-ms="779" status="PASS">
+        <test-method is-config="true" signature="setUpUiTest()[pri:0, instance:org.OptimaBusTests.uiTests.LoginTests@6a84bc3f]" started-at="2023-06-26T09:50:49 ALMT" name="setUpUiTest" finished-at="2023-06-26T09:50:49 ALMT" duration-ms="877" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpUiTest -->
-        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:org.OptimaBusTests.uiTests.LoginTests@7fc645e4]" started-at="2023-06-19T17:28:21 ALMT" name="openLoginPage" finished-at="2023-06-19T17:28:26 ALMT" duration-ms="4455" status="PASS">
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:org.OptimaBusTests.uiTests.LoginTests@6a84bc3f]" started-at="2023-06-26T09:50:49 ALMT" name="openLoginPage" finished-at="2023-06-26T09:50:54 ALMT" duration-ms="4401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openLoginPage -->
-        <test-method signature="loginWithValidCredentials()[pri:0, instance:org.OptimaBusTests.uiTests.LoginTests@7fc645e4]" started-at="2023-06-19T17:28:26 ALMT" name="loginWithValidCredentials" description="Verify that user can login with valid credentials" finished-at="2023-06-19T17:28:27 ALMT" duration-ms="1344" status="PASS">
+        <test-method signature="loginWithValidCredentials()[pri:0, instance:org.OptimaBusTests.uiTests.LoginTests@6a84bc3f]" started-at="2023-06-26T09:50:54 ALMT" name="loginWithValidCredentials" description="Verify that user can login with valid credentials" finished-at="2023-06-26T09:50:55 ALMT" duration-ms="1362" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithValidCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.OptimaBusTests.uiTests.LoginTests@7fc645e4]" started-at="2023-06-19T17:28:27 ALMT" name="tearDown" finished-at="2023-06-19T17:28:27 ALMT" duration-ms="198" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.OptimaBusTests.uiTests.LoginTests@6a84bc3f]" started-at="2023-06-26T09:50:55 ALMT" name="tearDown" finished-at="2023-06-26T09:50:55 ALMT" duration-ms="198" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.OptimaBusTests.uiTests.LoginTests -->
       <class name="org.OptimaBusTests.uiTests.CalcTests">
-        <test-method is-config="true" signature="setUpUiTest()[pri:0, instance:org.OptimaBusTests.uiTests.CalcTests@5a8ba37c]" started-at="2023-06-19T17:28:04 ALMT" name="setUpUiTest" finished-at="2023-06-19T17:28:08 ALMT" duration-ms="3949" status="PASS">
+        <test-method is-config="true" signature="setUpUiTest()[pri:0, instance:org.OptimaBusTests.uiTests.CalcTests@3cbcd8f3]" started-at="2023-06-26T09:50:31 ALMT" name="setUpUiTest" finished-at="2023-06-26T09:50:36 ALMT" duration-ms="5848" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpUiTest -->
-        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:org.OptimaBusTests.uiTests.CalcTests@5a8ba37c]" started-at="2023-06-19T17:28:08 ALMT" name="openLoginPage" finished-at="2023-06-19T17:28:15 ALMT" duration-ms="7461" status="PASS">
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:org.OptimaBusTests.uiTests.CalcTests@3cbcd8f3]" started-at="2023-06-26T09:50:36 ALMT" name="openLoginPage" finished-at="2023-06-26T09:50:44 ALMT" duration-ms="7464" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openLoginPage -->
-        <test-method signature="loginWithValidCredentials()[pri:1, instance:org.OptimaBusTests.uiTests.CalcTests@5a8ba37c]" started-at="2023-06-19T17:28:15 ALMT" name="loginWithValidCredentials" description="Verify that user can login with valid credentials" finished-at="2023-06-19T17:28:17 ALMT" duration-ms="1809" status="PASS">
+        <test-method signature="loginWithValidCredentials()[pri:1, instance:org.OptimaBusTests.uiTests.CalcTests@3cbcd8f3]" started-at="2023-06-26T09:50:44 ALMT" name="loginWithValidCredentials" description="Verify that user can login with valid credentials" finished-at="2023-06-26T09:50:45 ALMT" duration-ms="1304" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithValidCredentials -->
-        <test-method signature="chooseUSD()[pri:2, instance:org.OptimaBusTests.uiTests.CalcTests@5a8ba37c]" started-at="2023-06-19T17:28:17 ALMT" name="chooseUSD" description="Change the currency  " finished-at="2023-06-19T17:28:20 ALMT" duration-ms="3086" status="PASS">
+        <test-method signature="chooseUSD()[pri:2, instance:org.OptimaBusTests.uiTests.CalcTests@3cbcd8f3]" started-at="2023-06-26T09:50:45 ALMT" name="chooseUSD" description="Change the currency  " finished-at="2023-06-26T09:50:48 ALMT" duration-ms="3018" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chooseUSD -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.OptimaBusTests.uiTests.CalcTests@5a8ba37c]" started-at="2023-06-19T17:28:20 ALMT" name="tearDown" finished-at="2023-06-19T17:28:20 ALMT" duration-ms="227" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.OptimaBusTests.uiTests.CalcTests@3cbcd8f3]" started-at="2023-06-26T09:50:48 ALMT" name="tearDown" finished-at="2023-06-26T09:50:49 ALMT" duration-ms="293" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
