@@ -21,7 +21,7 @@ public class MBPerevodVal extends BasePage {
     public WebElement countryBTN;
     @FindBy(xpath = "(.//div[@class='ob-select'])[2]")
     public WebElement chooseAustriyaCountry;
-    @FindBy(xpath = "(.//div[@class='q-field__control-container col relative-position row no-wrap q-anchor--skip'])[5]")
+    @FindBy(xpath = "(.//input[@class='q-field__input q-placeholder col'])[1]")
     public WebElement BIKField;
     @FindBy(xpath = "(.//div[@class='ob-select'])[2]")
     public WebElement chooseFirstBIK;
@@ -52,10 +52,10 @@ public class MBPerevodVal extends BasePage {
 
 
     public void CheckFunctionalNaPodpis(){
-        elementActions.click(createBTN).click(MBPerevodVal).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
-                .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
+        elementActions.click(createBTN).click(MBPerevodVal).pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+                .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
                 .sendKeys(IBANSchet,"2222222222222222222222222222222222").inputDocumentNumber1(numberOfDocument).sendKeysInt(summaPlatejaField,22)
-                .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN);
+                .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
     }
 
 

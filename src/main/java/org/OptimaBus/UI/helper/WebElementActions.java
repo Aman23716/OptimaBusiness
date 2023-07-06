@@ -39,7 +39,7 @@ public class WebElementActions {
         waitForElementToBeClickable(element);
         waitForElementVisibilityOf(element);
         element.click();
-        pause(200);
+        pause(1000);
         return this;
     }
     public boolean isClickAble(WebElement element){
@@ -103,7 +103,7 @@ public class WebElementActions {
     public WebElementActions inputNaznachenieField1(WebElement element){
         waitForElementVisibilityOf(element);
         waitElementToBeDisplayed(element);
-        element.sendKeys("Test value for 'Назначение' field 1234567");
+        element.sendKeys("Test value for 'Naznachenie' field 1234567");
         return this;
     }
     public WebElementActions inputDocumentNumber2(WebElement element){
