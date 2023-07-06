@@ -12,7 +12,7 @@ public class ChromeWebDriver {
 
     public static WebDriver loadChromeDriver (){
         WebDriverManager.chromedriver().setup();
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Asus\\.m2\\chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Asus\\.m2\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-extensions ");
         options.addArguments("--start-maximized");
@@ -23,7 +23,7 @@ public class ChromeWebDriver {
         if (Boolean.parseBoolean(ConfigReader.getProperty("headless"))){
             options.addArguments("--headless");
         }
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Asus\\.m2\\chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Asus\\.m2\\chromedriver.exe");
 
         WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));

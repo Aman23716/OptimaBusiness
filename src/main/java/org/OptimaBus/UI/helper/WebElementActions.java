@@ -97,7 +97,7 @@ public class WebElementActions {
     public WebElementActions inputDocumentNumber1(WebElement element){
         waitElementToBeDisplayed(element);
         waitForElementVisibilityOf(element);
-        element.sendKeys("Test value 307698");
+        element.sendKeys("Test value");
         return this;
     }
     public WebElementActions inputNaznachenieField1(WebElement element){
@@ -115,7 +115,7 @@ public class WebElementActions {
     public WebElementActions inputNaznachenieField2(WebElement element){
         waitForElementVisibilityOf(element);
         waitElementToBeDisplayed(element);
-        element.sendKeys("dfsggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg1");
+        element.sendKeys("dfs");
     return this;
     }
 

@@ -1,5 +1,6 @@
 package org.OptimaBus.UI.driverFactory;
 
+import org.OptimaBus.UI.dataProvider.ConfigReader;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +13,12 @@ import java.time.Duration;
 
 public class nwe {
 
+    public static void main(String[] args) {
+
+
+
+
+    }
     @Test
 
     public void testGoogleSearch() throws InterruptedException {

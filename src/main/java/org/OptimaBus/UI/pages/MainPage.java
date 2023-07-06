@@ -29,14 +29,14 @@ public class MainPage extends BasePage {
     @FindBy(xpath = ".//button")
     public WebElement BTNToEnter;
 
-    @FindBy(xpath = ".//a[@class='router-link-active router-link-exact-active nav-item active']")
+    @FindBy(xpath = ".//a[@class='router-link-active']")
     public WebElement clickMainBTN;
 
     @FindBy(xpath = ".//div[@class='logo-wrap']")
     public WebElement MAINBTN;
 
 
-    @FindBy(xpath = "(.//div[@class='account-header p2'])[1]")
+    @FindBy(xpath = "(.//div[@class='account-header'])[1]")
     public WebElement HUI;
 
     @FindBy(xpath = ".//a[@class='user-toggle no-caret']")
@@ -50,6 +50,7 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "(.//span[@class='q-ml-auto'])[1]")
     public WebElement KURSSOM;
     @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--rectangle bg-primary text-white q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase payment__btn lite-shadow']")
+
     public WebElement CreateBTN;
     @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle q-btn--actionable q-focusable q-hoverable p-select-header-close q-pa-none']")
     public WebElement ExitBTN;
@@ -145,7 +146,6 @@ public class MainPage extends BasePage {
 
     public MainPage clickMNPage(){
         elementActions.click(clickMainBTN);
-
 
         return this;
     }

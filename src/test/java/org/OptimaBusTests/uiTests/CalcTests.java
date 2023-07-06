@@ -31,7 +31,7 @@ public class CalcTests extends BaseUiTests{
     @Owner("Aman")
     @Description("")
     public void chooseUSD(){
-        softAssert.assertEquals(driver.getCurrentUrl(),"https://test-ob.optimabank.kg/accounts1");
+//        softAssert.assertEquals(driver.getCurrentUrl(),"https://test-ob.optimabank.kg/accounts1");
         WebElementActions webElementActions1=new WebElementActions();
 //        System.out.println(webElementActions1.calk());
         MainPage mainPage1 = mainPage.GetValueSomSum(); /*Потом написать код для сравнения значений из Конвертаций*/

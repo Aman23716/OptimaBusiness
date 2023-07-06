@@ -8,7 +8,7 @@ public class Intra_bank_transfer extends BasePage {
 
 
 
-    @FindBy(className = "q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--rectangle bg-primary text-white q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase payment__btn lite-shadow")
+    @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--rectangle bg-primary text-white q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase payment__btn lite-shadow']")
     public WebElement createBTN;
     @FindBy(xpath = "(.//div[@class='q-field__control-container col relative-position row no-wrap q-anchor--skip'])[2]")
     public WebElement schetSpisaniyaBTN;
@@ -20,9 +20,9 @@ public class Intra_bank_transfer extends BasePage {
     public WebElement inputSchetZa4isleniya;
     @FindBy(xpath = "(.//input[@class='q-field__native q-placeholder'])[3]")
     public WebElement inputDocumNumber;
-    @FindBy(xpath = "(.//div[@class='q-field__control-container col relative-position row no-wrap q-anchor--skip'])[5]")
+    @FindBy(xpath = ".//input[@class='q-field__input']")
     public WebElement inputSummuPlateja;
-    @FindBy(xpath = "(.//input[@class='q-field__native q-placeholder'])[4]")
+    @FindBy(xpath = ".//input[@class='q-field__input q-placeholder col']")
     public WebElement inputKodPlateja;
     @FindBy(xpath = "(.//div[@class='ob-select'])[15]")
     public WebElement chooseNalog;
@@ -45,26 +45,31 @@ public class Intra_bank_transfer extends BasePage {
     public WebElement documentNumberError;
     @FindBy(xpath = ".//div[@role='alert']")
     public WebElement summaError;
-    @FindBy(xpath = "(.//div[@role='alert'])[5]")
+    @FindBy(xpath = ".//div[@role='alert']")
     public WebElement naznachenieError;
 
 
 
     public void CheckNaPodpisBTN(){
-        elementActions.click(schetSpisaniyaBTN).click(vnutriBankBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091808755280112").inputDocumentNumber1(inputDocumNumber)
+        elementActions.click(createBTN).click(vnutriBankBTN).click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091808755280112").inputDocumentNumber1(inputDocumNumber)
                 .sendKeysInt(inputSummuPlateja,100).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).click(naPodpisBTN);
     }
     public void TestTheWrongSchet(){
-        elementActions.click(schetSpisaniyaBTN).click(vnutriBankBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091808755280113").inputDocumentNumber1(inputDocumNumber)
+        elementActions.click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091808755280113").inputDocumentNumber1(inputDocumNumber)
                 .sendKeysInt(inputSummuPlateja,100).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).click(naPodpisBTN);
     }
     public void TestTheWrongSchetSpisaniya(){
-        elementActions.click(schetSpisaniyaBTN).click(vnutriBankBTN).sendKeys(inputSchetZa4isleniya,"1091808755280113").inputDocumentNumber1(inputDocumNumber)
+        elementActions.sendKeys(inputSchetZa4isleniya,"1091808755280113").inputDocumentNumber1(inputDocumNumber)
                 .sendKeysInt(inputSummuPlateja,100).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).click(naPodpisBTN);
     }
     public void TestMoreMoneyThenHave(){
-        elementActions.click(schetSpisaniyaBTN).click(vnutriBankBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091808755280113").inputDocumentNumber1(inputDocumNumber)
+        elementActions.click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091808755280113").inputDocumentNumber1(inputDocumNumber)
                 .sendKeysInt(inputSummuPlateja,999999999).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).click(naPodpisBTN);
+    }
+    public void TestNaznachenieMinValue(){
+        elementActions.click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091800100721052").inputDocumentNumber1(inputDocumNumber)
+                .sendKeysInt(inputSummuPlateja,100).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField2(inputNaznachenie).click(naPodpisBTN);
+
     }
 
 

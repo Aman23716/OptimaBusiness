@@ -15,52 +15,52 @@ import org.testng.annotations.BeforeClass;
 
 public abstract class BaseUiTests {
 
-    MBPerevodVal mbPerevodVal;
-    MBPerevodSom mbPerevodSom;
-    Intra_bank_transfer intra_bank_transfer;
-    CustomAssertions customAssertions;
-    WebElementActions webElementActions;
-    WebDriver driver;
-    LoginPage loginPage;
+   public MBPerevodVal mbPerevodVal ;
+   public MBPerevodSom mbPerevodSom ;
+   public Intra_bank_transfer intra_bank_transfer ;
+   public CustomAssertions customAssertions;
+   public WebElementActions webElementActions ;
+   public WebDriver driver ;
+   public LoginPage loginPage;
 
-    MainPage mainPage;
+   public MainPage mainPage;
 
-    OperationHistory operationHistory;
+   public OperationHistory operationHistory;
 
-    Documents documents;
+   public Documents documents;
 
-    Imports imports;
+    public Imports imports;
 
-    Settings settings;
+   public Settings settings;
 
-    More more;
+   public More more;
 
-    Staff staff;
+   public Staff staff;
 
-    Converting converting;
+  public Converting converting;
 
     @BeforeClass
     public void setUpUiTest(){
 //        driver.navigate().to(ConfigReader.getProperty("qa_env"));
 //        loginPage.fillUpUsernameAndPass();
-
+//        driver.navigate().to(ConfigReader.getProperty("qa_env"));
+//        loginPage.fillUpUsernameAndPass();
+//        mainPage.ChooseImaratStroi();
 
         loginPage=new LoginPage();
         webElementActions = new WebElementActions();
         driver= Driver.getDriver();
         mainPage = new MainPage();
-        operationHistory= new OperationHistory();
-        documents = new Documents();
         imports= new  Imports();
         settings= new Settings();
         more = new More();
         staff = new Staff();
-        converting= new Converting();
+        converting = new Converting();
+        intra_bank_transfer = new Intra_bank_transfer();
         customAssertions = new CustomAssertions();
-        intra_bank_transfer=new Intra_bank_transfer();
-        mbPerevodSom=new MBPerevodSom();
-        mbPerevodVal=new MBPerevodVal();
-    }
+        mbPerevodSom = new MBPerevodSom();
+        mbPerevodVal = new MBPerevodVal();
+   }
     @AfterClass
     public void tearDown() {
         Driver.closeDriver();
