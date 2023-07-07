@@ -23,6 +23,8 @@ public class MBPerevodVal extends BasePage {
     public WebElement chooseAustriyaCountry;
     @FindBy(xpath = "(.//input[@class='q-field__input q-placeholder col'])[1]")
     public WebElement BIKField;
+    @FindBy(xpath = "(.//input[@class='q-field__input q-placeholder col'])[2]")
+    public WebElement BIKField2;
     @FindBy(xpath = "(.//div[@class='ob-select'])[2]")
     public WebElement chooseFirstBIK;
     @FindBy(xpath = "(.//input[@class='q-field__native q-placeholder'])[2]")
@@ -35,6 +37,8 @@ public class MBPerevodVal extends BasePage {
     public WebElement summaPlatejaField;
     @FindBy(xpath = "(.//input[@class='q-field__input q-placeholder col'])[2]")
     public WebElement codeOplaty;
+    @FindBy(xpath = "(.//input[@class='q-field__input q-placeholder col'])[3]")
+    public WebElement codeOplaty2;
     @FindBy(xpath = "(.//div[@class='ob-select'])[2]")
     public WebElement chooseNalog;
     @FindBy(xpath = ".//textarea[@class='q-field__native q-placeholder']")
@@ -45,19 +49,75 @@ public class MBPerevodVal extends BasePage {
 
 
 
-    @FindBy(xpath = "(.//div[@role='alert'])[1]")
+    @FindBy(xpath = ".//div[@role='alert']")
     public WebElement allAlert;
 
 
 
 
     public void CheckFunctionalNaPodpis(){
-        elementActions.click(createBTN).click(MBPerevodVal).pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+        elementActions.pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
                 .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
                 .sendKeys(IBANSchet,"2222222222222222222222222222222222").inputDocumentNumber1(numberOfDocument).sendKeysInt(summaPlatejaField,22)
                 .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
     }
-
+    public void CheckWithoutSchetSpisaniya(){
+        elementActions.click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+                .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
+                .sendKeys(IBANSchet,"2222222222222222222222222222222222").inputDocumentNumber1(numberOfDocument).sendKeysInt(summaPlatejaField,22)
+                .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
+    }
+    public void CheckWithoutSchetComissii(){
+        elementActions.click(schetSpisaniyaBTN).click(chooseDollarSchet)
+                .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
+                .sendKeys(IBANSchet,"2222222222222222222222222222222222").inputDocumentNumber1(numberOfDocument).sendKeysInt(summaPlatejaField,22)
+                .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
+    } public void CheckWithEmptyCountryField(){
+        elementActions.pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+                .sendKeys(BIKField2,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
+                .sendKeys(IBANSchet,"2222222222222222222222222222222222").inputDocumentNumber1(numberOfDocument).sendKeysInt(summaPlatejaField,22)
+                .sendKeys(codeOplaty2,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
+    }
+    public void CheckEmptyBIKField(){
+        elementActions.pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+                .click(countryBTN).click(chooseAustriyaCountry).pause(1000).sendKeys(naimenovaniyaField,"Naimenovanie")
+                .sendKeys(IBANSchet,"2222222222222222222222222222222222").inputDocumentNumber1(numberOfDocument).sendKeysInt(summaPlatejaField,22)
+                .sendKeys(codeOplaty2,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
+    }
+    public void CheckEmptyNaimenovanieField(){
+        elementActions.pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+                .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK)
+                .sendKeys(IBANSchet,"2222222222222222222222222222222222").inputDocumentNumber1(numberOfDocument).sendKeysInt(summaPlatejaField,22)
+                .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
+    }
+    public void CheckEmptyIBAN(){
+        elementActions.pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+                .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
+                .inputDocumentNumber1(numberOfDocument).sendKeysInt(summaPlatejaField,22)
+                .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
+    }
+    public void CheckEmptyDocumNumberField(){ elementActions.click(createBTN).click(MBPerevodVal).pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+            .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
+            .sendKeys(IBANSchet,"2222222222222222222222222222222222").sendKeys(numberOfDocument,",more then 15 symbols 121333322").sendKeysInt(summaPlatejaField,22)
+            .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);}
+    public void CheckSummaPlatejaEmptyField(){
+        elementActions.pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+                .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
+                .sendKeys(IBANSchet,"2222222222222222222222222222222222").inputDocumentNumber1(numberOfDocument)
+                .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
+    }
+    public void CheckEmptyCodeOplatyField(){
+        elementActions.pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+                .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
+                .sendKeys(IBANSchet,"2222222222222222222222222222222222").inputDocumentNumber1(numberOfDocument).sendKeysInt(summaPlatejaField,22)
+                .inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
+    }
+    public void CheckEmptyNaznachenieField(){
+        elementActions.pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+                .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
+                .sendKeys(IBANSchet,"2222222222222222222222222222222222").inputDocumentNumber1(numberOfDocument).sendKeysInt(summaPlatejaField,22)
+                .sendKeys(codeOplaty,"1").click(chooseNalog).click(naPodpisBTN).pause(3000);
+    }
 
 
 

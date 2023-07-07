@@ -1,11 +1,11 @@
-package org.OptimaBusTests.uiTests;
+package org.OptimaBusTests.uiTests.createBTNTest;
 
 import org.OptimaBus.UI.dataProvider.ConfigReader;
+import org.OptimaBusTests.uiTests.BaseUiTests;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class IntraBankTest extends BaseUiTests{
+public class IntraBankTest extends BaseUiTests {
 
     @BeforeClass
     public void openLoginPage() {

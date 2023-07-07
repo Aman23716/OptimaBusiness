@@ -26,6 +26,9 @@ public class CustomAssertions {
             }
         }
     }
+//    public void asserNotClickable(WebElement actualElement,String asMassage){
+//        WebElementActions.
+//    }
 
 
 }

@@ -1,8 +1,7 @@
-package org.OptimaBusTests.uiTests;
+package org.OptimaBusTests.uiTests.createBTNTest;
 
 import org.OptimaBus.UI.dataProvider.ConfigReader;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
+import org.OptimaBusTests.uiTests.BaseUiTests;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -16,7 +15,7 @@ public class MBPerevodSomTest extends BaseUiTests {
     }
 
     @Test(description = "На подпись")
-    public void naPodisBTNcheck() {
+    public void naPodpisBTNcheck() {
         mbPerevodSom.CheckNaPodpisBTN1();
         webElementActions.refreshPage();
         webElementActions.pause(3000);
@@ -38,9 +37,12 @@ public class MBPerevodSomTest extends BaseUiTests {
     }
 
     @Test(description = "БИК/Наименование банка")
-    public void bikNaimenovanieTest(){
+    public void BIKNaimenovanieTes(){
         mbPerevodSom.CheckBIKAlert();
-        customAssertions.asserText("Заполните поле!",mbPerevodSom.allAlerts, "norm");
+        customAssertions.asserText("Счет получателя: Только цифры, фиксированная длина 16",mbPerevodSom.allAlerts, "norm");
+        webElementActions.refreshPage();
+        webElementActions.pause(3000);
+
     }
 
 }

@@ -1,8 +1,11 @@
 package org.OptimaBus.UI.helper;
 
 import org.OptimaBus.UI.driverFactory.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.apache.logging.log4j.LogManager;
@@ -11,6 +14,8 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 
+import static org.OptimaBus.UI.driverFactory.Driver.driver;
+import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 import static org.testng.Assert.assertEquals;
 
 public class WebElementActions {
@@ -29,9 +34,32 @@ public class WebElementActions {
     public static void waitForElementToBeClickable(WebElement element) {
         logger.info("Waiting for element to be clickable");
         new WebDriverWait(Driver.getDriver(),Duration.ofSeconds(4))
-                .until(ExpectedConditions.elementToBeClickable(element));
+                .until(elementToBeClickable(element));
         logger.info("Element is clickable");
     }
+    public static void waitForElementToBeNotClickable(WebElement element)  {
+        logger.info("Waiting for element to be not clickable");
+       try{ new WebDriverWait(Driver.getDriver(),Duration.ofSeconds(2))
+               .until(ExpectedConditions.elementToBeClickable(element));
+        logger.info("Element is clickable");}
+       catch (Exception e){
+           System.out.println("Oh");
+       }
+    }
+    public WebElementActions cantBeChanged(WebElement element){
+
+        if (element.isEnabled()) {
+            System.err.println("Element is enabled");
+        } else {
+            System.err.println("Element is disabled");
+        }
+
+        return this;
+    }
+
+
+
+
 
 
     public WebElementActions click (WebElement element){
@@ -94,6 +122,12 @@ public class WebElementActions {
         String text = element.getText();
         return text;
     }
+
+
+
+
+
+
     public WebElementActions inputDocumentNumber1(WebElement element){
         waitElementToBeDisplayed(element);
         waitForElementVisibilityOf(element);

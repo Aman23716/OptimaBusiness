@@ -8,13 +8,14 @@ import java.util.List;
 
 public class Converting extends BasePage {
 
-
+    @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--rectangle bg-primary text-white q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase payment__btn lite-shadow']")
+    public WebElement createBTN;
     @FindBy(xpath = "(.//a[@class='p-select-item'])[4]")
     public WebElement convertingBTN;
     @FindBy(xpath = "(.//input[@class='q-field__native q-placeholder'])[1]")
-    public WebElement documentNumber;
+    public WebElement naimenovanieField;
     @FindBy(xpath = "(.//input[@class='q-field__native q-placeholder'])[2]")
-    public List<WebElement> documentNumber1;
+    public WebElement documentNumber1;
     @FindBy(xpath = "(.//input[@class='q-field__native q-placeholder'])[2]")
     public WebElement documentNumber2;
     @FindBy(xpath = "(.//div[@class='q-field__control relative-position row no-wrap'])[3]")
@@ -39,15 +40,37 @@ public class Converting extends BasePage {
 
 
 
+    @FindBy(xpath = "(.//input[@class='q-field__native q-placeholder'])[2]")
+    public WebElement notClickableNaimenovnieField;
+
+
+
+
+
+    @FindBy(xpath = "(.//div[@role='alert'])[1]")
+    public WebElement firstSummaAlert;
+    @FindBy(xpath = "(.//div[@role='alert'])[2]")
+    public WebElement secondSummaAlert;
 
 
 
 
 
 
-    public void CheckCalcValue(){
-        elementActions.click(convertingBTN).sendKeysInt(documentNumber2,mockDataGenerator.generateMockValue()).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2).click(chooseSOM1)
+    public void CheckNaPodpisBTN(){
+        elementActions.pause(2000).inputDocumentNumber1(documentNumber1).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2).click(chooseSOM1)
                 .sendKeysDouble(inputMockValue,mockDataGenerator.generateMockValue1());
+    }
+    public void CheckNaPodpisWithoutSumma(){
+        elementActions.pause(2000).inputDocumentNumber1(documentNumber1).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2)
+                .click(chooseSOM1).click(BTNNaPodpis);
+    }
+    public void CheckCalcValue(){
+        elementActions.pause(2000).click(convertingBTN).sendKeysInt(documentNumber2,mockDataGenerator.generateMockValue()).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2).click(chooseSOM1)
+                .sendKeysDouble(inputMockValue,mockDataGenerator.generateMockValue1());
+    }
+    public void CheckNotClickableBTN(){
+        elementActions.pause(2000).click(createBTN).click(convertingBTN).inputDocumentNumber1(documentNumber1);
     }
 
 
@@ -66,14 +89,14 @@ public class Converting extends BasePage {
 //    return this;
 //}
 
-    public Converting LOL(){
-        for (WebElement list2 : documentNumber1){
-            if (list2.getText().equals("Номер документа")){
-                list2.getText();
-                System.out.println(list2);
-            }
-        }return this;
-    }
+//    public Converting LOL(){
+//        for (WebElement list2 : documentNumber1){
+//            if (list2.getText().equals("Номер документа")){
+//                list2.getText();
+//                System.out.println(list2);
+//            }
+//        }return this;
+//    }
 
 
 
