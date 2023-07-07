@@ -40,6 +40,7 @@ public class ConvertingTest extends BaseUiTests {
     public void moreThenWeHave(){
         converting.CheckToConvertMoreThenInValue();
         customAssertions.asserText("Сумма конвертации превышает доступный баланс счета", converting.secondSummaAlert, "norm");
+        customAssertions.asserText("Конвертация", converting.ConvertWord, "norm");
         webElementActions.refreshPage();
     }
 

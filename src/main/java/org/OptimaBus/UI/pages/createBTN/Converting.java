@@ -32,11 +32,30 @@ public class Converting extends BasePage {
     public WebElement currentCurrency ;
     @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--unelevated q-btn--rectangle q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase sign-btn transfer-btn']")
     public WebElement BTNNaPodpis;
-
     @FindBy(xpath = ".//p[@class='ob-dialog__label']")
     public WebElement documNumber;
     @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text- q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase ob-dialog__button ob-dialog__button_filled']")
     public WebElement PeyHistory;
+
+
+
+
+    @FindBy(xpath = "(.//div[@class='q-field__label no-pointer-events absolute ellipsis'])[1]")
+    public WebElement naimenovanieWord;
+    @FindBy(xpath = "(.//div[@class='q-field__label no-pointer-events absolute ellipsis'])[2]")
+    public WebElement numberDocumWord;
+    @FindBy(xpath = "(.//div[@class='q-field__label no-pointer-events absolute ellipsis'])[3]")
+    public WebElement schetSpisaniyaWord;
+    @FindBy(xpath = "(.//div[@class='q-field__label no-pointer-events absolute ellipsis'])[4]")
+    public WebElement summaWord;
+    @FindBy(xpath = "(.//div[@class='q-field__label no-pointer-events absolute ellipsis'])[5]")
+    public WebElement schetZa4isleniyaWord;
+    @FindBy(xpath = "(.//div[@class='q-field__label no-pointer-events absolute ellipsis'])[6]")
+    public WebElement summaZa4Word;
+    @FindBy(xpath = ".//h1[@class='header-title']")
+    public WebElement ConvertWord;
+
+
 
 
 
