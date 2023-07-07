@@ -56,7 +56,9 @@ public class Converting extends BasePage {
 
 
 
-
+    public void CheckToConvertMoreThenInValue(){ elementActions.pause(2000).click(createBTN).click(convertingBTN).inputDocumentNumber1(documentNumber1).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2).click(chooseSOM1)
+            .sendKeys(inputMockValue,"9999999999");
+    }
     public void CheckNaPodpisBTN(){
         elementActions.pause(2000).inputDocumentNumber1(documentNumber1).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2).click(chooseSOM1)
                 .sendKeysDouble(inputMockValue,mockDataGenerator.generateMockValue1());

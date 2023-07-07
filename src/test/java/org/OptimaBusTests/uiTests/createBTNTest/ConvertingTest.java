@@ -35,7 +35,12 @@ public class ConvertingTest extends BaseUiTests {
         webElementActions.cantBeChanged(mbPerevodVal.naimenovaniyaField);
         WebElementActions.waitForElementToBeNotClickable(mbPerevodVal.naPodpisBTN);
         webElementActions.refreshPage();
-
+    }
+    @Test(description = "Проверка превышения суммы конвертации")
+    public void moreThenWeHave(){
+        converting.CheckToConvertMoreThenInValue();
+        customAssertions.asserText("Сумма конвертации превышает доступный баланс счета", converting.secondSummaAlert, "norm");
+        webElementActions.refreshPage();
     }
 
 
