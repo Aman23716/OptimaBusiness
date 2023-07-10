@@ -12,7 +12,8 @@
             <class name="org.OptimaBusTests.uiTests.OperationHisTests"/>
             <class name="org.OptimaBusTests.uiTests.createBTNTest.IntraBankTest"/>
             <class name="org.OptimaBusTests.uiTests.createBTNTest.MBPerevodSomTest"/>
-            <class name="org.OptimaBusTests.uiTests.createBTNTest.MBPerevodSomTest"/>
+            <class name="org.OptimaBusTests.uiTests.createBTNTest.MBPerevodValTest"/>
+            <class name="org.OptimaBusTests.uiTests.createBTNTest.ConvertingTest"/>
         </classes>
     </test>
 <!--    <test name="Regression">-->

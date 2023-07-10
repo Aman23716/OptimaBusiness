@@ -65,6 +65,13 @@ public class Converting extends BasePage {
 
 
 
+    @FindBy(xpath = "((.//span)[3])")
+    public WebElement dostupenDOPole;
+    @FindBy(xpath = ".//p[@class='ob-dialog__label']")
+    public WebElement platejOtpravlen;
+
+
+
 
     @FindBy(xpath = "(.//div[@role='alert'])[1]")
     public WebElement firstSummaAlert;
@@ -75,7 +82,9 @@ public class Converting extends BasePage {
 
 
 
-    public void CheckToConvertMoreThenInValue(){ elementActions.pause(2000).click(createBTN).click(convertingBTN).inputDocumentNumber1(documentNumber1).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2).click(chooseSOM1)
+
+
+    public void CheckToConvertMoreThenInValue(){ elementActions.pause(2000).inputDocumentNumber1(documentNumber1).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2).click(chooseSOM1)
             .sendKeys(inputMockValue,"9999999999");
     }
     public void CheckNaPodpisBTN(){
@@ -95,9 +104,12 @@ public class Converting extends BasePage {
     }
 
 
+
+
+
     public Converting CalcResult(){
-//          inputMockValue.getText();
-//          currentCurrency.getText();
+          inputMockValue.getText();
+          currentCurrency.getText();
         return this;
     }
 //public Settings chooseSettings() {
