@@ -1,6 +1,7 @@
 package org.OptimaBusTests.uiTests.createBTNTest;
 
 import org.OptimaBus.UI.dataProvider.ConfigReader;
+import org.OptimaBus.UI.helper.ActionsHelper;
 import org.OptimaBus.UI.helper.WebElementActions;
 import org.OptimaBusTests.uiTests.BaseUiTests;
 import org.openqa.selenium.WebElement;
@@ -21,8 +22,11 @@ public class ConvertingTest extends BaseUiTests {
     public void createNaPodpisFunctional(){
         converting.CheckNaPodpisBTN();
         webElementActions.pause(3000);
-        customAssertions.asserText("Платеж  отправлен на подпись", converting.platejOtpravlen, "norm");
-        webElementActions.refreshPage();
+        customAssertions.asserText("Платеж Test value отправлен на подпись", converting.platejOtpravlen, "norm");
+        converting.vyxod();
+//        actionsHelper.moveToElement(operationHistory.vamNaPodpis1);
+//        customAssertions.asserText(" Вам на подпись", operationHistory.vamNaPodpis1, "norm");
+
     }
     @Test(description = "Проверка функционала без ввода суммы конвертации")
     public void withoutSummaPlatejaTest(){

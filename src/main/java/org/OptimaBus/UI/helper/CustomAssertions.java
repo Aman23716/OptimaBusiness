@@ -2,8 +2,10 @@ package org.OptimaBus.UI.helper;
 
 import lombok.experimental.Helper;
 import org.assertj.core.api.Assertions;
+import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
 

@@ -35,7 +35,7 @@ public class Converting extends BasePage {
     @FindBy(xpath = ".//p[@class='ob-dialog__label']")
     public WebElement documNumber;
     @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text- q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase ob-dialog__button ob-dialog__button_filled']")
-    public WebElement PeyHistory;
+    public WebElement peyHistory;
 
 
 
@@ -72,7 +72,7 @@ public class Converting extends BasePage {
 
 
 
-
+    /**  ERRORS  **/
     @FindBy(xpath = "(.//div[@role='alert'])[1]")
     public WebElement firstSummaAlert;
     @FindBy(xpath = "(.//div[@role='alert'])[2]")
@@ -88,8 +88,8 @@ public class Converting extends BasePage {
             .sendKeys(inputMockValue,"9999999999");
     }
     public void CheckNaPodpisBTN(){
-        elementActions.pause(2000).inputDocumentNumber1(documentNumber1).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2).click(chooseSOM1)
-                .sendKeysDouble(inputMockValue,mockDataGenerator.generateMockValue1());
+        elementActions.click(createBTN).click(convertingBTN).pause(2000).inputDocumentNumber1(documentNumber1).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2).click(chooseSOM1)
+                .sendKeysDouble(inputMockValue,mockDataGenerator.generateMockValue1()).click(BTNNaPodpis).pause(3000);
     }
     public void CheckNaPodpisWithoutSumma(){
         elementActions.pause(2000).inputDocumentNumber1(documentNumber1).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2)
@@ -106,7 +106,9 @@ public class Converting extends BasePage {
 
 
 
-
+    public void vyxod(){
+        elementActions.click(peyHistory);
+    }
     public Converting CalcResult(){
           inputMockValue.getText();
           currentCurrency.getText();

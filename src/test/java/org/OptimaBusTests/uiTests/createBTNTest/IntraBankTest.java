@@ -17,6 +17,13 @@ public class IntraBankTest extends BaseUiTests {
     }
     @Test(priority = 0,description = "Check 'На подпись' button ")
     public void naPodpisBTNCheck(){
+        customAssertions.asserText("Внутрибанковский перевод", intra_bank_transfer.vnutribankPerevodW, "norm");
+        customAssertions.asserText("Доступен до 23:30", intra_bank_transfer.dostupenDoW, "norm");
+        customAssertions.asserText("Наименование ЮЛ", intra_bank_transfer.naimenovanieW, "norm");
+        customAssertions.asserText("Списать", intra_bank_transfer.spisatW, "norm");
+        customAssertions.asserText("Зачислить", intra_bank_transfer.za4islitW, "norm");
+        customAssertions.asserText("Номер документа", intra_bank_transfer.nomerDocumentaW, "norm");
+        customAssertions.asserText("Сумма платежа", intra_bank_transfer.summaPlatejaW, "norm");
         intra_bank_transfer.CheckNaPodpisBTN();
             webElementActions.refreshPage();
     }
