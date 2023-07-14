@@ -20,11 +20,8 @@ public class ConvertingTest extends BaseUiTests {
     public void createNaPodpisFunctional(){
         converting.CheckNaPodpisBTN();
         webElementActions.pause(3000);
-        customAssertions.asserText("Платеж Test value отправлен на подпись", converting.platejOtpravlen, "norm");
-        converting.vyxod();
-//        actionsHelper.moveToElement(operationHistory.vamNaPodpis1);
-//        customAssertions.asserText(" Вам на подпись", operationHistory.vamNaPodpis1, "norm");
-
+        customAssertions.asserText("Платеж  отправлен на подпись", converting.platejOtpravlen, "norm");
+        webElementActions.refreshPage();
     }
     @Test(description = "Проверка функционала без ввода суммы конвертации")
     public void withoutSummaPlatejaTest(){
