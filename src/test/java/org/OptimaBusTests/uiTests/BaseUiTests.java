@@ -1,6 +1,5 @@
 package org.OptimaBusTests.uiTests;
 
-import org.OptimaBus.UI.dataProvider.ConfigReader;
 import org.OptimaBus.UI.driverFactory.Driver;
 import org.OptimaBus.UI.helper.CustomAssertions;
 import org.OptimaBus.UI.helper.WebElementActions;
@@ -58,8 +57,7 @@ public abstract class BaseUiTests {
         converting = new Converting();
         intra_bank_transfer = new Intra_bank_transfer();
         customAssertions = new CustomAssertions();
-        mbPerevodSom = new MBPerevodSom();
-        mbPerevodVal = new MBPerevodVal();
+
    }
     @AfterClass
     public void tearDown() {
