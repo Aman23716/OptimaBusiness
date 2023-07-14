@@ -1,10 +1,8 @@
 package org.OptimaBusTests.uiTests.createBTNTest;
 
 import org.OptimaBus.UI.dataProvider.ConfigReader;
-import org.OptimaBus.UI.helper.ActionsHelper;
 import org.OptimaBus.UI.helper.WebElementActions;
 import org.OptimaBusTests.uiTests.BaseUiTests;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 

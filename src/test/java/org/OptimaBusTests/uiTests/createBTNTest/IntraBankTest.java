@@ -17,6 +17,7 @@ public class IntraBankTest extends BaseUiTests {
     }
     @Test(priority = 0,description = "Check 'На подпись' button ")
     public void naPodpisBTNCheck(){
+        intra_bank_transfer.CheckNaPodpisBTN();
         customAssertions.asserText("Внутрибанковский перевод", intra_bank_transfer.vnutribankPerevodW, "norm");
         customAssertions.asserText("Доступен до 23:30", intra_bank_transfer.dostupenDoW, "norm");
         customAssertions.asserText("Наименование ЮЛ", intra_bank_transfer.naimenovanieW, "norm");
@@ -24,7 +25,6 @@ public class IntraBankTest extends BaseUiTests {
         customAssertions.asserText("Зачислить", intra_bank_transfer.za4islitW, "norm");
         customAssertions.asserText("Номер документа", intra_bank_transfer.nomerDocumentaW, "norm");
         customAssertions.asserText("Сумма платежа", intra_bank_transfer.summaPlatejaW, "norm");
-        intra_bank_transfer.CheckNaPodpisBTN();
             webElementActions.refreshPage();
     }
     @Test(priority = 1,description = "Check the wrong schet")
@@ -51,8 +51,4 @@ public class IntraBankTest extends BaseUiTests {
         customAssertions.asserText("Назначение: Цифры, латиница, кириллица, !?()№%_.,+\\-*/\"' , мин 4 - макс 140",intra_bank_transfer.naznachenieError,"alert");
         webElementActions.refreshPage();
     }
-
-
-
-
 }

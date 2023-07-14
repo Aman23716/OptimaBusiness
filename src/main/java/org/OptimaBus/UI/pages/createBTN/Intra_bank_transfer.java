@@ -43,6 +43,7 @@ public class Intra_bank_transfer extends BasePage {
     @FindBy(xpath = ".//div[@role='alert']")
     public WebElement naznachenieError;
 
+
     /** Надписи **/
     @FindBy(xpath = ".//h1[@class='header-title']")
     public WebElement vnutribankPerevodW;
@@ -72,7 +73,7 @@ public class Intra_bank_transfer extends BasePage {
 
 
     public void CheckNaPodpisBTN(){
-        elementActions.click(createBTN).click(vnutriBankBTN).click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091808755280112").inputDocumentNumber1(inputDocumNumber)
+        elementActions.click(createBTN).pause(500).click(vnutriBankBTN).click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091808755280112").inputDocumentNumber1(inputDocumNumber)
                 .sendKeysInt(inputSummuPlateja,100).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).click(naPodpisBTN);
     }
     public void TestTheWrongSchet(){
@@ -84,7 +85,7 @@ public class Intra_bank_transfer extends BasePage {
                 .sendKeysInt(inputSummuPlateja,100).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).click(naPodpisBTN);
     }
     public void TestMoreMoneyThenHave(){
-        elementActions.click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091808755280113").inputDocumentNumber1(inputDocumNumber)
+        elementActions.click(createBTN).pause(500).click(vnutriBankBTN).click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091808755280113").inputDocumentNumber1(inputDocumNumber)
                 .sendKeysInt(inputSummuPlateja,999999999).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).click(naPodpisBTN);
     }
     public void TestNaznachenieMinValue(){

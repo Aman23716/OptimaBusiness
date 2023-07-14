@@ -1,12 +1,13 @@
-package org.OptimaBusTests.uiTests;
+package org.OptimaBusTests.uiTests.mainPageTests;
 
 import org.OptimaBus.UI.dataProvider.ConfigReader;
 import org.OptimaBus.UI.pages.*;
+import org.OptimaBusTests.uiTests.BaseUiTests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class MainPageTest extends BaseUiTests{
+public class MainPageTest extends BaseUiTests {
 
     @BeforeClass
     public void openLoginPage() {

@@ -59,8 +59,8 @@ public class MainPage extends BasePage {
 
     @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense icon-notification lite-shadow payment__btn']")
     public WebElement BellBtn;
-//    @FindBy(xpath = "")
-
+    @FindBy(className = "offline-form-title offline-form-desktop-close")
+    public WebElement CloseChatBTN;
 
 
 

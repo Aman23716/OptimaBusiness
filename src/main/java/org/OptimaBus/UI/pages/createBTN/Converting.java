@@ -88,7 +88,7 @@ public class Converting extends BasePage {
             .sendKeys(inputMockValue,"9999999999");
     }
     public void CheckNaPodpisBTN(){
-        elementActions.click(createBTN).click(convertingBTN).pause(2000).inputDocumentNumber1(documentNumber1).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2).click(chooseSOM1)
+        elementActions.pause(2000).inputDocumentNumber1(documentNumber1).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2).click(chooseSOM1)
                 .sendKeysDouble(inputMockValue,mockDataGenerator.generateMockValue1()).click(BTNNaPodpis).pause(3000);
     }
     public void CheckNaPodpisWithoutSumma(){

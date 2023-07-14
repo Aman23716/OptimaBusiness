@@ -57,12 +57,9 @@ public abstract class BaseUiTests {
         settings= new Settings();
         more = new More();
         staff = new Staff();
-        converting = new Converting();
         intra_bank_transfer = new Intra_bank_transfer();
         customAssertions = new CustomAssertions();
-        mbPerevodSom = new MBPerevodSom();
-        mbPerevodVal = new MBPerevodVal();
-
+        converting = new Converting();
    }
 //    @AfterClass
 //    public void tearDown() {

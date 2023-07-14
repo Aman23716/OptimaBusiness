@@ -1,18 +1,17 @@
-package org.OptimaBusTests.uiTests;
+package org.OptimaBusTests.uiTests.mainPageTests;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import org.OptimaBus.UI.dataProvider.ConfigReader;
 import org.OptimaBus.UI.helper.WebElementActions;
-import org.OptimaBus.UI.pages.createBTN.Converting;
 import org.OptimaBus.UI.pages.MainPage;
-import org.testng.Assert;
+import org.OptimaBusTests.uiTests.BaseUiTests;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 //import ru.testit.annotations.WorkItemIds;
 
-public class CalcTests extends BaseUiTests{
+public class CalcTests extends BaseUiTests {
     SoftAssert softAssert = new SoftAssert();
     @BeforeClass
     public void openLoginPage() {
