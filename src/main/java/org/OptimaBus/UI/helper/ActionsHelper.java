@@ -19,7 +19,6 @@ public class ActionsHelper {
     }
     public Actions moveToElement(WebElement element){
         actions.moveToElement(element).perform();
-
         return null;
     }
 
