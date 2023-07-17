@@ -10,17 +10,11 @@ public class ConvertingTest extends BaseUiTests {
 
 
 
-    @BeforeClass
-    public void openLoginPage() {
-        driver.navigate().to(ConfigReader.getProperty("qa_env"));
-        loginPage.fillUpUsernameAndPass();
-        mainPage.ChooseImaratStroi();
-    }
     @Test(description = "Проверка функионала создании операции по конвертации с валидными данными")
     public void createNaPodpisFunctional(){
         converting.CheckNaPodpisBTN();
-        webElementActions.pause(3000);
-        customAssertions.asserText("Платеж  отправлен на подпись", converting.platejOtpravlen, "norm");
+        webElementActions.pause(4000);
+        customAssertions.asserText("Платеж Test value отправлен на подпись", converting.platejOtpravlen, "norm");
         webElementActions.refreshPage();
     }
     @Test(description = "Проверка функционала без ввода суммы конвертации")

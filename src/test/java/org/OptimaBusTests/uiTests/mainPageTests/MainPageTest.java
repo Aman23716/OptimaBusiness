@@ -7,14 +7,11 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+
+
 public class MainPageTest extends BaseUiTests {
 
-    @BeforeClass
-    public void openLoginPage() {
-        driver.navigate().to(ConfigReader.getProperty("qa_env"));
-        loginPage.fillUpUsernameAndPass();
-        mainPage.ChooseDentTrade();
-    }
+
     @Test( description = "check navigation bar" )
     public void checkTheMPBar(){
         MainPage mainPage1 = mainPage.clickMNPage();

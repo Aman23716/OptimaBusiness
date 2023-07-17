@@ -67,7 +67,7 @@ public class Intra_bank_transfer extends BasePage {
                 .sendKeysInt(inputSummuPlateja,999999999).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).click(naPodpisBTN);
     }
     public void TestNaznachenieMinValue(){
-        elementActions.click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091800100721052").inputDocumentNumber1(inputDocumNumber)
+        elementActions.click(createBTN).click(vnutriBankBTN).click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091800100721052").inputDocumentNumber1(inputDocumNumber)
                 .sendKeysInt(inputSummuPlateja,100).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField2(inputNaznachenie).click(naPodpisBTN);
 
     }

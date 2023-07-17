@@ -7,7 +7,14 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
 public class Converting extends BasePage {
+    @FindBy(xpath = ".//a[@class='user-toggle no-caret']")
+    public WebElement chooseCompany;
 
+    @FindBy(xpath = ".//button[@class='aside-dropdown-item dropdown-item user-text text-dark'][2]")
+    public WebElement chooseUtes;
+
+    @FindBy(xpath = ".//span[@class='company-name']")
+    public List<WebElement> chooseAltynken;
     @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--rectangle bg-primary text-white q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase payment__btn lite-shadow']")
     public WebElement createBTN;
     @FindBy(xpath = "(.//a[@class='p-select-item'])[4]")
@@ -89,21 +96,33 @@ public class Converting extends BasePage {
     }
     public void CheckNaPodpisBTN(){
         elementActions.pause(2000).inputDocumentNumber1(documentNumber1).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2).click(chooseSOM1)
-                .sendKeysDouble(inputMockValue,mockDataGenerator.generateMockValue1());
+                .sendKeysDouble(inputMockValue,mockDataGenerator.generateMockValue1()).click(BTNNaPodpis);
     }
     public void CheckNaPodpisWithoutSumma(){
         elementActions.pause(2000).inputDocumentNumber1(documentNumber1).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2)
                 .click(chooseSOM1).click(BTNNaPodpis);
     }
     public void CheckCalcValue(){
-        elementActions.pause(2000).click(convertingBTN).sendKeysInt(documentNumber2,mockDataGenerator.generateMockValue()).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2).click(chooseSOM1)
+        elementActions.pause(2000).sendKeysInt(documentNumber2,mockDataGenerator.generateMockValue()).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2).click(chooseSOM1)
                 .sendKeysDouble(inputMockValue,mockDataGenerator.generateMockValue1());
     }
     public void CheckNotClickableBTN(){
-        elementActions.pause(2000).click(createBTN).click(convertingBTN).inputDocumentNumber1(documentNumber1);
+        elementActions.pause(4000).click(createBTN).click(convertingBTN);
+//                .inputDocumentNumber1(documentNumber1);
     }
 
-
+    public void ChooseImaratStroi(){
+        elementActions.click(chooseCompany);
+        for (WebElement list1 : chooseAltynken){
+            System.out.println(list1);
+            if (list1.getText().equals("ОсОО \"Имарат Строй\"")){
+                list1.click();
+//                if (list1.getText().equals(ConfigReader.getProperty("CompName"))){
+//                    list1.click();
+//
+            }
+        }
+    }
 
 
 

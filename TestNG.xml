@@ -6,7 +6,7 @@
     <test name="SmokeTest">
         <classes>
 <!--            <class name="org.OptimaBusTests.uiTests.LoginTests"/>-->
-<!--            <class name="org.OptimaBusTests.uiTests.mainPageTests.CalcTests"/>-->
+<!--            <class name="org.OptimaBusTests.uiTests.CalcTests"/>-->
 <!--            <class name="org.OptimaBusTests.uiTests.mainPageTests.SettingsTests"/>-->
 <!--            <class name="org.OptimaBusTests.uiTests.mainPageTests.MainPageTest"/>-->
 <!--            <class name="org.OptimaBusTests.uiTests.mainPageTests.OperationHisTests"/>-->

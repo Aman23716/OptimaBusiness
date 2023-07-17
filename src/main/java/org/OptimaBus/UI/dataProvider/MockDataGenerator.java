@@ -32,7 +32,7 @@ public class MockDataGenerator {
     }
 
     public double generateMockValue1(){
-        return faker.number().randomDouble(99,1, 10009);
+        return faker.number().randomDouble(99,100, 10009);
 
     }
 

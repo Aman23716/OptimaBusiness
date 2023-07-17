@@ -7,14 +7,6 @@ import org.testng.annotations.Test;
 
 public class IntraBankTest extends BaseUiTests {
 
-    @BeforeClass
-    public void openLoginPage() {
-        driver.navigate().to(ConfigReader.getProperty("qa_env"));
-        loginPage.fillUpUsernameAndPass();
-        mainPage.ChooseImaratStroi();
-//        webElementActions.click(intra_bank_transfer.createBTN).click(intra_bank_transfer.vnutriBankBTN);
-
-    }
     @Test(priority = 0,description = "Check 'На подпись' button ")
     public void naPodpisBTNCheck(){
         intra_bank_transfer.CheckNaPodpisBTN();

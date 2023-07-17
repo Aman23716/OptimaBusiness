@@ -1,6 +1,7 @@
 package org.OptimaBusTests.uiTests.mainPageTests;
 
 import org.OptimaBus.UI.dataProvider.ConfigReader;
+import org.OptimaBus.UI.driverFactory.Driver;
 import org.OptimaBusTests.uiTests.BaseUiTests;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -8,12 +9,7 @@ import org.testng.annotations.Test;
 
 public class OperationHisTests extends BaseUiTests {
 
-    @BeforeClass
-    public void openLoginPage() {
-        driver.navigate().to(ConfigReader.getProperty("qa_env"));
-        loginPage.fillUpUsernameAndPass();
-        mainPage.ChooseDentTrade();
-    }
+
 
     @Test(priority = 0, description = "Click to История операции in Main Page")
     public void checkThe2BTN() {

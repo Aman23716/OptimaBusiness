@@ -9,12 +9,12 @@ import static org.testng.AssertJUnit.assertEquals;
 
 public class SettingsTests extends BaseUiTests {
 
-    @BeforeClass
-    public void openLoginPage() {
-        driver.navigate().to(ConfigReader.getProperty("qa_env"));
-        loginPage.fillUpUsernameAndPass();
-        mainPage.ChooseDentTrade();
-    }
+//    @BeforeClass
+//    public void openLoginPage() {
+//        driver.navigate().to(ConfigReader.getProperty("qa_env"));
+//        loginPage.fillUpUsernameAndPass();
+//        mainPage.ChooseDentTrade();
+//    }
 
     @Test(priority = 1, description = "check settings (information)")
     public void CheckSettings() {

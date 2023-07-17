@@ -25,8 +25,11 @@ public WebElement submitLogin;
 
 
   public LoginPage fillUpUsernameAndPass(){
-      elementActions.sendKeys(usernameInput, ConfigReader.getProperty("userID"))
-              .sendKeys(passwordInput,ConfigReader.getProperty("password")).click(submitLogin).sendKeys(inputTOTP,ConfigReader.getProperty("TOTP")).click(enterBTN);
+      elementActions.sendKeys(usernameInput, ConfigReader.getProperty("userID"));
+
+      elementActions.sendKeys(passwordInput,ConfigReader.getProperty("password"))
+              ;
+      elementActions.click(submitLogin).sendKeys(inputTOTP,ConfigReader.getProperty("TOTP")).click(enterBTN);
       return this;
   }
 

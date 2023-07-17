@@ -8,14 +8,9 @@ import org.testng.annotations.BeforeClass;
 import javax.swing.*;
 import javax.xml.crypto.Data;
 
-public class MBPerevodValTest extends BaseUiTests {
-    @BeforeClass
-    public void openLoginPage() {
-        driver.navigate().to(ConfigReader.getProperty("qa_env"));
-        loginPage.fillUpUsernameAndPass();
-        mainPage.ChooseImaratStroi();
 
-    }
+public class MBPerevodValTest extends BaseUiTests {
+
    @Test(description = "Проверка кнопки На подпись ")
     public void checkNaPodpisBTN(){
        mbPerevodVal.CheckFunctionalNaPodpis();
