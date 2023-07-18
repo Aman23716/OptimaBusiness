@@ -92,22 +92,22 @@ public class Converting extends BasePage {
 
 
     public void CheckToConvertMoreThenInValue(){ elementActions.pause(2000).inputDocumentNumber1(documentNumber1).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2).click(chooseSOM1)
-            .sendKeys(inputMockValue,"9999999999");
+            .sendKeys(inputMockValue,"9999999999").refreshPage();
     }
     public void CheckNaPodpisBTN(){
         elementActions.pause(2000).inputDocumentNumber1(documentNumber1).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2).click(chooseSOM1)
-                .sendKeysDouble(inputMockValue,mockDataGenerator.generateMockValue1()).click(BTNNaPodpis);
+                .sendKeysDouble(inputMockValue,mockDataGenerator.generateMockValue1())/*.click(BTNNaPodpis)*/.refreshPage();
     }
     public void CheckNaPodpisWithoutSumma(){
         elementActions.pause(2000).inputDocumentNumber1(documentNumber1).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2)
-                .click(chooseSOM1).click(BTNNaPodpis);
+                .click(chooseSOM1).click(BTNNaPodpis).refreshPage();
     }
     public void CheckCalcValue(){
         elementActions.pause(2000).sendKeysInt(documentNumber2,mockDataGenerator.generateMockValue()).click(chooseCurrencyBTN1).click(chooseUSDT1).click(chooseCurrencyBTN2).click(chooseSOM1)
                 .sendKeysDouble(inputMockValue,mockDataGenerator.generateMockValue1());
     }
     public void CheckNotClickableBTN(){
-        elementActions.pause(4000).click(createBTN).click(convertingBTN);
+        elementActions.pause(4000).click(createBTN).click(convertingBTN).refreshPage();
 //                .inputDocumentNumber1(documentNumber1);
     }
 

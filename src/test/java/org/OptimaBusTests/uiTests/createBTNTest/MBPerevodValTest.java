@@ -1,9 +1,7 @@
 package org.OptimaBusTests.uiTests.createBTNTest;
 
-import org.OptimaBus.UI.dataProvider.ConfigReader;
 import org.OptimaBusTests.uiTests.BaseUiTests;
 import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
 
 import javax.swing.*;
 import javax.xml.crypto.Data;
@@ -58,7 +56,5 @@ public class MBPerevodValTest extends BaseUiTests {
        customAssertions.asserText("Номер документа: Цифры, латиница, !?()№%_.,+\\-*/\"' , макс длина 15", mbPerevodVal.allAlert, "norm");
        webElementActions.refreshPage();
    }
-
-
 
 }

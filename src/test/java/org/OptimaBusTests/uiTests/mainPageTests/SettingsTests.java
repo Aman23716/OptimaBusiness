@@ -1,20 +1,13 @@
 package org.OptimaBusTests.uiTests.mainPageTests;
 
-import org.OptimaBus.UI.dataProvider.ConfigReader;
+
 import org.OptimaBusTests.uiTests.BaseUiTests;
-import org.testng.annotations.BeforeClass;
+
 import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertEquals;
-
 public class SettingsTests extends BaseUiTests {
 
-//    @BeforeClass
-//    public void openLoginPage() {
-//        driver.navigate().to(ConfigReader.getProperty("qa_env"));
-//        loginPage.fillUpUsernameAndPass();
-//        mainPage.ChooseDentTrade();
-//    }
 
     @Test(priority = 1, description = "check settings (information)")
     public void CheckSettings() {
@@ -35,6 +28,7 @@ public class SettingsTests extends BaseUiTests {
         settings.cngVis();
 
     }
+
     @Test(priority = 4, description = "check change password")
     public void ChangePassword() {
         settings.cngPassBTN();
@@ -42,6 +36,7 @@ public class SettingsTests extends BaseUiTests {
         settings.changePass();
 
     }
+
     @Test(priority = 5, description = "check change telephone number")
     public void ChangeNumber() {
         settings.cngNumBTN();

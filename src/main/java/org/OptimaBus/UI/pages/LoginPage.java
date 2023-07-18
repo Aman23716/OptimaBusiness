@@ -14,7 +14,7 @@ public class LoginPage extends BasePage {
   public WebElement passwordInput;
 
   @FindBy(xpath = "(.//span[@class=\"q-btn__content text-center col items-center q-anchor--skip justify-center row no-wrap text-no-wrap\"])[1]")
-public WebElement submitLogin;
+  public WebElement submitLogin;
 
   @FindBy(xpath = ".//input[@class='form-control']")
   public WebElement inputTOTP;

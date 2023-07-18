@@ -1,8 +1,6 @@
 package org.OptimaBusTests.uiTests;
 
-import org.OptimaBus.UI.dataProvider.ConfigReader;
-import org.OptimaBus.UI.driverFactory.Driver;
-import org.testng.annotations.BeforeClass;
+
 import org.testng.annotations.Test;
 
 

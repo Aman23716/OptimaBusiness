@@ -1,8 +1,6 @@
 package org.OptimaBusTests.uiTests.createBTNTest;
 
-import org.OptimaBus.UI.dataProvider.ConfigReader;
 import org.OptimaBusTests.uiTests.BaseUiTests;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class MBPerevodSomTest extends BaseUiTests {
