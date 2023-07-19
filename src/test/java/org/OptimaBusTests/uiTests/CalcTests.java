@@ -2,7 +2,7 @@ package org.OptimaBusTests.uiTests;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
-import org.OptimaBus.UI.pages.MainPage;
+import org.OptimaBus.UI.pages.mainPage.MainPage;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 

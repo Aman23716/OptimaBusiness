@@ -1,6 +1,7 @@
-package org.OptimaBus.UI.pages;
+package org.OptimaBus.UI.pages.logIn;
 
 import org.OptimaBus.UI.dataProvider.ConfigReader;
+import org.OptimaBus.UI.pages.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -32,5 +33,8 @@ public class LoginPage extends BasePage {
       elementActions.click(submitLogin).sendKeys(inputTOTP,ConfigReader.getProperty("TOTP")).click(enterBTN);
       return this;
   }
+//  public LoginPage LoginWithInvalidValue(){
+//      elementActions.click()
+//  }
 
 }

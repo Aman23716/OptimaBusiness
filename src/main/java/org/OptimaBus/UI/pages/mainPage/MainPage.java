@@ -1,5 +1,6 @@
-package org.OptimaBus.UI.pages;
+package org.OptimaBus.UI.pages.mainPage;
 
+import org.OptimaBus.UI.pages.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
@@ -46,7 +47,7 @@ public class MainPage extends BasePage {
     public WebElement chooseUtes;
 
     @FindBy(xpath = ".//span[@class='company-name']")
-    public List<WebElement> chooseAltynken;
+    public List<WebElement> chooseImarat;
     @FindBy(xpath = "(.//span[@class='q-ml-auto'])[1]")
     public WebElement KURSSOM;
     @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--rectangle bg-primary text-white q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase payment__btn lite-shadow']")
@@ -81,7 +82,7 @@ public class MainPage extends BasePage {
 
     public void ChooseDentTrade(){
         elementActions.click(chooseCompany);
-        for (WebElement list1 : chooseAltynken){
+        for (WebElement list1 : chooseImarat){
             System.out.println(list1);
             if (list1.getText().equals("ОсОО \"DentTrade\" (\"ДентТрейд\")")){
                 list1.click();
@@ -93,7 +94,7 @@ public class MainPage extends BasePage {
     }
     public void ChooseImaratStroi(){
         elementActions.click(chooseCompany);
-        for (WebElement list1 : chooseAltynken){
+        for (WebElement list1 : chooseImarat){
             System.out.println(list1);
             if (list1.getText().equals("ОсОО \"Имарат Строй\"")){
                 list1.click();

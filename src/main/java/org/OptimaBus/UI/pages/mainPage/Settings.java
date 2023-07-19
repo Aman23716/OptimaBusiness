@@ -1,6 +1,7 @@
-package org.OptimaBus.UI.pages;
+package org.OptimaBus.UI.pages.mainPage;
 
 import org.OptimaBus.UI.dataProvider.ConfigReader;
+import org.OptimaBus.UI.pages.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -9,7 +10,7 @@ import java.util.List;
 import static org.testng.AssertJUnit.assertEquals;
 import java.util.List;
 
-public class Settings extends BasePage{
+public class Settings extends BasePage {
 
 
     @FindBy(xpath = ".//a[@class='nav-item'][5]")

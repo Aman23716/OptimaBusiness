@@ -4,18 +4,12 @@ import org.OptimaBus.UI.dataProvider.ConfigReader;
 import org.OptimaBus.UI.driverFactory.Driver;
 import org.OptimaBus.UI.helper.CustomAssertions;
 import org.OptimaBus.UI.helper.WebElementActions;
-import org.OptimaBus.UI.pages.Documents;
-import org.OptimaBus.UI.pages.Imports;
-import org.OptimaBus.UI.pages.LoginPage;
-import org.OptimaBus.UI.pages.MainPage;
-import org.OptimaBus.UI.pages.More;
-import org.OptimaBus.UI.pages.OperationHistory;
-import org.OptimaBus.UI.pages.Settings;
-import org.OptimaBus.UI.pages.Staff;
 import org.OptimaBus.UI.pages.createBTN.Converting;
 import org.OptimaBus.UI.pages.createBTN.Intra_bank_transfer;
 import org.OptimaBus.UI.pages.createBTN.MBPerevodSom;
 import org.OptimaBus.UI.pages.createBTN.MBPerevodVal;
+import org.OptimaBus.UI.pages.logIn.LoginPage;
+import org.OptimaBus.UI.pages.mainPage.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -64,8 +58,8 @@ public abstract class BaseUiTests {
         mbPerevodVal = new MBPerevodVal();
     }
 
-    @AfterClass
-    public void tearDown() {
-        Driver.closeDriver();
-    }
+//    @AfterClass
+//    public void tearDown() {
+//        Driver.closeDriver();
+//    }
 }

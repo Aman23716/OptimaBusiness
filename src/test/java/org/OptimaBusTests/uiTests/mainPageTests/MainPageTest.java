@@ -1,6 +1,7 @@
 package org.OptimaBusTests.uiTests.mainPageTests;
 
 import org.OptimaBus.UI.pages.*;
+import org.OptimaBus.UI.pages.mainPage.*;
 import org.OptimaBusTests.uiTests.BaseUiTests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
