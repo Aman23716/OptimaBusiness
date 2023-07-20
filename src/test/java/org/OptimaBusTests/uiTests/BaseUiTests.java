@@ -67,8 +67,8 @@ public abstract class BaseUiTests {
         mbPerevodVal = new MBPerevodVal();
     }
 
-    @AfterClass
-    public void tearDown() {
-        Driver.closeDriver();
-    }
+//    @AfterClass
+//    public void tearDown() {
+//        Driver.closeDriver();
+//    }
 }

@@ -9,6 +9,7 @@ public class MBPerevodSomTest extends BaseUiTests {
     public void naPodpisBTNcheck() {
         mbPerevodSom.CheckNaPodpisBTN1();
         webElementActions.pause(3000);
+        webElementActions.refreshPage();
     }
 
     @Test(description = "Тип операции алерт")
@@ -16,12 +17,14 @@ public class MBPerevodSomTest extends BaseUiTests {
         mbPerevodSom.CheckGrossAlert();
         customAssertions.asserText("Заполните поле!", mbPerevodSom.allAlerts, "norm");
         webElementActions.pause(3000);
+        webElementActions.refreshPage();
     }
     @Test(description = "Счет списания не казан алерт")
     public void schetSpisaniyaTest(){
         mbPerevodSom.CheckSchetSpisaniyaAlert();
         customAssertions.asserText("Заполните поле!",mbPerevodSom.allAlerts, "norm");
         webElementActions.pause(3000);
+        webElementActions.refreshPage();
     }
 
     @Test(description = "БИК/Наименование банка")
@@ -29,6 +32,7 @@ public class MBPerevodSomTest extends BaseUiTests {
         mbPerevodSom.CheckBIKAlert();
         customAssertions.asserText("Счет получателя: Только цифры, фиксированная длина 16",mbPerevodSom.allAlerts, "norm");;
         webElementActions.pause(3000);
+        webElementActions.refreshPage();
 
     }
 

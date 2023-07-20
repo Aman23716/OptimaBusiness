@@ -53,7 +53,8 @@ public class MBPerevodValTest extends BaseUiTests {
     public void checkDocumentNumberTest(){
         mbPerevodVal.CheckEmptyDocumNumberField();
        customAssertions.asserText("Номер документа: Цифры, латиница, !?()№%_.,+\\-*/\"' , макс длина 15", mbPerevodVal.allAlert, "norm");
-   ;
+
+
    }
 
 }

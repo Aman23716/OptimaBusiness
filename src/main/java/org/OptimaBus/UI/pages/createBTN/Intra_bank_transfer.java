@@ -52,24 +52,24 @@ public class Intra_bank_transfer extends BasePage {
 
     public void CheckNaPodpisBTN(){
         elementActions.click(createBTN).click(vnutriBankBTN).click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091808755280112").inputDocumentNumber1(inputDocumNumber)
-                .sendKeysInt(inputSummuPlateja,100).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).click(naPodpisBTN).pause(2000).refreshPage();
+                .sendKeysInt(inputSummuPlateja,100).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).click(naPodpisBTN);
 
     }
     public void TestTheWrongSchet(){
         elementActions.click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091808755280113").inputDocumentNumber1(inputDocumNumber)
-                .sendKeysInt(inputSummuPlateja,100).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).click(naPodpisBTN).pause(2000).refreshPage();
+                .sendKeysInt(inputSummuPlateja,100).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).click(naPodpisBTN);
     }
     public void TestTheWrongSchetSpisaniya(){
         elementActions.sendKeys(inputSchetZa4isleniya,"1091808755280113").inputDocumentNumber1(inputDocumNumber)
-                .sendKeysInt(inputSummuPlateja,100).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).click(naPodpisBTN).pause(2000).refreshPage();
+                .sendKeysInt(inputSummuPlateja,100).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).click(naPodpisBTN);
     }
     public void TestMoreMoneyThenHave(){
         elementActions.click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091808755280113").inputDocumentNumber1(inputDocumNumber)
-                .sendKeysInt(inputSummuPlateja,999999999).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).click(naPodpisBTN).pause(2000).refreshPage();
+                .sendKeysInt(inputSummuPlateja,999999999).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).click(naPodpisBTN);
     }
     public void TestNaznachenieMinValue(){
         elementActions.click(createBTN).click(vnutriBankBTN).click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091800100721052").inputDocumentNumber1(inputDocumNumber)
-                .sendKeysInt(inputSummuPlateja,100).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField2(inputNaznachenie).click(naPodpisBTN).pause(2000).refreshPage();
+                .sendKeysInt(inputSummuPlateja,100).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField2(inputNaznachenie).click(naPodpisBTN);
 
     }
 

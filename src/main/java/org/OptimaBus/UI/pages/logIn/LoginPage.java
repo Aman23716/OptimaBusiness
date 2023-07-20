@@ -25,16 +25,54 @@ public class LoginPage extends BasePage {
 
 
 
+
+
+
+    @FindBy(xpath = ".//a[@class='user-toggle no-caret']")
+    public WebElement chooseCompany1;
+    @FindBy(xpath = ".//button[@class='aside-dropdown-item dropdown-item user-text btn-blue']")
+    public WebElement exitBTN;
+
+
+
+
+
+    /**ERROR MASSAGES**/
+    @FindBy(xpath = ".//div[@role='alert']")
+    public WebElement alerts;
+    @FindBy(xpath = ".//p[@class='text-error']")
+    public WebElement errorText;
+
+
+
+    /**ВСЕ НАДПИСИ НА ЭТАПЕ ВХОДА**/
+    @FindBy(xpath = ".//h3[@class='title']")
+    public WebElement vhodWord;
+    @FindBy(xpath = "(.//div)[9]")
+    public WebElement internetBankSentence;
+    @FindBy(xpath = ".//div[@class='q-ma-md text-muted text-center']")
+    public WebElement captcha;
+
+
+
+
+
   public LoginPage fillUpUsernameAndPass(){
       elementActions.sendKeys(usernameInput, ConfigReader.getProperty("userID"));
 
-      elementActions.sendKeys(passwordInput,ConfigReader.getProperty("password"))
-              ;
+      elementActions.sendKeys(passwordInput,ConfigReader.getProperty("password"));
+
       elementActions.click(submitLogin).sendKeys(inputTOTP,ConfigReader.getProperty("TOTP")).click(enterBTN);
       return this;
   }
-//  public LoginPage LoginWithInvalidValue(){
-//      elementActions.click()
-//  }
+  public void LoginWithInvalidId(){
+      elementActions.sendKeys(usernameInput,"Words with spaces").sendKeys(passwordInput,ConfigReader.getProperty("password")).click(submitLogin);
+  }
+  public void LoginWithInvalidPassword(){
+      elementActions.sendKeys(usernameInput, ConfigReader.getProperty("userID")).sendKeys(passwordInput,"Invalidpassword").click(submitLogin);
+  }
+  public void LoginWithEmptyFields(){
+    elementActions.click(chooseCompany1).click(exitBTN).click(submitLogin);
+  }
 
 }

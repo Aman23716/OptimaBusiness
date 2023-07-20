@@ -89,6 +89,15 @@ public class WebElementActions {
         element.sendKeys(txt);
         return this;
     }
+    public WebElementActions getText(WebElement element){
+        waitElementToBeDisplayed(element);
+        element.getText();
+        return this;
+    }
+
+
+
+
     public WebElementActions assertUrlPage(String object){
         assertEquals(Driver.getDriver().getCurrentUrl(),object);
         return this;

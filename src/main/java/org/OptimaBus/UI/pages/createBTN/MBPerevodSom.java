@@ -55,22 +55,22 @@ public class MBPerevodSom extends BasePage {
     public void CheckNaPodpisBTN1(){
         elementActions.click(tipOperaciiBTN).click(tipOperaciiGross).pause(1000).click(schetSpisaniyaBTN).click(somSchetSpisaniya).sendKeys(BIKNaimenovaniya,"103001").click(chooseBIK)
                 .sendKeys(naimenovaniePoluchatelya,"deeeeee").sendKeys(schet,"1030120000542727").inputDocumentNumber1(documNumber).sendKeysDouble(somSumma,80.22).sendKeysInt(kodPlatejaInput,1)
-                .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN).pause(2000).refreshPage();
+                .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN);
     }
     public void CheckGrossAlert(){
         elementActions.click(tipOperaciiBTN).click(tipOperaciiGross).sendKeys(BIKNaimenovaniya,"1").click(chooseBIK)
                 .sendKeys(naimenovaniePoluchatelya,"deeeeee").sendKeys(schet,"1030120000542727").inputDocumentNumber1(documNumber).sendKeysDouble(somSumma,80.00).sendKeysInt(kodPlatejaInput,1)
-                .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN).pause(2000).refreshPage();
+                .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN);
     }
     public void CheckSchetSpisaniyaAlert(){
         elementActions.click(tipOperaciiBTN).click(tipOperaciiGross).pause(1000).sendKeys(BIKNaimenovaniya,"1").click(chooseBIK)
                 .sendKeys(naimenovaniePoluchatelya,"deeeeee").sendKeys(schet,"1030120000542727").inputDocumentNumber1(documNumber).sendKeysDouble(somSumma,80.22).sendKeysInt(kodPlatejaInput,1)
-                .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN).pause(2000).refreshPage();
+                .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN);
     }
     public void CheckBIKAlert(){
         elementActions.click(createBTN).click(mbPerevodSom).click(tipOperaciiBTN).click(tipOperaciiGross).pause(1000).click(schetSpisaniyaBTN).click(somSchetSpisaniya)
                 .sendKeys(naimenovaniePoluchatelya,"deeeeee").pause(1000).sendKeys(schet,"1030120000542727").inputDocumentNumber1(documNumber).sendKeysDouble(somSumma,80.22).sendKeysInt(kodPlatejaInput,1)
-                .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN).pause(2000).refreshPage();
+                .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN);
     }
 
 
