@@ -54,6 +54,28 @@ public class LoginPage extends BasePage {
     public WebElement captcha;
 
 
+    /**ПОМОЩЬ**/
+    @FindBy(xpath = ".//div[@class='help flex items-center']")
+    public WebElement helpBTN;
+    @FindBy(xpath = ".//div[@class='title']")
+    public WebElement helpWord;
+    @FindBy(xpath = ".//div[@class='user-manual__text']//span")
+    public WebElement fileWords;
+    @FindBy(xpath = ".//DIV[@CLASS='title-contact']")
+    public WebElement contactsWord;
+    @FindBy(xpath = "(.//div[@class='contacts-details__title'])[1]")
+    public WebElement callCentre;
+    @FindBy(xpath = "(.//div[@class='contacts-details__title'])[2]")
+    public WebElement chatSupport;
+    @FindBy(xpath = "(.//div[@class='contacts-details__number'])[1]")
+    public WebElement firstNumber;
+    @FindBy(xpath = "(.//div[@class='contacts-details__number'])[2]")
+    public WebElement secondNumber;
+    @FindBy(xpath = "(.//div[@class='contacts-details__number'])[3]")
+    public WebElement thirdNumber;
+    @FindBy(xpath = "(.//div[@class='contacts-details__number'])[4]")
+    public WebElement foursNumber;
+
 
 
 
@@ -72,7 +94,10 @@ public class LoginPage extends BasePage {
       elementActions.sendKeys(usernameInput, ConfigReader.getProperty("userID")).sendKeys(passwordInput,"Invalidpassword").click(submitLogin);
   }
   public void LoginWithEmptyFields(){
-    elementActions.click(chooseCompany1).click(exitBTN).click(submitLogin);
+    elementActions.click(submitLogin);
+  }
+  public void HelpBTN(){
+    elementActions.click(chooseCompany1).click(exitBTN).click(helpBTN);
   }
 
 }

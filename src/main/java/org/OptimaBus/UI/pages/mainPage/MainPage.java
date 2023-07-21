@@ -4,6 +4,8 @@ import org.OptimaBus.UI.pages.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
+import org.testng.annotations.Test;
+
 import java.util.List;
 
 public class MainPage extends BasePage {
@@ -58,10 +60,19 @@ public class MainPage extends BasePage {
     @FindBy(xpath = ".//div[@class='rates-calculator__content']")
     public List<WebElement> listOfcurency;
 
+
+    /**Кнопка создать операцию**/
     @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense icon-notification lite-shadow payment__btn']")
     public WebElement BellBtn;
-    @FindBy(className = "offline-form-title offline-form-desktop-close")
-    public WebElement CloseChatBTN;
+
+
+    /**ВСЕ НАДПИСИ НА ГЛАВНОМ ЭКРАНЕ СТРАНИЦЫ**/
+    @FindBy(xpath = ".//h3[@class='q-ma-none header__title']")
+    public WebElement moiSchetaWord;
+    @FindBy(xpath = "(.//div[@class='contract-number q-mb-sm text-muted'])[1]")
+    public WebElement dogovorNumber;
+    /****/
+    /****/
 
 
 

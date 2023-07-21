@@ -46,4 +46,5 @@ public class ConvertingTest extends BaseUiTests {
         customAssertions.asserText("Сумма",converting.summaZa4Word,"norm");
         webElementActions.refreshPage();
     }
+
 }

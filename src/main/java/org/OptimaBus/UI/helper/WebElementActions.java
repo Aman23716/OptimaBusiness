@@ -84,6 +84,13 @@ public class WebElementActions {
         element.sendKeys(Integer.toString(f));
         return this;
     }
+    public WebElementActions sendKeysLong(WebElement element, Long f){
+        waitElementToBeDisplayed(element);
+        element.sendKeys(Keys.CONTROL + "a");
+        element.sendKeys(Keys.DELETE);
+        element.sendKeys(Long.toString(f));
+        return this;
+    }
     public WebElementActions sendKeys(WebElement element, String txt){
         waitElementToBeDisplayed(element);
         element.sendKeys(txt);

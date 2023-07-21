@@ -27,7 +27,7 @@ public class MBPerevodSom extends BasePage {
     public WebElement naimenovaniePoluchatelya;
 
     @FindBy(xpath = "(.//input[@class='q-field__native q-placeholder'])[4]")
-    public WebElement schet;
+    public WebElement schet1;
     @FindBy(xpath = "(.//input[@class='q-field__native q-placeholder'])[5]")
     public WebElement documNumber;
     @FindBy(xpath = ".//input[@class='q-field__input']")
@@ -53,23 +53,23 @@ public class MBPerevodSom extends BasePage {
 
 
     public void CheckNaPodpisBTN1(){
-        elementActions.click(tipOperaciiBTN).click(tipOperaciiGross).pause(1000).click(schetSpisaniyaBTN).click(somSchetSpisaniya).sendKeys(BIKNaimenovaniya,"103001").click(chooseBIK)
-                .sendKeys(naimenovaniePoluchatelya,"deeeeee").sendKeys(schet,"1030120000542727").inputDocumentNumber1(documNumber).sendKeysDouble(somSumma,80.22).sendKeysInt(kodPlatejaInput,1)
-                .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN);
+        elementActions.click(createBTN).click(mbPerevodSom).click(tipOperaciiBTN).click(tipOperaciiGross).pause(1000).click(schetSpisaniyaBTN).click(somSchetSpisaniya).sendKeys(BIKNaimenovaniya,"138005").click(chooseBIK)
+                .sendKeys(naimenovaniePoluchatelya,"Дордойский филиал").sendKeysLong(schet1,1380001100007390L).sendKeys(documNumber,"").sendKeysDouble(somSumma,80.22).sendKeysInt(kodPlatejaInput,1)
+                .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN).pause(4000);
     }
     public void CheckGrossAlert(){
         elementActions.click(tipOperaciiBTN).click(tipOperaciiGross).sendKeys(BIKNaimenovaniya,"1").click(chooseBIK)
-                .sendKeys(naimenovaniePoluchatelya,"deeeeee").sendKeys(schet,"1030120000542727").inputDocumentNumber1(documNumber).sendKeysDouble(somSumma,80.00).sendKeysInt(kodPlatejaInput,1)
+                .sendKeys(naimenovaniePoluchatelya,"Дордойский филиал").sendKeysLong(schet1,1380001100007390L).sendKeys(documNumber,"").sendKeysDouble(somSumma,80.00).sendKeysInt(kodPlatejaInput,1)
                 .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN);
     }
     public void CheckSchetSpisaniyaAlert(){
         elementActions.click(tipOperaciiBTN).click(tipOperaciiGross).pause(1000).sendKeys(BIKNaimenovaniya,"1").click(chooseBIK)
-                .sendKeys(naimenovaniePoluchatelya,"deeeeee").sendKeys(schet,"1030120000542727").inputDocumentNumber1(documNumber).sendKeysDouble(somSumma,80.22).sendKeysInt(kodPlatejaInput,1)
+                .sendKeys(naimenovaniePoluchatelya,"Дордойский филиал").sendKeysLong(schet1,1380001100007390L).sendKeys(documNumber,"").sendKeysDouble(somSumma,80.22).sendKeysInt(kodPlatejaInput,1)
                 .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN);
     }
     public void CheckBIKAlert(){
         elementActions.click(createBTN).click(mbPerevodSom).click(tipOperaciiBTN).click(tipOperaciiGross).pause(1000).click(schetSpisaniyaBTN).click(somSchetSpisaniya)
-                .sendKeys(naimenovaniePoluchatelya,"deeeeee").pause(1000).sendKeys(schet,"1030120000542727").inputDocumentNumber1(documNumber).sendKeysDouble(somSumma,80.22).sendKeysInt(kodPlatejaInput,1)
+                .sendKeys(naimenovaniePoluchatelya,"Дордойский филиал").pause(1000).sendKeysLong(schet1,1380001100007390L).sendKeys(documNumber,"").sendKeysDouble(somSumma,80.22).sendKeysInt(kodPlatejaInput,1)
                 .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN);
     }
 
