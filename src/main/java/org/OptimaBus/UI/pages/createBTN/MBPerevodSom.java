@@ -53,7 +53,7 @@ public class MBPerevodSom extends BasePage {
 
 
     public void CheckNaPodpisBTN1(){
-        elementActions.click(createBTN).click(mbPerevodSom).click(tipOperaciiBTN).click(tipOperaciiGross).pause(1000).click(schetSpisaniyaBTN).click(somSchetSpisaniya).sendKeys(BIKNaimenovaniya,"138005").click(chooseBIK)
+        elementActions.click(tipOperaciiBTN).click(tipOperaciiGross).pause(1000).click(schetSpisaniyaBTN).click(somSchetSpisaniya).sendKeys(BIKNaimenovaniya,"138005").click(chooseBIK)
                 .sendKeys(naimenovaniePoluchatelya,"Дордойский филиал").sendKeysLong(schet1,1380001100007390L).sendKeys(documNumber,"").sendKeysDouble(somSumma,80.22).sendKeysInt(kodPlatejaInput,1)
                 .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN).pause(4000);
     }
@@ -69,7 +69,7 @@ public class MBPerevodSom extends BasePage {
     }
     public void CheckBIKAlert(){
         elementActions.click(createBTN).click(mbPerevodSom).click(tipOperaciiBTN).click(tipOperaciiGross).pause(1000).click(schetSpisaniyaBTN).click(somSchetSpisaniya)
-                .sendKeys(naimenovaniePoluchatelya,"Дордойский филиал").pause(1000).sendKeysLong(schet1,1380001100007390L).sendKeys(documNumber,"").sendKeysDouble(somSumma,80.22).sendKeysInt(kodPlatejaInput,1)
+                .sendKeys(naimenovaniePoluchatelya,"Дордойский филиал").pause(2000).sendKeysLong(schet1,1380001100007390L).sendKeys(documNumber,"").sendKeysDouble(somSumma,80.22).sendKeysInt(kodPlatejaInput,1)
                 .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN);
     }
 

@@ -20,31 +20,34 @@ public class IntraBankTest extends BaseUiTests {
     }
     @Test(priority = 1,description = "Check the wrong schet")
     public void wrongSchetZachisleniyaError(){
-        intra_bank_transfer.TestTheWrongSchet();
-    customAssertions.asserText("Счет не найден!", intra_bank_transfer.schetPoluchatelyaError, "alert");
         webElementActions.refreshPage();
+        intra_bank_transfer.TestTheWrongSchet();
+        customAssertions.asserText("Счет не найден!", intra_bank_transfer.schetPoluchatelyaError, "alert");
+
     }
     @Test(priority = 2,description = "Check the wrong schet spisaniya")
     public void wrongSchetSpisaniyaError(){
+        webElementActions.refreshPage();
         intra_bank_transfer.TestTheWrongSchetSpisaniya();
         customAssertions.asserText("Заполните поле!",intra_bank_transfer.zapolnitePoleError,"alert");
-        webElementActions.refreshPage();
+
     }
     @Test(priority = 3,description = "Check to transfer more money then in the accaunt")
     public void moreThenHaveError(){
+        webElementActions.refreshPage();
         intra_bank_transfer.TestMoreMoneyThenHave();
         customAssertions.asserText("ИП Бегматова Тумар Тимуровна", intra_bank_transfer.naimenovanieIP, "norm");
         customAssertions.asserText("Сумма платежа превышает доступный баланс счета",intra_bank_transfer.summaError,"alert");
-        webElementActions.refreshPage();
     }
     @Test(priority =4, description = "Check to input MIN value in 'Назначение'")
     public void minValueInNAznachenie(){
+        webElementActions.refreshPage();
         intra_bank_transfer.TestNaznachenieMinValue();
         customAssertions.asserText("Назначение: Цифры, латиница, кириллица, !?()№%_.,+\\-*/\"' , мин 4 - макс 140",intra_bank_transfer.naznachenieError,"alert");
-        webElementActions.refreshPage();
     }
     @Test(priority = 5,description = "Check tranzit schet intro_bank")
     public void tranzitSchetCheck(){
+        webElementActions.refreshPage();
         intra_bank_transfer.CheckNaPodpisBTNTranzit();
         customAssertions.asserText("Бишкекский центральный филиал ОАО \"Оптима Банк\"", intra_bank_transfer.naimenovanieIP, "norm");
         customAssertions.asserText("Платеж отправлен на подпись", intra_bank_transfer.platejOtpravlen, "norm");
@@ -54,7 +57,6 @@ public class IntraBankTest extends BaseUiTests {
         customAssertions.asserText("Перевод на чужой счет", intra_bank_transfer.perevodKudaCheck, "norm");
         customAssertions.asserText("Бишкекский центральный филиал ОАО \"Оптима Банк\"", intra_bank_transfer.naimenovanieKudaPerevodCheck,"norm");
         customAssertions.asserText("1092220111430162", intra_bank_transfer.schetPerevodaCheck,"norm" );
-        webElementActions.refreshPage();
     }
 
 
