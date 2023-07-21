@@ -1,11 +1,9 @@
 package org.OptimaBusTests.uiTests;
 
 import org.OptimaBus.UI.dataProvider.ConfigReader;
-import org.OptimaBus.UI.driverFactory.ChromeWebDriver;
 import org.OptimaBus.UI.driverFactory.Driver;
 import org.OptimaBus.UI.helper.CustomAssertions;
 import org.OptimaBus.UI.helper.WebElementActions;
-import org.OptimaBus.UI.pages.*;
 import org.OptimaBus.UI.pages.createBTN.Converting;
 import org.OptimaBus.UI.pages.createBTN.Intra_bank_transfer;
 import org.OptimaBus.UI.pages.createBTN.MBPerevodSom;
@@ -14,7 +12,6 @@ import org.OptimaBus.UI.pages.logIn.LoginPage;
 import org.OptimaBus.UI.pages.mainPage.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 
@@ -27,21 +24,14 @@ public abstract class BaseUiTests {
     public WebElementActions webElementActions;
     public WebDriver driver;
     public LoginPage loginPage;
-
     public ChromeDriver chromeDriver;
     public MainPage mainPage;
-
     public OperationHistory operationHistory;
-
     public Documents documents;
     public Imports imports;
-
     public Settings settings;
-
     public More more;
-
     public Staff staff;
-
     public Converting converting;
 
 

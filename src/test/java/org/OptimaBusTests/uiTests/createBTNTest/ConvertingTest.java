@@ -9,7 +9,7 @@ public class ConvertingTest extends BaseUiTests {
 
 
     @Test(description = "Проверка функионала создании операции по конвертации с валидными данными")
-    public void createNaPodpisFunctional(){
+    public void createNaPodpisFunctionalSom(){
         converting.CheckNaPodpisBTN();
         webElementActions.pause(4000);
         customAssertions.asserText("Платеж Test value отправлен на подпись", converting.platejOtpravlen, "norm");
@@ -45,6 +45,21 @@ public class ConvertingTest extends BaseUiTests {
         customAssertions.asserText("Счет зачисления",converting.schetZa4isleniyaWord,"norm");
         customAssertions.asserText("Сумма",converting.summaZa4Word,"norm");
         webElementActions.refreshPage();
+    }
+    @Test(description = "Проверка функионала создании операции по конвертации с валидными данными c доллара на евро")
+    public void createNaPodpisFunctionalDollar(){
+        converting.CheckNaPodpisBTNDollar();
+        webElementActions.pause(4000);
+        customAssertions.asserText("Платеж отправлен на подпись", converting.platejOtpravlen, "norm");
+        webElementActions.refreshPage();
+    }
+    @Test(description = "Проверка функионала создании операции по конвертации с валидными данными c доллара на сом")
+    public void createNaPodpisFunctionalInvalute(){
+        converting.CheckNaPodpisBTNInvalute();
+        webElementActions.pause(4000);
+        customAssertions.asserText("Платеж отправлен на подпись", converting.platejOtpravlen, "norm");
+        webElementActions.refreshPage();
+
     }
 
 }
