@@ -12,6 +12,7 @@ import org.OptimaBus.UI.pages.logIn.LoginPage;
 import org.OptimaBus.UI.pages.mainPage.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 
@@ -57,8 +58,8 @@ public abstract class BaseUiTests {
         mbPerevodVal = new MBPerevodVal();
     }
 
-//    @AfterClass
-//    public void tearDown() {
-//        Driver.closeDriver();
-//    }
+    @AfterClass
+    public void tearDown() {
+        Driver.closeDriver();
+    }
 }

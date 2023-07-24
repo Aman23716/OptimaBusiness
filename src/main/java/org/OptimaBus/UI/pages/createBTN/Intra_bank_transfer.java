@@ -64,7 +64,7 @@ public WebElement schetPerevodaCheck;
     public WebElement documentNumberError;
     @FindBy(xpath = ".//div[@role='alert']")
     public WebElement summaError;
-    @FindBy(xpath = ".//div[@role='alert']")
+    @FindBy(xpath = ".//p[@class='ob-dialog__message']")
     public WebElement naznachenieError;
 
 
@@ -94,8 +94,9 @@ public WebElement schetPerevodaCheck;
     }
     public void CheckNaPodpisBTNTranzit(){
         elementActions.click(createBTN).click(vnutriBankBTN).click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091822000180171").sendKeys(inputDocumNumber,"")
-                .sendKeysInt(inputSummuPlateja,500).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).pause(2000).click(naPodpisBTN).pause(5000)
-        ;
+                .sendKeysInt(inputSummuPlateja,500).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).pause(2000).click(naPodpisBTN).pause(4000)
+                ;
+
 
     }
 

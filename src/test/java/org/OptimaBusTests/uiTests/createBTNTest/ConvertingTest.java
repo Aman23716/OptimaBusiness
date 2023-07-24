@@ -9,6 +9,7 @@ public class ConvertingTest extends BaseUiTests {
     @Test(description = "Проверка функионала создании операции по конвертации с валидными данными")
     public void createNaPodpisFunctionalSom(){
         webElementActions.refreshPage();
+        webElementActions.pause(2000);
         converting.CheckNaPodpisBTN();
         webElementActions.pause(4000);
         customAssertions.asserText("Платеж Test value отправлен на подпись", converting.platejOtpravlen, "norm");
@@ -17,6 +18,7 @@ public class ConvertingTest extends BaseUiTests {
     @Test(description = "Проверка функционала без ввода суммы конвертации")
     public void withoutSummaPlatejaTest(){
         webElementActions.refreshPage();
+        webElementActions.pause(2000);
         converting.CheckNaPodpisWithoutSumma();
         customAssertions.asserText("Сумма списания: Только цифры, сумма мин=1, макс длина целой части 12, остатка 2", converting.firstSummaAlert, "norm");
         customAssertions.asserText("Сумма зачисления: Только цифры, сумма мин=1, макс длина целой части 12, остатка 2", converting.secondSummaAlert, "norm");
@@ -33,6 +35,7 @@ public class ConvertingTest extends BaseUiTests {
     @Test(description = "Проверка превышения суммы конвертации")
     public void moreThenWeHave(){
         webElementActions.refreshPage();
+        webElementActions.pause(2000);
         converting.CheckToConvertMoreThenInValue();
         customAssertions.asserText("Сумма конвертации превышает доступный баланс счета", converting.secondSummaAlert, "norm");
         customAssertions.asserText("Конвертация", converting.ConvertWord, "norm");
@@ -48,6 +51,7 @@ public class ConvertingTest extends BaseUiTests {
     @Test(description = "Проверка функионала создании операции по конвертации с валидными данными c доллара на евро")
     public void createNaPodpisFunctionalDollar(){
         webElementActions.refreshPage();
+        webElementActions.pause(2000);
         converting.CheckNaPodpisBTNDollar();
         webElementActions.pause(4000);
         customAssertions.asserText("Платеж отправлен на подпись", converting.platejOtpravlen, "norm");
@@ -55,6 +59,7 @@ public class ConvertingTest extends BaseUiTests {
     @Test(description = "Проверка функионала создании операции по конвертации с валидными данными c доллара на сом")
     public void createNaPodpisFunctionalInvalute(){
         webElementActions.refreshPage();
+        webElementActions.pause(2000);
         converting.CheckNaPodpisBTNInvalute();
         webElementActions.pause(4000);
         customAssertions.asserText("Платеж отправлен на подпись", converting.platejOtpravlen, "norm");
