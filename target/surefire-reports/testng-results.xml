@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="10" passed="6" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -411,11 +412,69 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           </reporter-output>
         </test-method> <!-- loginWithValidCredentials -->
         <test-method is-config="true" signature="tearDown()[pri:0, instance:org.OptimaBusTests.uiTests.LoginTests@1b7cae6f]" started-at="2023-06-01T09:46:27 ALMT" name="tearDown" finished-at="2023-06-01T09:46:27 ALMT" duration-ms="180" status="PASS">
+=======
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-07-03T11:34:21 ALMT" name="Surefire suite" finished-at="2023-07-03T11:35:46 ALMT" duration-ms="84324">
+    <groups>
+    </groups>
+    <test started-at="2023-07-03T11:34:21 ALMT" name="Surefire test" finished-at="2023-07-03T11:35:46 ALMT" duration-ms="84324">
+      <class name="org.OptimaBusTests.uiTests.IntraBankTest">
+        <test-method is-config="true" signature="setUpUiTest()[pri:0, instance:org.OptimaBusTests.uiTests.IntraBankTest@5445f5ba]" started-at="2023-07-03T11:34:44 ALMT" name="setUpUiTest" finished-at="2023-07-03T11:34:45 ALMT" duration-ms="798" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpUiTest -->
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:org.OptimaBusTests.uiTests.IntraBankTest@5445f5ba]" started-at="2023-07-03T11:34:45 ALMT" name="openLoginPage" finished-at="2023-07-03T11:34:55 ALMT" duration-ms="9746" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLoginPage -->
+        <test-method signature="naPodpisBTNCheck()[pri:0, instance:org.OptimaBusTests.uiTests.IntraBankTest@5445f5ba]" started-at="2023-07-03T11:34:55 ALMT" name="naPodpisBTNCheck" description="Check &#039;На подпись&#039; button " finished-at="2023-07-03T11:35:05 ALMT" duration-ms="10541" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- naPodpisBTNCheck -->
+        <test-method signature="wrongSchetZachisleniyaError()[pri:1, instance:org.OptimaBusTests.uiTests.IntraBankTest@5445f5ba]" started-at="2023-07-03T11:35:05 ALMT" name="wrongSchetZachisleniyaError" description="Check the wrong schet" finished-at="2023-07-03T11:35:14 ALMT" duration-ms="8573" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wrongSchetZachisleniyaError -->
+        <test-method signature="wrongSchetSpisaniyaError()[pri:2, instance:org.OptimaBusTests.uiTests.IntraBankTest@5445f5ba]" started-at="2023-07-03T11:35:14 ALMT" name="wrongSchetSpisaniyaError" description="Check the wrong schet spisaniya" finished-at="2023-07-03T11:35:22 ALMT" duration-ms="7692" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wrongSchetSpisaniyaError -->
+        <test-method signature="moreThenHaveError()[pri:3, instance:org.OptimaBusTests.uiTests.IntraBankTest@5445f5ba]" started-at="2023-07-03T11:35:22 ALMT" name="moreThenHaveError" description="Check to transfer more money then in the accaunt" finished-at="2023-07-03T11:35:31 ALMT" duration-ms="8915" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- moreThenHaveError -->
+        <test-method signature="minValueInNAznachenie()[pri:4, instance:org.OptimaBusTests.uiTests.IntraBankTest@5445f5ba]" started-at="2023-07-03T11:35:31 ALMT" name="minValueInNAznachenie" description="Check to input MIN value in &#039;Назначение&#039;" finished-at="2023-07-03T11:35:39 ALMT" duration-ms="7995" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- minValueInNAznachenie -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.OptimaBusTests.uiTests.IntraBankTest@5445f5ba]" started-at="2023-07-03T11:35:39 ALMT" name="tearDown" finished-at="2023-07-03T11:35:39 ALMT" duration-ms="203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.OptimaBusTests.uiTests.IntraBankTest -->
+      <class name="org.OptimaBusTests.uiTests.LoginTests">
+        <test-method is-config="true" signature="setUpUiTest()[pri:0, instance:org.OptimaBusTests.uiTests.LoginTests@1431267b]" started-at="2023-07-03T11:35:39 ALMT" name="setUpUiTest" finished-at="2023-07-03T11:35:39 ALMT" duration-ms="768" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpUiTest -->
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:org.OptimaBusTests.uiTests.LoginTests@1431267b]" started-at="2023-07-03T11:35:39 ALMT" name="openLoginPage" finished-at="2023-07-03T11:35:43 ALMT" duration-ms="3854" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLoginPage -->
+        <test-method signature="loginWithValidCredentials()[pri:0, instance:org.OptimaBusTests.uiTests.LoginTests@1431267b]" started-at="2023-07-03T11:35:43 ALMT" name="loginWithValidCredentials" description="Verify that user can login with valid credentials" finished-at="2023-07-03T11:35:45 ALMT" duration-ms="2039" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.OptimaBusTests.uiTests.LoginTests@1431267b]" started-at="2023-07-03T11:35:45 ALMT" name="tearDown" finished-at="2023-07-03T11:35:46 ALMT" duration-ms="180" status="PASS">
+>>>>>>> main
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.OptimaBusTests.uiTests.LoginTests -->
       <class name="org.OptimaBusTests.uiTests.CalcTests">
+<<<<<<< HEAD
         <test-method is-config="true" signature="setUpUiTest()[pri:0, instance:org.OptimaBusTests.uiTests.CalcTests@3fd2322d]" started-at="2023-06-01T09:46:02 ALMT" name="setUpUiTest" finished-at="2023-06-01T09:46:06 ALMT" duration-ms="3881" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -433,6 +492,25 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           </reporter-output>
         </test-method> <!-- chooseUSD -->
         <test-method is-config="true" signature="tearDown()[pri:0, instance:org.OptimaBusTests.uiTests.CalcTests@3fd2322d]" started-at="2023-06-01T09:46:20 ALMT" name="tearDown" finished-at="2023-06-01T09:46:20 ALMT" duration-ms="283" status="PASS">
+=======
+        <test-method is-config="true" signature="setUpUiTest()[pri:0, instance:org.OptimaBusTests.uiTests.CalcTests@442f92e6]" started-at="2023-07-03T11:34:21 ALMT" name="setUpUiTest" finished-at="2023-07-03T11:34:25 ALMT" duration-ms="4181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpUiTest -->
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:org.OptimaBusTests.uiTests.CalcTests@442f92e6]" started-at="2023-07-03T11:34:25 ALMT" name="openLoginPage" finished-at="2023-07-03T11:34:35 ALMT" duration-ms="9545" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLoginPage -->
+        <test-method signature="loginWithValidCredentials()[pri:1, instance:org.OptimaBusTests.uiTests.CalcTests@442f92e6]" started-at="2023-07-03T11:34:35 ALMT" name="loginWithValidCredentials" description="Verify that user can login with valid credentials" finished-at="2023-07-03T11:34:39 ALMT" duration-ms="3702" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidCredentials -->
+        <test-method signature="chooseUSD()[pri:2, instance:org.OptimaBusTests.uiTests.CalcTests@442f92e6]" started-at="2023-07-03T11:34:39 ALMT" name="chooseUSD" description="Change the currency  " finished-at="2023-07-03T11:34:44 ALMT" duration-ms="5119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chooseUSD -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.OptimaBusTests.uiTests.CalcTests@442f92e6]" started-at="2023-07-03T11:34:44 ALMT" name="tearDown" finished-at="2023-07-03T11:34:44 ALMT" duration-ms="273" status="PASS">
+>>>>>>> main
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

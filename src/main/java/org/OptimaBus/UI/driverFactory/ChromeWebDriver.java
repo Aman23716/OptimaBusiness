@@ -12,6 +12,7 @@ public class ChromeWebDriver {
 
     public static WebDriver loadChromeDriver (){
         WebDriverManager.chromedriver().setup();
+
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-extensions ");
         options.addArguments("--start-maximized");
@@ -21,11 +22,10 @@ public class ChromeWebDriver {
             options.addArguments("--headless");
         }
 
+
         WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
         return driver;
-
     }
-
 }

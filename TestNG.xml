@@ -5,21 +5,15 @@
     </listeners>
     <test name="SmokeTest">
         <classes>
-<!--            <class name="org.OptimaBusTests.uiTests.LoginTests"/>-->
-            <class name="org.OptimaBusTests.uiTests.CalcTests"/>
-            <class name="org.OptimaBusTests.uiTests.SettingsTests"/>
-            <class name="org.OptimaBusTests.uiTests.MainPageTest"/>
-            <class name="org.OptimaBusTests.uiTests.OperationHisTests"/>
+
+<!--            <class name="org.OptimaBusTests.uiTests.CalcTests"/>-->
+<!--            <class name="org.OptimaBusTests.uiTests.mainPageTests.SettingsTests"/>-->
+<!--            <class name="org.OptimaBusTests.uiTests.mainPageTests.MainPageTest"/>-->
+<!--            <class name="org.OptimaBusTests.uiTests.mainPageTests.OperationHisTests"/>-->
+            <class name="org.OptimaBusTests.uiTests.createBTNTest.IntraBankTest"/>
+            <class name="org.OptimaBusTests.uiTests.createBTNTest.MBPerevodSomTest"/>
+            <class name="org.OptimaBusTests.uiTests.createBTNTest.MBPerevodValTest"/>
+            <class name="org.OptimaBusTests.uiTests.createBTNTest.ConvertingTest"/>
         </classes>
     </test>
-<!--&lt;!&ndash;    <test name="Regression">&ndash;&gt;-->
-<!--        <classes>-->
-
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="2E2">-->
-<!--        <classes>-->
-
-<!--        </classes>-->
-<!--    </test>-->
 </suite>

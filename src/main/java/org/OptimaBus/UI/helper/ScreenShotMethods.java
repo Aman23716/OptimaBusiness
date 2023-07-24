@@ -34,6 +34,5 @@ public class ScreenShotMethods {
 
         FileUtils.copyFile(scrFile, new File(path + "\\screenshot" + dateFormat.format(cal.getTime()) + ".png"));
 
-
     }
     }

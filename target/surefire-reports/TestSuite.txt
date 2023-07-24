@@ -1,6 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 10, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 177.03 s <<< FAILURE! - in TestSuite
 checkTheMPBar(org.OptimaBusTests.uiTests.MainPageTest)  Time elapsed: 33.871 s  <<< FAILURE!
 org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: .//a[@class='nav-item'][6]' (tried for 10 second(s) with 500 milliseconds interval)
@@ -60,3 +61,6 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
 Session ID: dd2ada049e44a96f33ed58d160ab1a6f
 	at org.OptimaBusTests.uiTests.SettingsTests.ChangePassword(SettingsTests.java:36)
 
+=======
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 86.025 s - in TestSuite
+>>>>>>> main

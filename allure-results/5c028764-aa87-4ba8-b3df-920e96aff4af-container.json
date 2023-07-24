@@ -1,0 +1,1 @@
+{"uuid":"5c028764-aa87-4ba8-b3df-920e96aff4af","name":"org.OptimaBusTests.uiTests.LoginTests","children":["67f419f2-036e-4d43-b965-816c43ec9960"],"befores":[],"afters":[{"name":"tearDown","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1689359166749,"stop":1689359166883}],"start":1689359162867,"stop":1689359166890}

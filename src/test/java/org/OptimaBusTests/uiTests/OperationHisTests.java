@@ -1,38 +1,18 @@
 package org.OptimaBusTests.uiTests;
 
-import org.OptimaBus.UI.dataProvider.ConfigReader;
-import org.testng.annotations.BeforeClass;
+
 import org.testng.annotations.Test;
 
 
 public class OperationHisTests extends BaseUiTests {
 
-    @BeforeClass
-    public void openLoginPage() {
-        driver.navigate().to(ConfigReader.getProperty("qa_env"));
-        loginPage.fillUpUsernameAndPass();
-        mainPage.ChooseAltynken1();
-    }
-
-    @Test(priority = 0, description = "Click to История операции in Main Page")
-    public void checkThe2BTN() {
-        //       System.out.println( calk(2,1));
-        operationHistory.BTN2();
-    }
-//    @Test(priority = 1,description = "Click to (All) BTN")
-//    public void AllBTN(){
-//        operationHistory.AllBTN();
-//   }
 
 
     @Test(priority = 1,description = "Click to (На Подпись) BTN")
     public void NaPodpis(){
         operationHistory.NaPodpis();
     }
-//    @Test(priority = 2,description = "Click to () BTN")
-//    public void NaPodpis(){
-//        operationHistory.NaPodpis();
-//    }
+
     @Test(priority = 2,description = "Click to (Ожидает подписи) BTN")
     public void OjidaetOtpr(){
         operationHistory.OjidaetOtpravki();

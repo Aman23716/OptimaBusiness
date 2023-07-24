@@ -36,7 +36,9 @@ public class MockDataGenerator {
 //    }
 
     public double generateMockValue1(){
-        return faker.number().randomDouble(99,1,1000);
+
+        return faker.number().randomDouble(99,100, 10009);
+
 
     }
 
