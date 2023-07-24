@@ -1,10 +1,8 @@
 package org.OptimaBusTests.uiTests;
 
-<<<<<<< HEAD
-import org.OptimaBus.UI.dataProvider.MockDataGenerator;
-=======
+
 import org.OptimaBus.UI.dataProvider.ConfigReader;
->>>>>>> main
+
 import org.OptimaBus.UI.driverFactory.Driver;
 import org.OptimaBus.UI.helper.CustomAssertions;
 import org.OptimaBus.UI.helper.WebElementActions;
@@ -33,40 +31,12 @@ public abstract class BaseUiTests {
     public MainPage mainPage;
     public OperationHistory operationHistory;
     public Documents documents;
-    public Imports imports;
-    public Settings settings;
-    public More more;
-    public Staff staff;
+//    public Imports imports;
+//    public Settings settings;
+//    public More more;
+//    public Staff staff;
     public Converting converting;
 
-
-<<<<<<< HEAD
-
-    MockDataGenerator mockDataGenerator;
-
-
-    WebElementActions webElementActions;
-    WebDriver driver;
-    LoginPage loginPage;
-
-    MainPage mainPage;
-
-    OperationHistory operationHistory;
-
-    Documents documents;
-
-    Imports imports;
-
-    Settings settings;
-
-    MoreCallCenter moreCallCenter;
-
-    Staff staff;
-
-    Converting converting;
-
-=======
->>>>>>> main
     @BeforeClass
     public void setUpUiTest() {
         driver = Driver.getDriver();
@@ -78,10 +48,10 @@ public abstract class BaseUiTests {
         converting.ChooseImaratStroi();
 
 
-        imports = new Imports();
-        settings = new Settings();
-        more = new More();
-        staff = new Staff();
+//        imports = new Imports();
+//        settings = new Settings();
+//        more = new More();
+//        staff = new Staff();
         intra_bank_transfer = new Intra_bank_transfer();
         customAssertions = new CustomAssertions();
         operationHistory = new OperationHistory();
@@ -89,15 +59,10 @@ public abstract class BaseUiTests {
         mbPerevodVal = new MBPerevodVal();
     }
 
+
     @AfterClass
     public void tearDown() {
         Driver.closeDriver();
     }
-<<<<<<< HEAD
-    @AfterClass
-    public void tearDown() {
-        Driver.closeDriver();
-    }
-=======
->>>>>>> main
+
 }
