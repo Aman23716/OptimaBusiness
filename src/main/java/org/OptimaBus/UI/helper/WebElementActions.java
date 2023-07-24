@@ -24,6 +24,7 @@ public class WebElementActions {
 
     public  static void  waitElementToBeDisplayed(WebElement element){
 
+
         new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(6)).until(ExpectedConditions.visibilityOf(element));
 
     }
@@ -79,6 +80,10 @@ public class WebElementActions {
         element.sendKeys(Double.toString(f));
         return this;
     }
+
+
+
+
     public WebElementActions sendKeysInt(WebElement element, Integer f){
         waitElementToBeDisplayed(element);
         element.sendKeys(Integer.toString(f));
