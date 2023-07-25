@@ -69,14 +69,16 @@ public WebElement schetPerevodaCheck;
 
 
 
+
+
+
     public void CheckNaPodpisBTN(){
         elementActions.click(createBTN).click(vnutriBankBTN).click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091808755280112").sendKeys(inputDocumNumber,"")
-                .sendKeysInt(inputSummuPlateja,100).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).pause(2000).click(naPodpisBTN).pause(4000)
+                .sendKeysInt(inputSummuPlateja,100).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).pause(2000).click(naPodpisBTN).pause(5000)
                 ;
-
     }
     public void TestTheWrongSchet(){
-        elementActions.click(createBTN).click(vnutriBankBTN).click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091808755222222").sendKeys(inputDocumNumber,"")
+        elementActions.click(createBTN).click(vnutriBankBTN).click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"2091808755280112").sendKeys(inputDocumNumber,"")
                 .sendKeysInt(inputSummuPlateja,200).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).pause(2000).click(naPodpisBTN);
     }
     public void TestTheWrongSchetSpisaniya(){
@@ -93,7 +95,7 @@ public WebElement schetPerevodaCheck;
 
     }
     public void CheckNaPodpisBTNTranzit(){
-        elementActions.click(createBTN).click(vnutriBankBTN).click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091822000180171").sendKeys(inputDocumNumber,"")
+        elementActions.click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091822000180171").sendKeys(inputDocumNumber,"")
                 .sendKeysInt(inputSummuPlateja,500).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).pause(2000).click(naPodpisBTN).pause(4000)
                 ;
 

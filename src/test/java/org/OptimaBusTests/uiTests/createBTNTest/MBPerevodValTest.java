@@ -3,8 +3,7 @@ package org.OptimaBusTests.uiTests.createBTNTest;
 import org.OptimaBusTests.uiTests.BaseUiTests;
 import org.testng.annotations.Test;
 
-import javax.swing.*;
-import javax.xml.crypto.Data;
+
 
 
 public class MBPerevodValTest extends BaseUiTests {

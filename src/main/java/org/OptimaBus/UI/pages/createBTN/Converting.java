@@ -116,12 +116,12 @@ public class Converting extends BasePage {
 //                .inputDocumentNumber1(documentNumber1);
     }
     public void CheckNaPodpisBTNDollar() {
-        elementActions.pause(2000).click(createBTN).click(convertingBTN).click(chooseCurrencyBTN1).click(chooseUSDT).click(chooseCurrencyBTN2).click(chooseDOLL)
+        elementActions.pause(2000).click(chooseCurrencyBTN1).click(chooseUSDT).click(chooseCurrencyBTN2).click(chooseDOLL)
                 .sendKeysDouble(inputMockValue, mockDataGenerator.generateMockValue1()).click(BTNNaPodpis);
 
     }
     public void CheckNaPodpisBTNInvalute() {
-        elementActions.pause(2000).click(createBTN).click(convertingBTN).click(chooseCurrencyBTN1).click(chooseUSDT).click(chooseCurrencyBTN2).click(chooseSom)
+        elementActions.pause(2000).click(chooseCurrencyBTN1).click(chooseUSDT).click(chooseCurrencyBTN2).click(chooseSom)
                 .sendKeysDouble(inputMockValue, mockDataGenerator.generateMockValue1()).click(BTNNaPodpis);
 
     }
