@@ -14,6 +14,8 @@ public class MBPerevodValTest extends BaseUiTests {
         mbPerevodVal.CheckFunctionalNaPodpis();
         webElementActions.pause(2000);
         customAssertions.asserText("Платеж отправлен на подпись", mbPerevodVal.platejOtpravlenSentence, "norm");
+        mbPerevodVal.VIstoriuOperaciiBTN();
+        webElementActions.pause(2000);
 
     }
     @Test(description = "Проверка на некорректном счете списания")

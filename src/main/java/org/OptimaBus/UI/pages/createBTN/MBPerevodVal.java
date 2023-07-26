@@ -47,8 +47,8 @@ public class MBPerevodVal extends BasePage {
     public WebElement naPodpisBTN;
     @FindBy(xpath = ".//p[@class='ob-dialog__label']")
     public WebElement platejOtpravlenSentence;
-
-
+    @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text- q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase ob-dialog__button ob-dialog__button_filled']")
+    public WebElement vIstoriuOperaciiBTN;
 
     @FindBy(xpath = ".//div[@role='alert']")
     public WebElement allAlert;
@@ -57,7 +57,7 @@ public class MBPerevodVal extends BasePage {
 
 
     public void CheckFunctionalNaPodpis(){
-        elementActions.pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+        elementActions.pause(2000).click(createBTN).click(MBPerevodVal).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
                 .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
                 .sendKeys(IBANSchet,"2222222222222222222222222222222222").sendKeysInt(summaPlatejaField,22)
                 .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
@@ -137,6 +137,9 @@ public class MBPerevodVal extends BasePage {
                 .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
                 .sendKeys(IBANSchet,"2222222222222222222222222222222222").inputDocumentNumber1(numberOfDocument).sendKeysInt(summaPlatejaField,22)
                 .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
+    }
+    public void VIstoriuOperaciiBTN(){
+        elementActions.click(vIstoriuOperaciiBTN);
     }
 
 
