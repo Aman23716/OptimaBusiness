@@ -45,7 +45,8 @@ public class MBPerevodVal extends BasePage {
     public WebElement naznachenieField;
     @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--unelevated q-btn--rectangle q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase sign-btn transfer-btn']")
     public WebElement naPodpisBTN;
-
+    @FindBy(xpath = ".//p[@class='ob-dialog__label']")
+    public WebElement platejOtpravlenSentence;
 
 
 
@@ -58,7 +59,7 @@ public class MBPerevodVal extends BasePage {
     public void CheckFunctionalNaPodpis(){
         elementActions.pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
                 .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
-                .sendKeys(IBANSchet,"2222222222222222222222222222222222").inputDocumentNumber1(numberOfDocument).sendKeysInt(summaPlatejaField,22)
+                .sendKeys(IBANSchet,"2222222222222222222222222222222222").sendKeysInt(summaPlatejaField,22)
                 .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
     }
     public void CheckWithoutSchetSpisaniya(){
@@ -107,6 +108,12 @@ public class MBPerevodVal extends BasePage {
                 .sendKeys(IBANSchet,"2222222222222222222222222222222222").inputDocumentNumber1(numberOfDocument)
                 .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN);
     }
+    public void CheckSummaMoreSummaField(){
+        elementActions.pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+                .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
+                .sendKeys(IBANSchet,"2222222222222222222222222222222222").sendKeysLong(summaPlatejaField,9999999999L)
+                .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN);
+    }
     public void CheckEmptyCodeOplatyField(){
         elementActions.pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
                 .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
@@ -119,10 +126,33 @@ public class MBPerevodVal extends BasePage {
                 .sendKeys(IBANSchet,"2222222222222222222222222222222222").inputDocumentNumber1(numberOfDocument).sendKeysInt(summaPlatejaField,22)
                 .sendKeys(codeOplaty,"1").click(chooseNalog).click(naPodpisBTN);
     }
+    public void CheckFunctionalWithRU(){
+        elementActions.pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+                .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
+                .sendKeys(IBANSchet,"2222222222222222222222222222222222").sendKeysInt(summaPlatejaField,22)
+                .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
+    }
+    public void CheckFunctionalWithKZ(){
+        elementActions.pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+                .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
+                .sendKeys(IBANSchet,"2222222222222222222222222222222222").inputDocumentNumber1(numberOfDocument).sendKeysInt(summaPlatejaField,22)
+                .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
+    }
 
 
 
-
+//    public void ChooseAltynken1(){
+//        elementActions.click(chooseCompany);
+//        for (WebElement list1 : chooseAltynken){
+//            System.out.println(list1);
+//            if (list1.getText().equals("ОсОО \"DentTrade\" (\"ДентТрейд\")")){
+//                list1.click();
+////                if (list1.getText().equals(ConfigReader.getProperty("CompName"))){
+////                    list1.click();
+////
+//            }
+//        }
+//    }
 
 
 

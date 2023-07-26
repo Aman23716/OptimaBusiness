@@ -38,7 +38,7 @@ public class ConvertingTest extends BaseUiTests {
         webElementActions.pause(2000);
         converting.CheckToConvertMoreThenInValue();
         customAssertions.asserText("Сумма конвертации превышает доступный баланс счета", converting.secondSummaAlert, "norm");
-        customAssertions.asserText("Конвертация", converting.ConvertWord, "norm");
+        customAssertions.asserText("Конвертация", converting.convertWord, "norm");
         webElementActions.refreshPage();
         customAssertions.asserText("Наименование ЮЛ", converting.naimenovanieWord, "norm");
         customAssertions.asserText("Номер документа",converting.numberDocumWord,"norm");
@@ -46,7 +46,6 @@ public class ConvertingTest extends BaseUiTests {
         customAssertions.asserText("Сумма",converting.summaWord,"norm");
         customAssertions.asserText("Счет зачисления",converting.schetZa4isleniyaWord,"norm");
         customAssertions.asserText("Сумма",converting.summaZa4Word,"norm");
-
     }
     @Test(description = "Проверка функионала создании операции по конвертации с валидными данными c доллара на евро")
     public void createNaPodpisFunctionalDollar(){
@@ -63,7 +62,20 @@ public class ConvertingTest extends BaseUiTests {
         converting.CheckNaPodpisBTNInvalute();
         webElementActions.pause(4000);
         customAssertions.asserText("Платеж отправлен на подпись", converting.platejOtpravlen, "norm");
+    }
+    @Test(description = "Проверка функионала создании операции по конвертации с изменением курса валют в ручную")
+    public void createNewCourseFunctionalCheck() {
+        webElementActions.refreshPage();
+        webElementActions.pause(2000);
+        converting.CheckToWriteNewCourse();
+        webElementActions.pause(4000);
+        customAssertions.asserText("100 KGS", intra_bank_transfer.summaPodpisCheck, "norm");
+        customAssertions.asserText("Вам на подпись", intra_bank_transfer.vamNaPodpisCheck, "norm");
+        customAssertions.asserText("Конвертация", intra_bank_transfer.perevodKudaCheck, "norm");
+        customAssertions.asserText("ОсОО \"АЛТЫНКЕН\"", intra_bank_transfer.naimenovanieKudaPerevodCheck,"norm");
+        customAssertions.asserText("1092220111430162", intra_bank_transfer.schetPerevodaCheck,"norm" );
 
     }
+
 
 }

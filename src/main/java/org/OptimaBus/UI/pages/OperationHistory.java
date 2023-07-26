@@ -28,6 +28,21 @@ public class OperationHistory extends BasePage{
 
 
 
+
+    @FindBy(xpath = "(.//div[@class='p3 transaction__status status-info']//span)[1]")
+    public WebElement vamNaPodpisCheck;
+    @FindBy(xpath = "(.//div[@class='transaction__amount text-weight-medium p1'])[1]")
+    public WebElement summaPodpisCheck;
+    @FindBy(xpath = "(.//div[@class='transaction__additional-info']//div)[1]")
+    public WebElement perevodKudaCheck;
+    @FindBy(xpath = "(.//div[@class='transaction__title p1 d-none'])[1]")
+    public WebElement naimenovanieKudaPerevodCheck;
+    @FindBy(xpath = "(.//div[@class='text-muted text-small d-none'])[1]")
+    public WebElement schetPerevodaCheck;
+
+
+
+
     public OperationHistory BTN2(){
         elementActions.click(ClickTo2BTN);
 
