@@ -10,8 +10,11 @@ public class EmployeesTests extends BaseUiTests {
     public void isEmployeesBtnClickable() {
         webElementActions.refreshPage();
         webElementActions.pause(2000);
-        Assert.assertEquals(webElementActions.isClickAble(employees.employeesBtn), true);
-       // Assert.assertEquals(webElementActions.click(employees.clickEmployeesBtn().employeesBtn ) );
+        webElementActions.click(employees.employeesBtn);
+        customAssertions.asserText("Сотрудники", employees.employeeText, "norm");
+
+
+
 
 
     }
