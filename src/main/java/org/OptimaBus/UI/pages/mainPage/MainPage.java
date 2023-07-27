@@ -45,6 +45,10 @@ public class MainPage extends BasePage {
     @FindBy(xpath = ".//a[@class='user-toggle no-caret']")
     public WebElement chooseCompany;
 
+ //12
+ @FindBy(xpath = ".//button[@class='aside-dropdown-item dropdown-item user-text text-dark active']")
+    public List<WebElement> chosenIPSydykovaAjar;
+
     @FindBy(xpath = ".//button[@class='aside-dropdown-item dropdown-item user-text text-dark'][2]")
     public WebElement chooseUtes;
 
@@ -114,11 +118,22 @@ public class MainPage extends BasePage {
 //
             }
         }
+
     }
 
 
+    public void chooseIPSydykovaAjar(){
+        elementActions.click(chooseCompany);
+        for (WebElement list1 : chosenIPSydykovaAjar) {
+            System.out.println(list1);
+            if (list1.getText().equals("ИП Сыдыкова Ажар Тологоновна")) {
+                list1.click();
+//                if (list1.getText().equals(ConfigReader.getProperty("CompName"))){
+//                    list1.click();
 
-
+            }
+        }
+    }
 
     public void listOfCurr() {
         for (WebElement list : listOfcurency) {

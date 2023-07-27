@@ -15,6 +15,11 @@ public class Converting extends BasePage {
     /****/
     @FindBy(xpath = ".//span[@class='company-name']")
     public List<WebElement> chooseAltynken;
+
+    //************************************************
+    @FindBy(xpath = ".//button[@class='aside-dropdown-item dropdown-item user-text text-dark active']")
+    public List<WebElement> chosenIPSydykovaAjar;
+
     @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--rectangle bg-primary text-white q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase payment__btn lite-shadow']")
     public WebElement createBTN;
     @FindBy(xpath = "(.//a[@class='p-select-item'])[4]")
@@ -135,9 +140,9 @@ public class Converting extends BasePage {
 
     public void ChooseImaratStroi(){
         elementActions.click(chooseCompany);
-        for (WebElement list1 : chooseAltynken){
+        for (WebElement list1 : chosenIPSydykovaAjar){
             System.out.println(list1);
-            if (list1.getText().equals("ОсОО \"АЛТЫНКЕН\"")){
+            if (list1.getText().equals("ИП Сыдыкова Ажар Тологоновна")){
                 list1.click();
 //                if (list1.getText().equals(ConfigReader.getProperty("CompName"))){
 //                    list1.click();

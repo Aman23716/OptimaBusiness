@@ -10,6 +10,7 @@ public class OperationHisTests extends BaseUiTests {
 
     @Test(priority = 1,description = "Click to (На Подпись) BTN")
     public void NaPodpis(){
+
         operationHistory.NaPodpis();
     }
 

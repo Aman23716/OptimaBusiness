@@ -20,8 +20,8 @@ public class MainPageTest extends BaseUiTests {
         Assert.assertEquals(driver.getCurrentUrl(),"https://test-ob.optimabank.kg/accounts");
         OperationHistory operationHistory1 = operationHistory.BTN2();
         Documents documents1  = documents.BTN3();
-//        Staff staff1 = staff.BTN4();
-//        Imports imports1 = imports.BTN5();
+//        Employees staff1 = staff.BTN4();
+//        Imported imports1 = imports.BTN5();
 //        Settings settings1 = settings.BTN6();
 //        More more1 = more.BTN7();
 //        Assert.assertEquals(imports1.ClickTo4BTN.getText(),"Сотрудники");
@@ -47,6 +47,10 @@ public class MainPageTest extends BaseUiTests {
     }
     @Test(priority = 4, description = "Check the importBTN")
     public void importCheckBTN(){
+
+    }
+    @Test (priority = 5, description = "Click to dropdown and choose one company")
+    public void checkChosenOneCompany(){
 
     }
 
