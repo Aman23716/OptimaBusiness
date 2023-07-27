@@ -16,6 +16,11 @@ public class MBPerevodValTest extends BaseUiTests {
         customAssertions.asserText("Платеж отправлен на подпись", mbPerevodVal.platejOtpravlenSentence, "norm");
         mbPerevodVal.VIstoriuOperaciiBTN();
         webElementActions.pause(2000);
+        customAssertions.asserText("22 USD", intra_bank_transfer.summaPodpisCheck, "norm");
+        customAssertions.asserText("Вам на подпись", intra_bank_transfer.vamNaPodpisCheck, "norm");
+        customAssertions.asserText("SWIFT", intra_bank_transfer.perevodKudaCheck, "norm");
+        customAssertions.asserText("Naimenovanie", intra_bank_transfer.naimenovanieKudaPerevodCheck,"norm");
+        customAssertions.asserText("1092220111430162", intra_bank_transfer.schetPerevodaCheck,"norm" );
 
     }
     @Test(description = "Проверка на некорректном счете списания")
@@ -101,15 +106,17 @@ public class MBPerevodValTest extends BaseUiTests {
     }
     @Test(description = "Проверка на невалидные значения в поле Номер документа")
     public void checkTheFunctionalWithKZ() {
-        webElementActions.refreshPage();
         webElementActions.pause(2000);
+        mbPerevodVal.ChooseAvtoCur();
         mbPerevodVal.CheckFunctionalWithKZ();
+        customAssertions.asserText("Платеж отправлен на подпись", mbPerevodVal.platejOtpravlenSentence, "norm");
     }
     @Test(description = "Проверка на невалидные значения в поле Номер документа")
     public void checkTheFunctionalWithRU() {
-        webElementActions.refreshPage();
         webElementActions.pause(2000);
+        mbPerevodVal.ChooseDanteTrade();
         mbPerevodVal.CheckFunctionalWithRU();
+        customAssertions.asserText("Платеж отправлен на подпись", mbPerevodVal.platejOtpravlenSentence, "norm");
     }
 
 
