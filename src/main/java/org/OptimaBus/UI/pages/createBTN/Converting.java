@@ -44,6 +44,8 @@ public class Converting extends BasePage {
     public WebElement chooseDOLL;
     @FindBy(xpath = "(.//input[@class='q-field__input'])[1]")
     public WebElement inputMockValue;
+    @FindBy(xpath = "(.//input[@class='q-field__input'])[2]")
+    public WebElement inputValueInSummaZachisleniyaField;
     @FindBy(xpath = "currency-rates__rate")
     public WebElement currentCurrency ;
     @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--unelevated q-btn--rectangle q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase sign-btn transfer-btn']")
@@ -69,9 +71,13 @@ public class Converting extends BasePage {
     @FindBy(xpath = "(.//div[@class='q-field__label no-pointer-events absolute ellipsis'])[6]")
     public WebElement summaZa4Word;
     @FindBy(xpath = ".//h1[@class='header-title']")
-    public WebElement ConvertWord;
-
-
+    public WebElement convertWord;
+    @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle q-btn--actionable q-focusable q-hoverable q-btn--dense edit-rate__btn']")
+    public WebElement dogovornoyCourseBTN;
+    @FindBy(xpath = "(.//input[@class='q-field__input'])[3]")
+    public WebElement inputNewCourseField;
+    @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text- q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase ob-dialog__button ob-dialog__button_filled']")
+    public WebElement istoriyaOperaciiBTN;
 
 
     /**NOTCLICKABLE**/
@@ -118,17 +124,19 @@ public class Converting extends BasePage {
     }
     public void CheckNotClickableBTN(){
         elementActions.pause(4000).click(createBTN).click(convertingBTN);
-//                .inputDocumentNumber1(documentNumber1);
     }
     public void CheckNaPodpisBTNDollar() {
-        elementActions.click(chooseCurrencyBTN1).click(chooseUSDT).click(chooseCurrencyBTN2).click(chooseDOLL)
+        elementActions.pause(2000).click(chooseCurrencyBTN1).click(chooseUSDT).click(chooseCurrencyBTN2).click(chooseDOLL)
                 .sendKeysDouble(inputMockValue, mockDataGenerator.generateMockValue1()).click(BTNNaPodpis);
 
     }
     public void CheckNaPodpisBTNInvalute() {
         elementActions.pause(2000).click(chooseCurrencyBTN1).click(chooseUSDT).click(chooseCurrencyBTN2).click(chooseSom)
                 .sendKeysDouble(inputMockValue, mockDataGenerator.generateMockValue1()).click(BTNNaPodpis);
-
+    }
+    public void CheckToWriteNewCourse(){
+        elementActions.pause(2000).click(createBTN).click(convertingBTN).click(chooseCurrencyBTN1).click(chooseSom).click(chooseCurrencyBTN2).click(chooseSOM1)
+                .click(dogovornoyCourseBTN).sendKeysLong(inputNewCourseField,1l).sendKeysInt(inputValueInSummaZachisleniyaField, 100).click(BTNNaPodpis).click(istoriyaOperaciiBTN);
     }
 
 
@@ -158,26 +166,6 @@ public class Converting extends BasePage {
           currentCurrency.getText();
         return this;
     }
-//public Settings chooseSettings() {
-//    for (WebElement list1 : navigationList) {
-//        if (list1.getText().equals("Настройки")){
-//            System.out.println(list1.getText());
-//            list1.click();
-//        }
-//    }
-//    return this;
-//}
-
-//    public Converting LOL(){
-//        for (WebElement list2 : documentNumber1){
-//            if (list2.getText().equals("Номер документа")){
-//                list2.getText();
-//                System.out.println(list2);
-//            }
-//        }return this;
-//    }
-
-
 
     public Converting GetDocumValue(){
 //          documentNumber1.getText();
