@@ -13,7 +13,7 @@ public class Converting extends BasePage {
     @FindBy(xpath = ".//button[@class='aside-dropdown-item dropdown-item user-text text-dark'][2]")
     public WebElement chooseUtes;
     /****/
-    @FindBy(xpath = ".//span[@class='company-name']")
+    @FindBy(xpath = ".//button[@class='aside-dropdown-item dropdown-item user-text text-dark active']")
     public List<WebElement> chooseAltynken;
 
     //************************************************
@@ -148,7 +148,7 @@ public class Converting extends BasePage {
 
     public void ChooseImaratStroi(){
         elementActions.click(chooseCompany);
-        for (WebElement list1 : chosenIPSydykovaAjar){
+        for (WebElement list1 : chooseAltynken){
             System.out.println(list1);
             if (list1.getText().equals("ОсОО \"АЛТЫНКЕН\"")){
                 list1.click();
