@@ -46,6 +46,8 @@ public WebElement naimenovanieIP;
 /**История операций**/
 @FindBy(xpath = "(.//div[@class='p3 transaction__status status-info']//span)[1]")
 public WebElement vamNaPodpisCheck;
+@FindBy(xpath = "(.//div[@class='p3 transaction__status status-warning']//span)[1]")
+public WebElement naPodpisanii;
 @FindBy(xpath = "(.//div[@class='transaction__amount text-weight-medium p1'])[1]")
 public WebElement summaPodpisCheck;
 @FindBy(xpath = "(.//div[@class='transaction__additional-info']//div)[1]")

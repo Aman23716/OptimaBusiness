@@ -4,6 +4,8 @@ import org.OptimaBus.UI.pages.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class MBPerevodVal extends BasePage {
     @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--rectangle bg-primary text-white q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase payment__btn lite-shadow']")
     public WebElement createBTN;
@@ -13,6 +15,8 @@ public class MBPerevodVal extends BasePage {
     public WebElement schetSpisaniyaBTN;
     @FindBy(xpath = "(.//div[@class='ob-select'])[1]")
     public WebElement chooseDollarSchet;
+    @FindBy(xpath = "(.//div[@class='ob-select'])[2]")
+    public WebElement chooseKZSchet;
     @FindBy(xpath = "(.//div[@class='q-field__control-container col relative-position row no-wrap q-anchor--skip'])[3]")
     public WebElement schetOplatyKomissiiBTN;
     @FindBy(xpath = "(.//div[@class='ob-select'])[1]")
@@ -49,7 +53,31 @@ public class MBPerevodVal extends BasePage {
     public WebElement platejOtpravlenSentence;
     @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text- q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase ob-dialog__button ob-dialog__button_filled']")
     public WebElement vIstoriuOperaciiBTN;
+    @FindBy(xpath = ".//a[@class='user-toggle no-caret']")
+    public WebElement chooseCompany;
+    @FindBy(xpath = ".//span[@class='company-name']")
+    public List<WebElement> chooseDanteTrade;
+    @FindBy(xpath = ".//button[@class='close']")
+    public WebElement closeBTN;
 
+
+
+    /**ПОЛЯ ДЛЯ ПЕРЕВОДА КЗ**/
+    @FindBy(xpath = "(.//input[@class='q-field__native q-placeholder'])[5]")
+    public WebElement binFieldKZ;
+    @FindBy(xpath = "(.//input[@class='q-field__native q-placeholder'])[6]")
+    public WebElement KPPFieldKZ;
+
+
+    /**ПОЛЯ ДЛЯ ПЕРЕВОДА РУ**/
+    @FindBy(xpath = "(.//input[@class='q-field__native q-placeholder'])[5]")
+    public WebElement codeValutnoyOperaciiRU;
+    @FindBy(xpath = "(.//input[@class='q-field__native q-placeholder'])[6]")
+    public WebElement INNFieldRU;
+    @FindBy(xpath = "(.//input[@class='q-field__native q-placeholder'])[7]")
+    public WebElement KPPFieldRU;
+
+    /**ALERTS**/
     @FindBy(xpath = ".//div[@role='alert']")
     public WebElement allAlert;
 
@@ -57,7 +85,7 @@ public class MBPerevodVal extends BasePage {
 
 
     public void CheckFunctionalNaPodpis(){
-        elementActions.pause(2000).click(createBTN).click(MBPerevodVal).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+        elementActions.pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
                 .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
                 .sendKeys(IBANSchet,"2222222222222222222222222222222222").sendKeysInt(summaPlatejaField,22)
                 .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
@@ -74,7 +102,7 @@ public class MBPerevodVal extends BasePage {
                 .sendKeys(IBANSchet,"2222222222222222222222222222222222").inputDocumentNumber1(numberOfDocument).sendKeysInt(summaPlatejaField,22)
                 .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
     } public void CheckWithEmptyCountryField(){
-        elementActions.pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+        elementActions.pause(2000).click(createBTN).click(MBPerevodVal).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
                 .sendKeys(BIKField2,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
                 .sendKeys(IBANSchet,"2222222222222222222222222222222222").inputDocumentNumber1(numberOfDocument).sendKeysInt(summaPlatejaField,22)
                 .sendKeys(codeOplaty2,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
@@ -127,35 +155,50 @@ public class MBPerevodVal extends BasePage {
                 .sendKeys(codeOplaty,"1").click(chooseNalog).click(naPodpisBTN);
     }
     public void CheckFunctionalWithRU(){
-        elementActions.pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+        elementActions.pause(2000).click(createBTN).click(MBPerevodVal).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
                 .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
-                .sendKeys(IBANSchet,"2222222222222222222222222222222222").sendKeysInt(summaPlatejaField,22)
+                .sendKeys(IBANSchet,"2222222222222222222222222222222222").sendKeysInt(codeValutnoyOperaciiRU,11111).sendKeysLong(INNFieldRU,1111111111L).sendKeysLong(KPPFieldRU,111111111L).sendKeysInt(summaPlatejaField,22)
                 .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
     }
     public void CheckFunctionalWithKZ(){
-        elementActions.pause(2000).click(schetSpisaniyaBTN).click(chooseDollarSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
+        elementActions.pause(2000).click(createBTN).click(MBPerevodVal).click(schetSpisaniyaBTN).click(chooseKZSchet).click(schetOplatyKomissiiBTN).click(chooseSomForKomissiya)
                 .click(countryBTN).click(chooseAustriyaCountry).sendKeys(BIKField,"1").pause(1000).click(chooseFirstBIK).sendKeys(naimenovaniyaField,"Naimenovanie")
-                .sendKeys(IBANSchet,"2222222222222222222222222222222222").inputDocumentNumber1(numberOfDocument).sendKeysInt(summaPlatejaField,22)
+                .sendKeys(IBANSchet,"2222222222222222222222222222222222").sendKeysLong(binFieldKZ,321111111233L).sendKeysInt(KPPFieldKZ, 4321423).sendKeysInt(summaPlatejaField,22)
                 .sendKeys(codeOplaty,"1").click(chooseNalog).inputNaznachenieField1(naznachenieField).click(naPodpisBTN).pause(3000);
     }
+
+
     public void VIstoriuOperaciiBTN(){
         elementActions.click(vIstoriuOperaciiBTN);
     }
 
 
 
-//    public void ChooseAltynken1(){
-//        elementActions.click(chooseCompany);
-//        for (WebElement list1 : chooseAltynken){
-//            System.out.println(list1);
-//            if (list1.getText().equals("ОсОО \"DentTrade\" (\"ДентТрейд\")")){
-//                list1.click();
-////                if (list1.getText().equals(ConfigReader.getProperty("CompName"))){
-////                    list1.click();
-////
-//            }
-//        }
-//    }
+    public void ChooseDanteTrade(){
+        elementActions.click(chooseCompany);
+        for (WebElement list1 : chooseDanteTrade){
+            System.out.println(list1);
+            if (list1.getText().equals("ОсОО \"DentTrade\" (\"ДентТрейд\")")){
+                list1.click();
+//                if (list1.getText().equals(ConfigReader.getProperty("CompName"))){
+//                    list1.click();
+//
+            }
+        }
+    }
+    public void ChooseAvtoCur(){
+//        elementActions.click(closeBTN);
+        elementActions.click(chooseCompany);
+        for (WebElement list1 : chooseDanteTrade){
+            System.out.println(list1);
+            if (list1.getText().equals("Общество с ограниченной ответственностью \"АВТОКУРЬЕР\"")){
+                list1.click();
+//                if (list1.getText().equals(ConfigReader.getProperty("CompName"))){
+//                    list1.click();
+//
+            }
+        }
+    }
 
 
 
