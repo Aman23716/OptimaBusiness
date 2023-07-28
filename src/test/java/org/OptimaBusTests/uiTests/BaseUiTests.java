@@ -31,10 +31,10 @@ public abstract class BaseUiTests {
     public MainPage mainPage;
     public OperationHistory operationHistory;
     public Documents documents;
-//    public Imports imports;
-//    public Settings settings;
-//    public More more;
-//    public Staff staff;
+    public Imported imported;
+    public Settings settings;
+    public More more;
+  public Employees employees;
     public Converting converting;
 
     @BeforeClass
@@ -47,11 +47,10 @@ public abstract class BaseUiTests {
         converting = new Converting();
         converting.ChooseImaratStroi();
 
-
-//        imports = new Imports();
-//        settings = new Settings();
-//        more = new More();
-//        staff = new Staff();
+        imported = new Imported();
+        settings = new Settings();
+        more = new More();
+       employees = new Employees();
         intra_bank_transfer = new Intra_bank_transfer();
         customAssertions = new CustomAssertions();
         operationHistory = new OperationHistory();
