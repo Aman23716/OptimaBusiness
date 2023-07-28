@@ -10,8 +10,13 @@ public class MBPerevodSomTest extends BaseUiTests {
         webElementActions.refreshPage();
         webElementActions.pause(2000);
         mbPerevodSom.CheckNaPodpisBTN1();
-        webElementActions.pause(3500);
-        customAssertions.asserText("Платеж отправлен на подпись", intra_bank_transfer.platejOtpravlen, "norm");
+        webElementActions.pause(2000);
+//        customAssertions.asserText("Платеж отправлен на подпись", intra_bank_transfer.platejOtpravlen, "norm");
+        customAssertions.asserText("80,22 KGS", intra_bank_transfer.summaPodpisCheck, "norm");
+        customAssertions.asserText("Вам на подпись", intra_bank_transfer.vamNaPodpisCheck, "norm");
+        customAssertions.asserText("Гросс", intra_bank_transfer.perevodKudaCheck, "norm");
+        customAssertions.asserText("Дордойский филиал", intra_bank_transfer.naimenovanieKudaPerevodCheck,"norm");
+        customAssertions.asserText("1092220111430162", intra_bank_transfer.schetPerevodaCheck,"norm" );
     }
 
     @Test(description = "Тип операции алерт")
