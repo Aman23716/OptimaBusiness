@@ -11,6 +11,7 @@ public class EmployeesTests extends BaseUiTests {
         webElementActions.refreshPage();
         webElementActions.pause(2000);
         webElementActions.click(employees.employeesBtn);
+
         customAssertions.asserText("Сотрудники", employees.employeeText, "norm");
 
 
