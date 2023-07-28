@@ -3,7 +3,7 @@ package org.OptimaBus.UI.pages.mainPage;
 import org.OptimaBus.UI.pages.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
+/**Zhyldyz123**/
 public class Employees extends BasePage {
     @FindBy(xpath = "//a[@href='/employees'] ")
     public WebElement employeesBtn;
@@ -13,6 +13,9 @@ public class Employees extends BasePage {
 
     @FindBy(xpath = "//input[@tabindex='0']")
     public WebElement inputSearchOnEmployees;
+
+    @FindBy(xpath = "//button[@type='button']")
+    public WebElement bellBtnOnEmployeesPage;
 
     @FindBy(xpath = "//th[contains(text(),'ФИО')]")
     public WebElement fIOText;

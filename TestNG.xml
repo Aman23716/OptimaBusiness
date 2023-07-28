@@ -16,4 +16,5 @@
             <class name="org.OptimaBusTests.uiTests.createBTNTest.ConvertingTest"/>
         </classes>
     </test>
+
 </suite>
