@@ -10,7 +10,7 @@ test:
   script:
     - mvn clean test
     - mvn allure:report
-
+#    - mvn io.qameta.allure:allure-maven:serve
   artifacts:
    paths:
      - target/site/allure-maven-plugin

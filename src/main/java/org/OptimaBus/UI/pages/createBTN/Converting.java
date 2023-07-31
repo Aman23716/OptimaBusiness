@@ -13,7 +13,7 @@ public class Converting extends BasePage {
     @FindBy(xpath = ".//button[@class='aside-dropdown-item dropdown-item user-text text-dark'][2]")
     public WebElement chooseUtes;
     /****/
-    @FindBy(xpath = ".//button[@class='aside-dropdown-item dropdown-item user-text text-dark active']")
+    @FindBy(xpath = ".//span[@class='company-name']")
     public List<WebElement> chooseAltynken;
 
     //************************************************
@@ -107,7 +107,7 @@ public class Converting extends BasePage {
 
 
 
-    public void CheckToConvertMoreThenInValue(){ elementActions.pause(2000).inputDocumentNumber1(documentNumber1).click(chooseCurrencyBTN1).click(chooseSom).click(chooseCurrencyBTN2).click(chooseSOM1)
+    public void CheckToConvertMoreThenInValue(){ elementActions.pause(2000).click(createBTN).click(convertingBTN).inputDocumentNumber1(documentNumber1).click(chooseCurrencyBTN1).click(chooseSom).click(chooseCurrencyBTN2).click(chooseSOM1)
             .sendKeys(inputMockValue,"9999999999");
     }
     public void CheckNaPodpisBTN(){
@@ -135,7 +135,7 @@ public class Converting extends BasePage {
                 .sendKeysDouble(inputMockValue, mockDataGenerator.generateMockValue1()).click(BTNNaPodpis);
     }
     public void CheckToWriteNewCourse(){
-        elementActions.pause(2000).click(createBTN).click(convertingBTN).click(chooseCurrencyBTN1).click(chooseSom).click(chooseCurrencyBTN2).click(chooseSOM1)
+        elementActions.pause(2000).click(chooseCurrencyBTN1).click(chooseSom).click(chooseCurrencyBTN2).click(chooseSOM1)
                 .click(dogovornoyCourseBTN).sendKeysLong(inputNewCourseField,1l).sendKeysInt(inputValueInSummaZachisleniyaField, 100).click(BTNNaPodpis).click(istoriyaOperaciiBTN);
     }
 
