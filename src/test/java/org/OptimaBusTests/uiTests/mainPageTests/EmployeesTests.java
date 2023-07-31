@@ -1,9 +1,15 @@
 package org.OptimaBusTests.uiTests.mainPageTests;
 
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import org.OptimaBus.UI.helper.Annotations;
 import org.OptimaBusTests.uiTests.BaseUiTests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-/** Zhyldyz123 **/
+
+/**
+ * Zhyldyz123
+ **/
 public class EmployeesTests extends BaseUiTests {
 
 
@@ -12,22 +18,12 @@ public class EmployeesTests extends BaseUiTests {
         webElementActions.refreshPage();
         webElementActions.pause(2000);
         webElementActions.click(employees.employeesBtn);
-
-        //после нажатия на сотрудники, открывается новая страничка
         customAssertions.asserText("Сотрудники", employees.employeeText, "norm");
 
     }
-    @Test(priority = 1, description = "Verify that user can type text on search input field on Employees Page")
-    public void typeTextOnInputSearch() {
-        webElementActions.refreshPage();
-        webElementActions.pause(2000);
-        webElementActions.click(employees.employeesBtn);
-        Assert.assertEquals(employees.inputSearchOnEmployees.isDisplayed(),true);
-        webElementActions.sendKeys(employees.inputSearchOnEmployees, "Исмаилов");
-        //Assert.assertEquals();
 
-    }
-    @Test(priority = 2, description = "Сheck the texts on Employees Page")
+    @Test(priority = 1, description = "Сheck the texts on Employees Page")
+    @Annotations.TestCase(id = 1709)
     public void checkTextsOnEmployeesPage() {
         webElementActions.refreshPage();
         webElementActions.pause(2000);
@@ -44,14 +40,59 @@ public class EmployeesTests extends BaseUiTests {
         customAssertions.asserText("996703503020", employees.begmatovaPhoneBtn, "norm");
         customAssertions.asserText("Право первой подписи", employees.begmatovaRoleBtn, "norm");
         customAssertions.asserText("Активен", employees.begmatovaStatusBtn, "norm");
-
-        //спросить у разрабов выходит ошибка- expected- , actual
-        // customAssertions.asserText("Сивогривова Анна Анатольевна", employees.sivogrivovaFIOBtn, "norm");
-        //customAssertions.asserText("996555230324", employees.sivogrivovaPhoneBtn, "norm");
+        customAssertions.asserText("Сивогривова Анна Анатольевна", employees.sivogrivovaFIOBtn, "norm");
+        customAssertions.asserText("996555230324", employees.sivogrivovaPhoneBtn, "norm");
         customAssertions.asserText("Право первой подписи", employees.sivogrivovaRoleBtn, "norm");
         customAssertions.asserText("Активен", employees.sivogrivovaStatusBtn, "norm");
 
     }
+
+    @Test(priority = 2, description = "Verify that user can type text on search input field on Employees Page")
+    @Annotations.TestCase(id = 1708)
+    @Severity(SeverityLevel.NORMAL)
+    public void typeTextOnInputSearch() {
+        webElementActions.refreshPage();
+        webElementActions.pause(2000);
+        webElementActions.click(employees.employeesBtn);
+        Assert.assertEquals(employees.inputSearchOnEmployees.isDisplayed(), true);
+        webElementActions.sendKeys(employees.inputSearchOnEmployees, "Исмаилов").click(employees.ismailovFIOBtn);
+        customAssertions.asserText("Исмаилов Руслан Евгеньевич", employeeIsmailov.ismailovFIOText, "norm");
+        Assert.assertEquals(employees.ismailovCloseBtn.isDisplayed(),true);
+        employees.ismailovCloseBtn.click();
+
+    }
+
+    @Test(priority = 3, description = "Verify that user can type numbers on search input field on Employees Page")
+    @Annotations.TestCase(id = 1711)
+    @Severity(SeverityLevel.NORMAL)
+    public void typeNumberOnInputSearch() {
+        // String str;
+        webElementActions.refreshPage();
+        webElementActions.pause(2000);
+        webElementActions.click(employees.employeesBtn);
+        webElementActions.sendKeysLong(employees.inputSearchOnEmployees, 8L).click(employees.ismailovFIOBtn);
+        customAssertions.asserText("Исмаилов Руслан Евгеньевич", employeeIsmailov.ismailovFIOText, "norm");
+    }
+
+        @Test(priority = 4, description = "Check the texts on Ismailov Page")
+        @Annotations.TestCase(id = 1111)
+        @Severity(SeverityLevel.MINOR)
+        public void checkTheTexts() {
+            webElementActions.refreshPage();
+            webElementActions.pause(2000);
+            webElementActions.click(employees.employeesBtn);
+            webElementActions.click(employees.ismailovFIOBtn);
+            customAssertions.asserText("2-подпись", employeeIsmailov.ismailov2PodpisText, "norm");
+            customAssertions.asserText("Номер телефона",employeeIsmailov.ismailovPhoneTitleText, "norm");
+            customAssertions.asserText("E-mail",employeeIsmailov.ismailovEmailTitleText, "norm");
+            customAssertions.asserText("ruslan.ismailov@optimabank.kg",employeeIsmailov.ismailovEmailText, "norm");
+            customAssertions.asserText("Роль",employeeIsmailov.ismailovRoleTitleText, "norm");
+            customAssertions.asserText("Право второй подписи",employeeIsmailov.ismailovRoleText, "norm");
+            customAssertions.asserText("Статус",employeeIsmailov.ismailovStatusTitleText, "norm");
+            customAssertions.asserText("Активен",employeeIsmailov.ismailovStatusText, "norm");
+            customAssertions.asserText("Дата регистрации",employeeIsmailov.ismailovDateOfRegisterTitleText, "norm");
+            customAssertions.asserText("26.04.2023",employeeIsmailov.ismailovDateOfRegisterText, "norm");
+        }
 }
 
 

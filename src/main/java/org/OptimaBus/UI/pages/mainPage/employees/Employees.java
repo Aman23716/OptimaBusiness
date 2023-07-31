@@ -1,9 +1,12 @@
-package org.OptimaBus.UI.pages.mainPage;
+package org.OptimaBus.UI.pages.mainPage.employees;
 
 import org.OptimaBus.UI.pages.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-/**Zhyldyz123**/
+
+/**
+ * Zhyldyz123
+ **/
 public class Employees extends BasePage {
     @FindBy(xpath = "//a[@href='/employees'] ")
     public WebElement employeesBtn;
@@ -35,9 +38,10 @@ public class Employees extends BasePage {
     public WebElement ismailovRoleBtn;
     @FindBy(xpath = "(//td[@class='q-td '])[2]")
     public WebElement ismailovStatusBtn;
+    @FindBy(xpath = "//button[@class='close']")
+    public WebElement ismailovCloseBtn;
+
     @FindBy(xpath = "(//td[@class='text-left'])[3]")
-
-
     public WebElement begmatovaFIOBtn;
     @FindBy(xpath = "(//td[@class='text-left'])[4]")
     public WebElement begmatovaPhoneBtn;
@@ -48,13 +52,19 @@ public class Employees extends BasePage {
     @FindBy(xpath = "(//td[@class='text-left'])[5]")
 
     public WebElement sivogrivovaFIOBtn;
-    @FindBy(xpath = "(//td[@class='text-left'])[6]")
+    // @FindBy(xpath = "(//td[@class='text-left'])[6]")
+    @FindBy(xpath = "//td[contains(text(), '996555230324')]")
     public WebElement sivogrivovaPhoneBtn;
     @FindBy(xpath = "(//td[@class='q-td '])[5]")
     public WebElement sivogrivovaRoleBtn;
     @FindBy(xpath = "(//td[@class='q-td '])[6]")
     public WebElement sivogrivovaStatusBtn;
+    @FindBy(xpath = "(//tr[@class='cursor-pointer'])[3]")
+    public WebElement sivogrivovaBtn;
 
+
+
+////////////***************************************************************
 
 
 
@@ -63,6 +73,7 @@ public class Employees extends BasePage {
         return this;
     }
 
-    }
+
+}
 
 
