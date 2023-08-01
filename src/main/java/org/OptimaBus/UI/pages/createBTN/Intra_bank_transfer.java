@@ -62,7 +62,11 @@ public class Intra_bank_transfer extends BasePage {
     public WebElement schetPerevodaCheck;
 
 
-//    @FindBy(xpath = "")
+    @FindBy(xpath = "(.//div[@class='transaction transaction--statement'])[1]")
+    public WebElement podrobnayaInfaOperacii;
+
+    @FindBy(xpath ="(.//div[@class='text-dark details-desc-child'])[6]")
+    public WebElement kodPlatejaDlyaTesta;
 
 
     /**
