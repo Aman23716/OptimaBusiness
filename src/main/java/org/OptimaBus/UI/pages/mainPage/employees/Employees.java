@@ -1,8 +1,12 @@
 package org.OptimaBus.UI.pages.mainPage.employees;
 
 import org.OptimaBus.UI.pages.BasePage;
+import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import static org.OptimaBus.UI.driverFactory.Driver.driver;
 
 /**
  * Zhyldyz123
@@ -63,17 +67,26 @@ public class Employees extends BasePage {
     public WebElement sivogrivovaBtn;
 
 
-
 ////////////***************************************************************
-
-
 
     public Employees clickEmployeesBtn() {
         elementActions.click(employeesBtn);
         return this;
     }
 
+    public Employees staleElementException() {
+        try {
+            WebElement element = driver.findElement(By.xpath("(//td[@class='text-left'])[1]"));
+            ismailovFIOBtn.click();
 
+        } catch (StaleElementReferenceException e) {
+            WebElement element = driver.findElement(By.xpath("(//td[@class='text-left'])[1]"));
+            ismailovFIOBtn.click();
+
+        }
+        return this;
+
+
+    }
 }
-
 

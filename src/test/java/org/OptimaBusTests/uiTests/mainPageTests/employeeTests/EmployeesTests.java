@@ -1,7 +1,8 @@
-package org.OptimaBusTests.uiTests.mainPageTests;
+package org.OptimaBusTests.uiTests.mainPageTests.employeeTests;
 
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.TmsLink;
 import org.OptimaBus.UI.helper.Annotations;
 import org.OptimaBusTests.uiTests.BaseUiTests;
 import org.testng.Assert;
@@ -14,6 +15,7 @@ public class EmployeesTests extends BaseUiTests {
 
 
     @Test(priority = 0, description = "Verify that user can click to Сотрудники btn  on MainPage")
+    @Annotations.TestCase(id=1708)
     public void isEmployeesBtnClickable() {
         webElementActions.refreshPage();
         webElementActions.pause(2000);
@@ -21,10 +23,9 @@ public class EmployeesTests extends BaseUiTests {
         customAssertions.asserText("Сотрудники", employees.employeeText, "norm");
 
     }
-
-    @Test(priority = 1, description = "Сheck the texts on Employees Page")
+    @Test(priority = 1, description = "Сheck the required  texts on Employees Page")
     @Annotations.TestCase(id = 1709)
-    public void checkTextsOnEmployeesPage() {
+    public void checkRequiredTextsOnEmployeesPage() {
         webElementActions.refreshPage();
         webElementActions.pause(2000);
         webElementActions.click(employees.employeesBtn);
@@ -32,6 +33,17 @@ public class EmployeesTests extends BaseUiTests {
         customAssertions.asserText("Номер телефона", employees.numberOfPhoneText, "norm");
         customAssertions.asserText("Роль", employees.roleText, "norm");
         customAssertions.asserText("Статус", employees.statusText, "norm");
+    }
+
+
+
+
+    @Test(priority = 3, description = "Сheck the data of registered users  on Employees Page")
+    @Annotations.TestCase(id = 1710)
+    public void checkDataOfRegisteredOnEmployeesPage() {
+        webElementActions.refreshPage();
+        webElementActions.pause(2000);
+        webElementActions.click(employees.employeesBtn);
         customAssertions.asserText("Исмаилов Руслан Евгеньевич", employees.ismailovFIOBtn, "norm");
         customAssertions.asserText("996555780893", employees.ismailovPhoneBtn, "norm");
         customAssertions.asserText("Право второй подписи", employees.ismailovRoleBtn, "norm");
@@ -44,10 +56,13 @@ public class EmployeesTests extends BaseUiTests {
         customAssertions.asserText("996555230324", employees.sivogrivovaPhoneBtn, "norm");
         customAssertions.asserText("Право первой подписи", employees.sivogrivovaRoleBtn, "norm");
         customAssertions.asserText("Активен", employees.sivogrivovaStatusBtn, "norm");
-
     }
 
-    @Test(priority = 2, description = "Verify that user can type text on search input field on Employees Page")
+
+
+
+
+    @Test(priority = 5, description = "Verify that user can type text on search input field on Employees Page")
     @Annotations.TestCase(id = 1708)
     @Severity(SeverityLevel.NORMAL)
     public void typeTextOnInputSearch() {
@@ -62,7 +77,7 @@ public class EmployeesTests extends BaseUiTests {
 
     }
 
-    @Test(priority = 3, description = "Verify that user can type numbers on search input field on Employees Page")
+    @Test(priority = 6, description = "Verify that user can type numbers on search input field on Employees Page")
     @Annotations.TestCase(id = 1711)
     @Severity(SeverityLevel.NORMAL)
     public void typeNumberOnInputSearch() {
@@ -74,7 +89,7 @@ public class EmployeesTests extends BaseUiTests {
         customAssertions.asserText("Исмаилов Руслан Евгеньевич", employeeIsmailov.ismailovFIOText, "norm");
     }
 
-        @Test(priority = 4, description = "Check the texts on Ismailov Page")
+        @Test(priority = 7, description = "Check the texts on Ismailov Page")
         @Annotations.TestCase(id = 1111)
         @Severity(SeverityLevel.MINOR)
         public void checkTheTexts() {
