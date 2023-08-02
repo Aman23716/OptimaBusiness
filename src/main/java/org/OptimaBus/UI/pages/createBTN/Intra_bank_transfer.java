@@ -61,12 +61,51 @@ public class Intra_bank_transfer extends BasePage {
     @FindBy(xpath = "(.//div[@class='text-muted text-small d-none'])[1]")
     public WebElement schetPerevodaCheck;
 
-
+    /**
+     * ДЛЯ ТЕСТА ПОДРОБНОЙ ИНФЫ ОПЕРАЦИИ (ДИНАМИЧНЫЕ ЗНАЧЕНИЯ)
+     **/
     @FindBy(xpath = "(.//div[@class='transaction transaction--statement'])[1]")
     public WebElement podrobnayaInfaOperacii;
+    @FindBy(xpath = "(.//div[@class='text-dark details-desc-child'])[6]")
+    public WebElement schetPoluchatelya;
+    @FindBy(xpath = "(.//div[@class='text-dark details-desc-child'])[7]")
+    public WebElement BIKPoluchatelya;
+    @FindBy(xpath = "(.//div[@class='text-dark details-desc-child'])[9]")
+    public WebElement firstPodpis;
+    @FindBy(xpath = "(.//div[@class='text-dark details-desc-child'])[10]")
+    public WebElement secondPodpis;
 
-    @FindBy(xpath ="(.//div[@class='text-dark details-desc-child'])[6]")
-    public WebElement kodPlatejaDlyaTesta;
+
+    /**ДЛЯ ТЕСТА ПОДРОБНОЙ ИНФЫ ОПЕРАЦИИ (СТАТИЧНЫЕ ЗНАЧЕНИЯ)**/
+    @FindBy(xpath = "(.//div[@class='text-h5 q-mr-auto details__expansion-header'])[1]")
+    public WebElement detaliPlateja;
+    @FindBy(xpath = "(.//div[@class='text-h5 q-mr-auto details__expansion-header'])[1]")
+    public WebElement poluchatelWord;
+    @FindBy(xpath = "(.//div[@class='text-h5 q-mr-auto details__expansion-header'])[1]")
+    public WebElement podpisanty;
+
+    @FindBy(xpath = "(.//div[@class='text-muted details-desc-child'])[1]")
+    public WebElement dataValutirovaniya;
+    @FindBy(xpath = "(.//div[@class='text-muted details-desc-child'])[2]")
+    public WebElement numberDocumenta;
+    @FindBy(xpath = "(.//div[@class='text-muted details-desc-child'])[3]")
+    public WebElement KBK;
+    @FindBy(xpath = "(.//div[@class='text-muted details-desc-child'])[4]")
+    public WebElement sozdano;
+    @FindBy(xpath = "(.//div[@class='text-muted details-desc-child'])[5]")
+    public WebElement naimenovanie;
+    @FindBy(xpath = "(.//div[@class='text-muted details-desc-child'])[6]")
+    public WebElement schetWord;
+    @FindBy(xpath = "(.//div[@class='text-muted details-desc-child'])[7]")
+    public WebElement BIKWord;
+    @FindBy(xpath = "(.//div[@class='text-muted details-desc-child'])[8]")
+    public WebElement bankWord;
+    @FindBy(xpath = "(.//div[@class='text-muted details-desc-child'])[9]")
+    public WebElement pervayaPodpis;
+    @FindBy(xpath = "(.//div[@class='text-muted details-desc-child'])[10]")
+    public WebElement vtorayaPodpis;
+
+
 
 
     /**

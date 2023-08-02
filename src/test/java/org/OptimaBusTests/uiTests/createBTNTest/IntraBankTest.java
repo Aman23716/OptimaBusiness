@@ -61,7 +61,7 @@ public class IntraBankTest extends BaseUiTests {
         webElementActions.click(intra_bank_transfer.vIstoriuOperaciiBTN);
         customAssertions.asserText("500 KGS", intra_bank_transfer.summaPodpisCheck, "norm");
         customAssertions.asserText("Вам на подпись", intra_bank_transfer.vamNaPodpisCheck, "norm");
-        customAssertions.asserText("Перевод на чужой счет", intra_bank_transfer.perevodKudaCheck, "norm");
+        customAssertions.asserText("Перевод на другие клиентские счета", intra_bank_transfer.perevodKudaCheck, "norm");
         customAssertions.asserText("Бишкекский центральный филиал ОАО \"Оптима Банк\"", intra_bank_transfer.naimenovanieKudaPerevodCheck,"norm");
         customAssertions.asserText("1092220111430162", intra_bank_transfer.schetPerevodaCheck,"norm" );
     }
