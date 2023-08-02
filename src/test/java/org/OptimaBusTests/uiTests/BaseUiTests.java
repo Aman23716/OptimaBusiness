@@ -50,7 +50,7 @@ public abstract class BaseUiTests {
         imported = new Imported();
         settings = new Settings();
         more = new More();
-       employees = new Employees();
+        employees = new Employees();
         intra_bank_transfer = new Intra_bank_transfer();
         customAssertions = new CustomAssertions();
         operationHistory = new OperationHistory();

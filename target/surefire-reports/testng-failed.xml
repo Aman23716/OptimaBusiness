@@ -3,24 +3,71 @@
 <suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="1" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="org.OptimaBusTests.uiTests.SettingsTests">
+      <class name="org.OptimaBusTests.uiTests.CalcTests">
         <methods>
-          <include name="openLoginPage"/>
+          <include name="chooseUSD"/>
           <include name="setUpUiTest"/>
-          <include name="ChangePassword"/>
           <include name="tearDown"/>
-          <include name="AccountVisibility"/>
+          <include name="loginWithValidCredentials"/>
         </methods>
-      </class> <!-- org.OptimaBusTests.uiTests.SettingsTests -->
-      <class name="org.OptimaBusTests.uiTests.MainPageTest">
+      </class> <!-- org.OptimaBusTests.uiTests.CalcTests -->
+      <class name="org.OptimaBusTests.uiTests.createBTNTest.MBPerevodValTest">
+        <methods>
+          <include name="setUpUiTest"/>
+          <include name="tearDown"/>
+          <include name="checkTheFunctionalWithRU"/>
+        </methods>
+      </class> <!-- org.OptimaBusTests.uiTests.createBTNTest.MBPerevodValTest -->
+      <class name="org.OptimaBusTests.uiTests.mainPageTests.OperationHisTests">
+        <methods>
+          <include name="setUpUiTest"/>
+          <include name="tearDown"/>
+          <include name="MoiChernoviki"/>
+        </methods>
+      </class> <!-- org.OptimaBusTests.uiTests.mainPageTests.OperationHisTests -->
+      <class name="org.OptimaBusTests.uiTests.LoginTests">
+        <methods>
+          <include name="checkHElpBTN"/>
+          <include name="setUpUiTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- org.OptimaBusTests.uiTests.LoginTests -->
+      <class name="org.OptimaBusTests.uiTests.mainPageTests.EmployeesTests">
+        <methods>
+          <include name="setUpUiTest"/>
+          <include name="tearDown"/>
+          <include name="isEmployeesBtnClickable"/>
+        </methods>
+      </class> <!-- org.OptimaBusTests.uiTests.mainPageTests.EmployeesTests -->
+      <class name="org.OptimaBusTests.uiTests.OperationHisTests">
+        <methods>
+          <include name="OtkazanoBankom"/>
+          <include name="NaPodpis"/>
+          <include name="NaRedact"/>
+          <include name="Otklonennye"/>
+          <include name="setUpUiTest"/>
+          <include name="MoiChernoviki"/>
+          <include name="tearDown"/>
+          <include name="OjidaetOtpr"/>
+          <include name="Ispolnennye"/>
+        </methods>
+      </class> <!-- org.OptimaBusTests.uiTests.OperationHisTests -->
+      <class name="org.OptimaBusTests.uiTests.mainPageTests.MainPageTest">
         <methods>
           <include name="checkTheMPBar"/>
-          <include name="openLoginPage"/>
+          <include name="checkOtherBTNS"/>
           <include name="setUpUiTest"/>
           <include name="visibilityBellBtn"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- org.OptimaBusTests.uiTests.MainPageTest -->
+      </class> <!-- org.OptimaBusTests.uiTests.mainPageTests.MainPageTest -->
+      <class name="org.OptimaBusTests.uiTests.createBTNTest.ConvertingTest">
+        <methods>
+          <include name="createNaPodpisFunctionalDollar"/>
+          <include name="setUpUiTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- org.OptimaBusTests.uiTests.createBTNTest.ConvertingTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->
