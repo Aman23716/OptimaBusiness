@@ -37,7 +37,7 @@ public class ConvertingTest extends BaseUiTests {
         customAssertions.asserText("Сумма конвертации превышает доступный баланс счета", converting.secondSummaAlert, "norm");
         customAssertions.asserText("Конвертация", converting.convertWord, "norm");
         webElementActions.refreshPage();
-        customAssertions.asserText("Наименование ЮЛ", converting.naimenovanieWord, "norm");
+        customAssertions.asserText("Наименование плательщика", converting.naimenovanieWord, "norm");
         customAssertions.asserText("Номер документа",converting.numberDocumWord,"norm");
         customAssertions.asserText("Счет списания",converting.schetSpisaniyaWord,"norm");
         customAssertions.asserText("Сумма",converting.summaWord,"norm");

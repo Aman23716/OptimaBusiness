@@ -40,6 +40,4 @@ public class CalcTests extends BaseUiTests {
 //        Assert.assertEquals(converting1,converting2);
 
         }
-
-
 }
