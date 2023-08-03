@@ -153,7 +153,7 @@ public class Converting extends BasePage {
         elementActions.click(chooseCompany);
         for (WebElement list1 : chooseAltynken){
             System.out.println(list1);
-            if (list1.getText().equals("ОсОО \"DentTrade\" (\"ДентТрейд\")")){
+            if (list1.getText().equals("ОсОО \"АЛТЫНКЕН\"")){
                 list1.click();
 //                if (list1.getText().equals(ConfigReader.getProperty("CompName"))){
 //                    list1.click();

@@ -8,6 +8,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class EmployeeIsmailovTest extends BaseUiTests {
+
+
     @Test(priority = 1)    //description = "Check the texts on Ismailov Page")
    // @Annotations.TestCase(id = 1111)
     @Severity(SeverityLevel.MINOR)

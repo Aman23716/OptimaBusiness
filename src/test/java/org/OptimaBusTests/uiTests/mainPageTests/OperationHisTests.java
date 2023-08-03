@@ -28,10 +28,7 @@ public class OperationHisTests extends BaseUiTests {
 //    public void NaPodpis(){
 //        operationHistory.NaPodpis();
 //    }
-    @Test(priority = 2,description = "Click to (Ожидает подписи) BTN")
-    public void OjidaetOtpr(){
-        operationHistory.OjidaetOtpravki();
-    }
+
     @Test(priority = 3,description = "Click to (На редактирование) BTN")
     public void NaRedact(){
         operationHistory.NaRedactirov();
