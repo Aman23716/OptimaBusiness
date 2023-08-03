@@ -18,7 +18,6 @@ public class MBPerevodValTest extends BaseUiTests {
         customAssertions.asserText("SWIFT", intra_bank_transfer.perevodKudaCheck, "norm");
         customAssertions.asserText("Naimenovanie", intra_bank_transfer.naimenovanieKudaPerevodCheck,"norm");
         customAssertions.asserText("1092220111430162", intra_bank_transfer.schetPerevodaCheck,"norm" );
-
     }
     @Test(description = "Проверка на некорректном счете списания")
     public void checkWithInvalidSChetSpisanuyaTest() {

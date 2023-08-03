@@ -18,7 +18,6 @@ public class MBPerevodSomTest extends BaseUiTests {
         customAssertions.asserText("Дордойский филиал", intra_bank_transfer.naimenovanieKudaPerevodCheck,"norm");
         customAssertions.asserText("1092220111430162", intra_bank_transfer.schetPerevodaCheck,"norm" );
     }
-
     @Test(description = "Тип операции алерт")
     public void tipOperaciiTest(){
         webElementActions.refreshPage();
@@ -27,7 +26,6 @@ public class MBPerevodSomTest extends BaseUiTests {
         customAssertions.asserText("Заполните поле!", mbPerevodSom.allAlerts, "norm");
         webElementActions.pause(3000);
     }
-
     @Test(description = "Счет списания не казан алерт")
     public void schetSpisaniyaTest(){
         webElementActions.refreshPage();
