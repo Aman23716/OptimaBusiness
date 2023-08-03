@@ -151,9 +151,22 @@ public class Converting extends BasePage {
 
     public void ChooseImaratStroi(){
         elementActions.click(chooseCompany);
-        for (WebElement list1 : chosenAutoKurier){
+        for (WebElement list1 : chooseAltynken){
             System.out.println(list1);
-            if (list1.getText().equals("Общество с ограниченной ответственностью \"АВТОКУРЬЕР\"")){
+            if (list1.getText().equals("ОсОО \"DentTrade\" (\"ДентТрейд\")")){
+                list1.click();
+//                if (list1.getText().equals(ConfigReader.getProperty("CompName"))){
+//                    list1.click();
+//
+            }
+        }
+
+    }
+    public void ChooseImaratStroi1() {
+        elementActions.click(chooseCompany);
+        for (WebElement list1 : chosenAutoKurier) {
+            System.out.println(list1);
+            if (list1.getText().equals("Общество с ограниченной ответственностью \"АВТОКУРЬЕР\"")) {
                 list1.click();
 //                if (list1.getText().equals(ConfigReader.getProperty("CompName"))){
 //                    list1.click();
@@ -161,8 +174,6 @@ public class Converting extends BasePage {
             }
         }
     }
-
-
 
     public Converting CalcResult(){
           inputMockValue.getText();
