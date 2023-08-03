@@ -91,11 +91,14 @@ public class EmployeeIsmailov extends BasePage {
 
     @FindBy(xpath = "(//span[@class='q-btn__content text-center col items-center q-anchor--skip justify-center row'])[10]")
     public WebElement cancelBtnOnPageKGS;
+    @FindBy(xpath = "(//span[@class='q-btn__content text-center col items-center q-anchor--skip justify-center row'])[10]")
+    public WebElement cancelBtnOnPageUSD;
 
     @FindBy(xpath = "(//span[@class='q-btn__content text-center col items-center q-anchor--skip justify-center row'])[11]")
     public WebElement saveBtnOnPageKGS;
 
-
+    @FindBy(xpath = "(//div[@class='q-toggle cursor-pointer no-outline row inline no-wrap items-center q-toggle--dense ob-toggle full-width q-mb-md'])[4]")
+    public WebElement sWIFTBtn;
 
     @FindBy(xpath = "(//span[@class='q-btn__content text-center col items-center q-anchor--skip justify-center row'])[9]")
     public WebElement backBtn;
