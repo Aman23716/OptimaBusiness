@@ -79,9 +79,9 @@ public class Intra_bank_transfer extends BasePage {
     /**ДЛЯ ТЕСТА ПОДРОБНОЙ ИНФЫ ОПЕРАЦИИ (СТАТИЧНЫЕ ЗНАЧЕНИЯ)**/
     @FindBy(xpath = "(.//div[@class='text-h5 q-mr-auto details__expansion-header'])[1]")
     public WebElement detaliPlateja;
-    @FindBy(xpath = "(.//div[@class='text-h5 q-mr-auto details__expansion-header'])[1]")
+    @FindBy(xpath = "(.//div[@class='text-h5 q-mr-auto details__expansion-header'])[2]")
     public WebElement poluchatelWord;
-    @FindBy(xpath = "(.//div[@class='text-h5 q-mr-auto details__expansion-header'])[1]")
+    @FindBy(xpath = "(.//div[@class='text-h5 q-mr-auto details__expansion-header'])[3]")
     public WebElement podpisanty;
 
     @FindBy(xpath = "(.//div[@class='text-muted details-desc-child'])[1]")

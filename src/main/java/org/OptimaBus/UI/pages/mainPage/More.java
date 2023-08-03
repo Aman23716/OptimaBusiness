@@ -8,7 +8,6 @@ public class More extends BasePage {
     @FindBy(xpath = "//a[@href='/more']")
     public WebElement moreBtn;
 
-
     public More clickMoreBtn(){
         elementActions.click(moreBtn);
         return this;

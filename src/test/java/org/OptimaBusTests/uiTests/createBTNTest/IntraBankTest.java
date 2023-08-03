@@ -15,12 +15,33 @@ public class IntraBankTest extends BaseUiTests {
         webElementActions.pause(3000);
         customAssertions.asserText("100 KGS", intra_bank_transfer.summaPodpisCheck, "norm");
         customAssertions.asserText("Вам на подпись", intra_bank_transfer.vamNaPodpisCheck, "norm");
-        customAssertions.asserText("Перевод на чужой счет", intra_bank_transfer.perevodKudaCheck, "norm");
+        customAssertions.asserText("Перевод на другие клиентские счета", intra_bank_transfer.perevodKudaCheck, "norm");
         customAssertions.asserText("ИП Бегматова Тумар Тимуровна", intra_bank_transfer.naimenovanieKudaPerevodCheck,"norm");
         customAssertions.asserText("1092220111430162", intra_bank_transfer.schetPerevodaCheck,"norm" );
+        webElementActions.click(intra_bank_transfer.podrobnayaInfaOperacii);
+        customAssertions.asserText("Детали платежа", intra_bank_transfer.detaliPlateja, "norm");
+        customAssertions.asserText("Получатель", intra_bank_transfer.poluchatelWord, "norm");
+        customAssertions.asserText("Подписанты", intra_bank_transfer.podpisanty, "norm");
+
+        customAssertions.asserText("Дата валютир.:", intra_bank_transfer.dataValutirovaniya, "norm");
+        customAssertions.asserText("Наименование:", intra_bank_transfer.naimenovanie, "norm");
+        customAssertions.asserText("№ документа:", intra_bank_transfer.numberDocumenta, "norm");
+        customAssertions.asserText("КБК:", intra_bank_transfer.KBK, "norm");
+        customAssertions.asserText("Создано:", intra_bank_transfer.sozdano, "norm");
+        customAssertions.asserText("Счет:", intra_bank_transfer.schetWord, "norm");
+        customAssertions.asserText("БИК:", intra_bank_transfer.BIKWord, "norm");
+        customAssertions.asserText("Банк:", intra_bank_transfer.bankWord, "norm");
+        customAssertions.asserText("Первая подпись", intra_bank_transfer.pervayaPodpis, "norm");
+        customAssertions.asserText("Вторая подпись", intra_bank_transfer.vtorayaPodpis, "norm");
+        customAssertions.asserText("В ожидании подписи", intra_bank_transfer.firstPodpis, "norm");
+        customAssertions.asserText("В ожидании подписи", intra_bank_transfer.secondPodpis, "norm");
+        customAssertions.asserText("1091808755280112", intra_bank_transfer.schetPoluchatelya, "norm");
+        customAssertions.asserText("109018", intra_bank_transfer.BIKPoluchatelya, "norm");
+
     }
     @Test(priority = 1,description = "Check the wrong schet")
     public void wrongSchetZachisleniyaError(){
+        webElementActions.refreshPage();
         webElementActions.pause(2000);
         intra_bank_transfer.TestTheWrongSchet();
         customAssertions.asserText("Счет не найден!", intra_bank_transfer.schetPoluchatelyaError, "alert");
@@ -65,8 +86,6 @@ public class IntraBankTest extends BaseUiTests {
         customAssertions.asserText("Бишкекский центральный филиал ОАО \"Оптима Банк\"", intra_bank_transfer.naimenovanieKudaPerevodCheck,"norm");
         customAssertions.asserText("1092220111430162", intra_bank_transfer.schetPerevodaCheck,"norm" );
     }
-
-
 
 
 }
