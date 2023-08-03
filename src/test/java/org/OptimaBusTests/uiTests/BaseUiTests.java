@@ -49,6 +49,7 @@ public abstract class BaseUiTests {
         loginPage.fillUpUsernameAndPass();
         converting = new Converting();
         converting.ChooseImaratStroi();
+        converting.ChooseImaratStroi1();
 
         imported = new Imported();
         settings = new Settings();

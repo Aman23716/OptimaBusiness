@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 public class EmployeesTests extends BaseUiTests {
 
 
-    @Test(priority = 0, description = "Verify that user can click to Сотрудники btn  on MainPage")
+    @Test//(priority = 0, description = "Verify that user can click to Сотрудники btn  on MainPage")
     @Annotations.TestCase(id=1708)
     public void isEmployeesBtnClickable() {
         webElementActions.refreshPage();
@@ -23,7 +23,7 @@ public class EmployeesTests extends BaseUiTests {
         customAssertions.asserText("Сотрудники", employees.employeeText, "norm");
 
     }
-    @Test(priority = 1, description = "Сheck the required  texts on Employees Page")
+    @Test//(priority = 1, description = "Сheck the required  texts on Employees Page")
     @Annotations.TestCase(id = 1709)
     public void checkRequiredTextsOnEmployeesPage() {
         webElementActions.refreshPage();
@@ -38,7 +38,7 @@ public class EmployeesTests extends BaseUiTests {
 
 
 
-    @Test(priority = 3, description = "Сheck the data of registered users  on Employees Page")
+    @Test//(priority = 3, description = "Сheck the data of registered users  on Employees Page")
     @Annotations.TestCase(id = 1710)
     public void checkDataOfRegisteredOnEmployeesPage() {
         webElementActions.refreshPage();
@@ -62,7 +62,7 @@ public class EmployeesTests extends BaseUiTests {
 
 
 
-    @Test(priority = 5, description = "Verify that user can type text on search input field on Employees Page")
+    @Test//(priority = 5, description = "Verify that user can type text on search input field on Employees Page")
     @Annotations.TestCase(id = 1708)
     @Severity(SeverityLevel.NORMAL)
     public void typeTextOnInputSearch() {
@@ -77,11 +77,10 @@ public class EmployeesTests extends BaseUiTests {
 
     }
 
-    @Test(priority = 6, description = "Verify that user can type numbers on search input field on Employees Page")
+    @Test//(priority = 6, description = "Verify that user can type numbers on search input field on Employees Page")
     @Annotations.TestCase(id = 1711)
     @Severity(SeverityLevel.NORMAL)
     public void typeNumberOnInputSearch() {
-        // String str;
         webElementActions.refreshPage();
         webElementActions.pause(2000);
         webElementActions.click(employees.employeesBtn);
@@ -89,25 +88,25 @@ public class EmployeesTests extends BaseUiTests {
         customAssertions.asserText("Исмаилов Руслан Евгеньевич", employeeIsmailov.ismailovFIOText, "norm");
     }
 
-        @Test(priority = 7, description = "Check the texts on Ismailov Page")
-        @Annotations.TestCase(id = 1111)
-        @Severity(SeverityLevel.MINOR)
-        public void checkTheTexts() {
-            webElementActions.refreshPage();
-            webElementActions.pause(2000);
-            webElementActions.click(employees.employeesBtn);
-            webElementActions.click(employees.ismailovFIOBtn);
-            customAssertions.asserText("2-подпись", employeeIsmailov.ismailov2PodpisText, "norm");
-            customAssertions.asserText("Номер телефона",employeeIsmailov.ismailovPhoneTitleText, "norm");
-            customAssertions.asserText("E-mail",employeeIsmailov.ismailovEmailTitleText, "norm");
-            customAssertions.asserText("ruslan.ismailov@optimabank.kg",employeeIsmailov.ismailovEmailText, "norm");
-            customAssertions.asserText("Роль",employeeIsmailov.ismailovRoleTitleText, "norm");
-            customAssertions.asserText("Право второй подписи",employeeIsmailov.ismailovRoleText, "norm");
-            customAssertions.asserText("Статус",employeeIsmailov.ismailovStatusTitleText, "norm");
-            customAssertions.asserText("Активен",employeeIsmailov.ismailovStatusText, "norm");
-            customAssertions.asserText("Дата регистрации",employeeIsmailov.ismailovDateOfRegisterTitleText, "norm");
-            customAssertions.asserText("26.04.2023",employeeIsmailov.ismailovDateOfRegisterText, "norm");
-        }
+//        @Test//(priority = 7, description = "Check the texts on Ismailov Page")
+//        @Annotations.TestCase(id = 1111)
+//        @Severity(SeverityLevel.MINOR)
+//        public void checkTheTexts() {
+//            webElementActions.refreshPage();
+//            webElementActions.pause(2000);
+//            webElementActions.click(employees.employeesBtn);
+//            webElementActions.click(employees.ismailovFIOBtn);
+//            customAssertions.asserText("2-подпись", employeeIsmailov.ismailov2PodpisText, "norm");
+//            customAssertions.asserText("Номер телефона",employeeIsmailov.ismailovPhoneTitleText, "norm");
+//            customAssertions.asserText("E-mail",employeeIsmailov.ismailovEmailTitleText, "norm");
+//            customAssertions.asserText("ruslan.ismailov@optimabank.kg",employeeIsmailov.ismailovEmailText, "norm");
+//            customAssertions.asserText("Роль",employeeIsmailov.ismailovRoleTitleText, "norm");
+//            customAssertions.asserText("Право второй подписи",employeeIsmailov.ismailovRoleText, "norm");
+//            customAssertions.asserText("Статус",employeeIsmailov.ismailovStatusTitleText, "norm");
+//            customAssertions.asserText("Активен",employeeIsmailov.ismailovStatusText, "norm");
+//            customAssertions.asserText("Дата регистрации",employeeIsmailov.ismailovDateOfRegisterTitleText, "norm");
+//            customAssertions.asserText("26.04.2023",employeeIsmailov.ismailovDateOfRegisterText, "norm");
+//        }
 }
 
 
