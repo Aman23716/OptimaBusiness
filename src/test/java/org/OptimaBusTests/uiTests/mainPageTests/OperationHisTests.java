@@ -53,4 +53,14 @@ public class OperationHisTests extends BaseUiTests {
         operationHistory.MoiChernoviki();
     }
 
+    @Test()
+    public void tipOperaciiConvert(){
+        operationHistory.TipPlatejaFilter();
+        customAssertions.asserText("Конвертация", operationHistory.assertions, "norm");
+        customAssertions.asserText("Конвертация", operationHistory.assertions2, "norm");
+
+    }
+
+
+
 }

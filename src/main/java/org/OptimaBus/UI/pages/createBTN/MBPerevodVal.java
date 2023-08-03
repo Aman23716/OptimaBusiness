@@ -15,7 +15,7 @@ public class MBPerevodVal extends BasePage {
     public WebElement schetSpisaniyaBTN;
     @FindBy(xpath = "(.//div[@class='ob-select'])[1]")
     public WebElement chooseDollarSchet;
-    @FindBy(xpath = "(.//div[@class='ob-select'])[2]")
+    @FindBy(xpath = "(.//div[@class='ob-select'])[3]")
     public WebElement chooseKZSchet;
     @FindBy(xpath = "(.//div[@class='q-field__control-container col relative-position row no-wrap q-anchor--skip'])[3]")
     public WebElement schetOplatyKomissiiBTN;
