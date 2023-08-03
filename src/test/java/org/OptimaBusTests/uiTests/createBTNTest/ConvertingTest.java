@@ -13,7 +13,6 @@ public class ConvertingTest extends BaseUiTests {
         converting.CheckNaPodpisBTN();
         webElementActions.pause(4000);
         customAssertions.asserText("Платеж Test value отправлен на подпись", converting.platejOtpravlen, "norm");
-
     }
     @Test(description = "Проверка функционала без ввода суммы конвертации")
     public void withoutSummaPlatejaTest(){
@@ -22,7 +21,6 @@ public class ConvertingTest extends BaseUiTests {
         converting.CheckNaPodpisWithoutSumma();
         customAssertions.asserText("Сумма списания: Только цифры, сумма мин=1, макс длина целой части 12, остатка 2", converting.firstSummaAlert, "norm");
         customAssertions.asserText("Сумма зачисления: Только цифры, сумма мин=1, макс длина целой части 12, остатка 2", converting.secondSummaAlert, "norm");
-
     }
     @Test(description = "Проверка кликабельности кнопки На подпись")
     public void clickableNaPodpisBTN() {
@@ -30,7 +28,6 @@ public class ConvertingTest extends BaseUiTests {
         webElementActions.cantBeChanged(mbPerevodVal.naimenovaniyaField);
         WebElementActions.waitForElementToBeNotClickable(mbPerevodVal.naPodpisBTN);
         customAssertions.asserText("Доступен до 23:00", converting.dostupenDOPole, "norm");
-
     }
     @Test(description = "Проверка превышения суммы конвертации")
     public void moreThenWeHave(){
@@ -76,6 +73,4 @@ public class ConvertingTest extends BaseUiTests {
         customAssertions.asserText("1092220111430162", intra_bank_transfer.schetPerevodaCheck,"norm" );
 
     }
-
-
 }
