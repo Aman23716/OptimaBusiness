@@ -40,8 +40,8 @@ public class MBPerevodSom extends BasePage {
     public WebElement naznachenie;
     @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--unelevated q-btn--rectangle q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase sign-btn transfer-btn']")
     public WebElement naPodpisBTN;
-
-
+    @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text- q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase ob-dialog__button ob-dialog__button_filled']")
+    public WebElement vIstoriuOperacii;
 
 
 
@@ -55,7 +55,7 @@ public class MBPerevodSom extends BasePage {
     public void CheckNaPodpisBTN1(){
         elementActions.click(tipOperaciiBTN).click(tipOperaciiGross).pause(1000).click(schetSpisaniyaBTN).click(somSchetSpisaniya).sendKeys(BIKNaimenovaniya,"138005").click(chooseBIK)
                 .sendKeys(naimenovaniePoluchatelya,"Дордойский филиал").sendKeysLong(schet1,1380001100007390L).sendKeys(documNumber,"").sendKeysDouble(somSumma,80.22).sendKeysInt(kodPlatejaInput,1)
-                .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN).pause(4000);
+                .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN).pause(2000).click(vIstoriuOperacii);
     }
     public void CheckGrossAlert(){
         elementActions.click(tipOperaciiBTN).click(tipOperaciiGross).sendKeys(BIKNaimenovaniya,"1").click(chooseBIK)
@@ -63,7 +63,7 @@ public class MBPerevodSom extends BasePage {
                 .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN);
     }
     public void CheckSchetSpisaniyaAlert(){
-        elementActions.click(tipOperaciiBTN).click(tipOperaciiGross).pause(1000).sendKeys(BIKNaimenovaniya,"1").click(chooseBIK)
+        elementActions.click(createBTN).click(mbPerevodSom).click(tipOperaciiBTN).click(tipOperaciiGross).pause(1000).sendKeys(BIKNaimenovaniya,"1").click(chooseBIK)
                 .sendKeys(naimenovaniePoluchatelya,"Дордойский филиал").sendKeysLong(schet1,1380001100007390L).sendKeys(documNumber,"").sendKeysDouble(somSumma,80.22).sendKeysInt(kodPlatejaInput,1)
                 .click(chooseKodPlateja).inputNaznachenieField1(naznachenie).click(naPodpisBTN);
     }

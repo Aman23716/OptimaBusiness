@@ -3,9 +3,6 @@ package org.OptimaBusTests.uiTests.createBTNTest;
 import org.OptimaBusTests.uiTests.BaseUiTests;
 import org.testng.annotations.Test;
 
-
-
-
 public class MBPerevodValTest extends BaseUiTests {
 
     @Test(description = "Проверка кнопки На подпись ")

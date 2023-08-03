@@ -7,7 +7,9 @@ import org.openqa.selenium.support.FindBy;
 public class Intra_bank_transfer extends BasePage {
 
 
-/**ВАЖНЫЕ ПОЛЯ**/
+    /**
+     * ВАЖНЫЕ ПОЛЯ
+     **/
     @FindBy(xpath = ".//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--rectangle bg-primary text-white q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase payment__btn lite-shadow']")
     public WebElement createBTN;
     @FindBy(xpath = "(.//div[@class='q-field__control-container col relative-position row no-wrap q-anchor--skip'])[2]")
@@ -34,30 +36,42 @@ public class Intra_bank_transfer extends BasePage {
     public WebElement vIstoriuOperaciiBTN;
 
 
-/**НАДПИСИ**/
-@FindBy(xpath = ".//p[@class='ob-dialog__label']")
-public WebElement platejOtpravlen;
-@FindBy(xpath = "(.//div[@class='text-muted flex items-center q-gutter-x-xs q-mb-md'])//span[2]")
-public WebElement naimenovanieIP;
+    /**
+     * НАДПИСИ
+     **/
+    @FindBy(xpath = ".//p[@class='ob-dialog__label']")
+    public WebElement platejOtpravlen;
+    @FindBy(xpath = "(.//div[@class='text-muted flex items-center q-gutter-x-xs q-mb-md'])//span[2]")
+    public WebElement naimenovanieIP;
 
 
+    /**
+     * История операций
+     **/
+    @FindBy(xpath = "(.//div[@class='p3 transaction__status status-info']//span)[1]")
+    public WebElement vamNaPodpisCheck;
+    @FindBy(xpath = "(.//div[@class='p3 transaction__status status-warning']//span)[1]")
+    public WebElement naPodpisanii;
+    @FindBy(xpath = "(.//div[@class='transaction__amount text-weight-medium p1'])[1]")
+    public WebElement summaPodpisCheck;
+    @FindBy(xpath = "(.//div[@class='transaction__additional-info']//div)[1]")
+    public WebElement perevodKudaCheck;
+    @FindBy(xpath = "(.//div[@class='transaction__title p1 d-none'])[1]")
+    public WebElement naimenovanieKudaPerevodCheck;
+    @FindBy(xpath = "(.//div[@class='text-muted text-small d-none'])[1]")
+    public WebElement schetPerevodaCheck;
 
 
-/**История операций**/
-@FindBy(xpath = "(.//div[@class='p3 transaction__status status-info']//span)[1]")
-public WebElement vamNaPodpisCheck;
-@FindBy(xpath = "(.//div[@class='p3 transaction__status status-warning']//span)[1]")
-public WebElement naPodpisanii;
-@FindBy(xpath = "(.//div[@class='transaction__amount text-weight-medium p1'])[1]")
-public WebElement summaPodpisCheck;
-@FindBy(xpath = "(.//div[@class='transaction__additional-info']//div)[1]")
-public WebElement perevodKudaCheck;
-@FindBy(xpath = "(.//div[@class='transaction__title p1 d-none'])[1]")
-public WebElement naimenovanieKudaPerevodCheck;
-@FindBy(xpath = "(.//div[@class='text-muted text-small d-none'])[1]")
-public WebElement schetPerevodaCheck;
+    @FindBy(xpath = "(.//div[@class='transaction transaction--statement'])[1]")
+    public WebElement podrobnayaInfaOperacii;
 
-/**ERRORS**/
+    @FindBy(xpath ="(.//div[@class='text-dark details-desc-child'])[6]")
+    public WebElement kodPlatejaDlyaTesta;
+
+
+    /**
+     * ERRORS
+     **/
     @FindBy(xpath = "(.//div[@role='alert'])[1]")
     public WebElement zapolnitePoleError;
     @FindBy(xpath = ".//div[@class='text-not-found']")
@@ -66,45 +80,44 @@ public WebElement schetPerevodaCheck;
     public WebElement documentNumberError;
     @FindBy(xpath = ".//div[@role='alert']")
     public WebElement summaError;
-    @FindBy(xpath = ".//p[@class='ob-dialog__message']")
+    @FindBy(xpath = ".//div[@role='alert']")
     public WebElement naznachenieError;
 
 
-
-
-
-
-    public void CheckNaPodpisBTN(){
-        elementActions.click(createBTN).click(vnutriBankBTN).click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091808755280112").sendKeys(inputDocumNumber,"")
-                .sendKeysInt(inputSummuPlateja,100).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).pause(2000).click(naPodpisBTN).pause(5000)
-                ;
+    public void CheckNaPodpisBTN() {
+        elementActions.click(createBTN).click(vnutriBankBTN).click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya, "1091808755280112").sendKeys(inputDocumNumber, "")
+                .sendKeysInt(inputSummuPlateja, 100).sendKeys(inputKodPlateja, "1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).pause(2000).click(naPodpisBTN).pause(5000)
+        ;
     }
-    public void TestTheWrongSchet(){
-        elementActions.click(createBTN).click(vnutriBankBTN).click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"2091808755280112").sendKeys(inputDocumNumber,"")
-                .sendKeysInt(inputSummuPlateja,200).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).pause(2000).click(naPodpisBTN);
-    }
-    public void TestTheWrongSchetSpisaniya(){
-        elementActions.sendKeys(inputSchetZa4isleniya,"1091808755280112").sendKeys(inputDocumNumber,"")
-                .sendKeysInt(inputSummuPlateja,300).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).pause(2000).click(naPodpisBTN);
-    }
-    public void TestMoreMoneyThenHave(){
-        elementActions.click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091808755280112").sendKeys(inputDocumNumber,"")
-                .sendKeysInt(inputSummuPlateja,999999999).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).pause(2000).click(naPodpisBTN);
-    }
-    public void TestNaznachenieMinValue(){
-        elementActions.click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091800100721052").sendKeys(inputDocumNumber,"")
-                .sendKeysInt(inputSummuPlateja,400).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField2(inputNaznachenie).pause(2000).click(naPodpisBTN);
 
+    public void TestTheWrongSchet() {
+        elementActions.click(createBTN).click(vnutriBankBTN).click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya, "2091808755280112").sendKeys(inputDocumNumber, "")
+                .sendKeysInt(inputSummuPlateja, 200).sendKeys(inputKodPlateja, "1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).pause(2000).click(naPodpisBTN);
     }
-    public void CheckNaPodpisBTNTranzit(){
-        elementActions.click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya,"1091822000180171").sendKeys(inputDocumNumber,"")
-                .sendKeysInt(inputSummuPlateja,500).sendKeys(inputKodPlateja,"1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).pause(2000).click(naPodpisBTN).pause(4000)
-                ;
 
+    public void TestTheWrongSchetSpisaniya() {
+        elementActions.sendKeys(inputSchetZa4isleniya, "1091808755280112").sendKeys(inputDocumNumber, "")
+                .sendKeysInt(inputSummuPlateja, 300).sendKeys(inputKodPlateja, "1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).pause(2000).click(naPodpisBTN);
+    }
+
+    public void TestMoreMoneyThenHave() {
+        elementActions.click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya, "1091808755280112").sendKeys(inputDocumNumber, "")
+                .sendKeysInt(inputSummuPlateja, 999999999).sendKeys(inputKodPlateja, "1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).pause(2000).click(naPodpisBTN);
+    }
+
+    public void TestNaznachenieMinValue() {
+        elementActions.click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya, "1091800100721052").sendKeys(inputDocumNumber, "")
+                .sendKeysInt(inputSummuPlateja, 400).sendKeys(inputKodPlateja, "1").click(chooseNalog).inputNaznachenieField2(inputNaznachenie).pause(2000).click(naPodpisBTN);
 
     }
 
+    public void CheckNaPodpisBTNTranzit() {
+        elementActions.click(schetSpisaniyaBTN).click(chooseSomSchet).sendKeys(inputSchetZa4isleniya, "1091822000180171").sendKeys(inputDocumNumber, "")
+                .sendKeysInt(inputSummuPlateja, 500).sendKeys(inputKodPlateja, "1").click(chooseNalog).inputNaznachenieField1(inputNaznachenie).pause(2000).click(naPodpisBTN).pause(4000)
+        ;
 
+
+    }
 
 
 }
