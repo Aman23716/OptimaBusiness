@@ -2,22 +2,21 @@ package org.OptimaBusTests.uiTests.mainPageTests.employeeTests;
 
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.TmsLink;
 import org.OptimaBus.UI.helper.Annotations;
 import org.OptimaBusTests.uiTests.BaseUiTests;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 /**
  * Zhyldyz123
  **/
 public class EmployeesTests extends BaseUiTests {
-@BeforeClass
-public void changeTheCompany(){
-    employees.ChooseImaratStroi1();
-}
+    @BeforeClass
+    public void changeTheCompany() {
+        employees.ChooseImaratStroi1();
+    }
 
     @Test//(priority = 0, description = "Verify that user can click to Сотрудники btn  on MainPage")
     @Annotations.TestCase(id=1708)

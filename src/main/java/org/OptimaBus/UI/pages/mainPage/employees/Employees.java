@@ -74,7 +74,7 @@ public class Employees extends BasePage {
 ////////////***************************************************************
 @FindBy(xpath = ".//a[@class='user-toggle no-caret']")
 public WebElement chooseCompany;
-    @FindBy(xpath = "//span[contains(text(),'Общество с ограниченной ответственностью \"АВТОКУРЬЕР\"')]")
+    @FindBy(xpath = ".//span[@class='company-name']")
     public List<WebElement> chosenAutoKurier;
 
     public Employees clickEmployeesBtn() {
@@ -92,10 +92,10 @@ public WebElement chooseCompany;
             ismailovFIOBtn.click();
 
         }
-        return this;
+        return this;}
 
 
-    }public void ChooseImaratStroi1() {
+    public void ChooseImaratStroi1() {
 
         elementActions.click(chooseCompany);
         for (WebElement list1 :chosenAutoKurier) {
