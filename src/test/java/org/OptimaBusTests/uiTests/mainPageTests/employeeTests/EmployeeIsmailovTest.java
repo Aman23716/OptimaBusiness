@@ -2,7 +2,6 @@ package org.OptimaBusTests.uiTests.mainPageTests.employeeTests;
 
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import org.OptimaBus.UI.helper.Annotations;
 import org.OptimaBusTests.uiTests.BaseUiTests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -63,15 +62,6 @@ public class EmployeeIsmailovTest extends BaseUiTests {
 
     }
 
-//    @Test//(priority = 5,description = "Test with more numbers")
-//    public void checkTheInputFieldWithMoreNumbers() {
-//        webElementActions.pause(1000);
-//        String actualErrorMessage = employeeIsmailov.ismailovInputSearchField.getAttribute("data validation message");
-//        String expectedErrorMessage = "Size of numbers must be less than 17";
-//        Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
-//        webElementActions.pause(1000);
-//        webElementActions.refreshPage();
-//    }
 
     @Test//(priority = 6, description = "Test the account number and number of contract")
     public void checkTheAccountContNum() {
@@ -117,58 +107,4 @@ public class EmployeeIsmailovTest extends BaseUiTests {
         Assert.assertTrue(employeeIsmailov.ismailovAccountUSD.isEnabled(), "open account");
         employeeIsmailov.backBtn.click();
     }
-//    @Test(priority = 10, description = "Test the account with EUR")
-//    public void clickTheAccountEUR() {
-//        webElementActions.pause(2000);
-//        webElementActions.click(employees.employeesBtn);
-//        webElementActions.click(employees.ismailovFIOBtn);
-//        webElementActions.click(employeeIsmailov.ismailovAccountEUR);
-//        Assert.assertTrue(employeeIsmailov.ismailovAccountEUR.isEnabled(), "open account");
-//        webElementActions.refreshPage();
-//        employeeIsmailov.backBtn.click();
-//    }
-//    @Test(priority = 11, description = "Test the account with RUB")
-//    public void clickTheAccountRUB() {
-//        webElementActions.pause(2000);
-//        webElementActions.refreshPage();
-//        webElementActions.click(employees.employeesBtn);
-//        webElementActions.click(employees.ismailovFIOBtn);
-//        webElementActions.click(employeeIsmailov.ismailovAccountRUB);
-//        Assert.assertTrue(employeeIsmailov.ismailovAccountRUB.isEnabled(), "open account");
-//        employeeIsmailov.backBtn.click();
-//    }
-//    @Test(priority = 12, description = "Test the account with KZT")
-//    public void clickTheAccountKZT() {
-//        webElementActions.pause(2000);
-//        webElementActions.refreshPage();
-//        webElementActions.click(employees.employeesBtn);
-//        webElementActions.click(employees.ismailovFIOBtn);
-//        webElementActions.click(employeeIsmailov.ismailovAccountKZT);
-//        Assert.assertTrue(employeeIsmailov.ismailovAccountKZT.isEnabled(), "open account");
-//        employeeIsmailov.backBtn.click();
-//    }
-//    @Test(priority = 13, description = "Test the account with CNY")
-//    public void clickTheAccountCNY() {
-//        webElementActions.pause(2000);
-//        webElementActions.click(employeeIsmailov.ismailovAccountCNY);
-//        Assert.assertTrue(employeeIsmailov.ismailovAccountCNY.isEnabled(), "open account");
-//        webElementActions.refreshPage();
-//        employeeIsmailov.backBtn.click();
-//    }
-//    @Test(priority = 14, description = "Test the account with JPY")
-//    public void clickTheAccountJPY() {
-//        webElementActions.pause(2000);
-//        webElementActions.click(employeeIsmailov.ismailovAccountJPY);
-//        Assert.assertTrue(employeeIsmailov.ismailovAccountJPY.isEnabled(), "open account");
-//        webElementActions.refreshPage();
-//        employeeIsmailov.backBtn.click();
-//    }
-//    @Test(priority = 15, description = "Test the account with GBP")
-//    public void clickTheAccountGBP() {
-//        webElementActions.pause(2000);
-//        webElementActions.click(employeeIsmailov.ismailovAccountGBP);
-//        Assert.assertTrue(employeeIsmailov.ismailovAccountGBP.isEnabled(), "open account");
-//        webElementActions.refreshPage();
-//        employeeIsmailov.backBtn.click();
-//    }
 }
