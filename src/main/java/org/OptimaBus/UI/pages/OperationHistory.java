@@ -1,11 +1,11 @@
-package org.OptimaBus.UI.pages;
-
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-
-public class OperationHistory extends BasePage{
-
-
+//package org.OptimaBus.UI.pages;
+//
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.support.FindBy;
+//
+//public class OperationHistory extends BasePage{
+//
+//
 //    @FindBy(xpath = ".//a[@class='nav-item'][1]")
 //    public WebElement ClickTo2BTN;
 //
@@ -81,5 +81,5 @@ public class OperationHistory extends BasePage{
 //        elementActions.click(moiChernoviki);
 //        return this;
 //    }
-
-}
+//
+//}

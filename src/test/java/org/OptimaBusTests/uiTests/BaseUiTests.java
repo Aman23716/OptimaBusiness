@@ -12,6 +12,7 @@ import org.OptimaBus.UI.pages.createBTN.MBPerevodSom;
 import org.OptimaBus.UI.pages.createBTN.MBPerevodVal;
 import org.OptimaBus.UI.pages.logIn.LoginPage;
 import org.OptimaBus.UI.pages.mainPage.*;
+import org.OptimaBus.UI.pages.mainPage.employees.EmployeeBegmatova;
 import org.OptimaBus.UI.pages.mainPage.employees.EmployeeIsmailov;
 import org.OptimaBus.UI.pages.mainPage.employees.Employees;
 import org.openqa.selenium.WebDriver;
@@ -36,9 +37,10 @@ public abstract class BaseUiTests {
     public Imported imported;
     public Settings settings;
     public More more;
-  public Employees employees;
+    public Employees employees;
     public Converting converting;
     public EmployeeIsmailov employeeIsmailov;
+    public EmployeeBegmatova employeeBegmatova;
 
     @BeforeClass
     public void setUpUiTest() {
@@ -51,11 +53,14 @@ public abstract class BaseUiTests {
         converting.ChooseImaratStroi();
 
 
+
         imported = new Imported();
         settings = new Settings();
         more = new More();
-       employees = new Employees();
-       employeeIsmailov=new EmployeeIsmailov();
+        employees = new Employees();
+
+        employeeIsmailov = new EmployeeIsmailov();
+        employeeBegmatova=new EmployeeBegmatova();
 
         intra_bank_transfer = new Intra_bank_transfer();
         customAssertions = new CustomAssertions();

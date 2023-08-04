@@ -1,10 +1,13 @@
 package org.OptimaBus.UI.pages.mainPage.employees;
 
 import org.OptimaBus.UI.pages.BasePage;
+import org.OptimaBus.UI.pages.Converting;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.List;
 
 import static org.OptimaBus.UI.driverFactory.Driver.driver;
 
@@ -12,6 +15,7 @@ import static org.OptimaBus.UI.driverFactory.Driver.driver;
  * Zhyldyz123
  **/
 public class Employees extends BasePage {
+
     @FindBy(xpath = "//a[@href='/employees'] ")
     public WebElement employeesBtn;
 
@@ -68,6 +72,10 @@ public class Employees extends BasePage {
 
 
 ////////////***************************************************************
+@FindBy(xpath = ".//a[@class='user-toggle no-caret']")
+public WebElement chooseCompany;
+    @FindBy(xpath = ".//span[@class='company-name']")
+    public List<WebElement> chosenAutoKurier;
 
     public Employees clickEmployeesBtn() {
         elementActions.click(employeesBtn);
@@ -84,9 +92,22 @@ public class Employees extends BasePage {
             ismailovFIOBtn.click();
 
         }
-        return this;
+        return this;}
 
 
+    public void ChooseImaratStroi1() {
+
+        elementActions.click(chooseCompany);
+        for (WebElement list1 :chosenAutoKurier) {
+            System.out.println(list1);
+            if (list1.getText().equals("Общество с ограниченной ответственностью \"АВТОКУРЬЕР\"")) {
+                list1.click();
+//                if (list1.getText().equals(ConfigReader.getProperty("CompName"))){
+//                    list1.click();
+//
+            }
+        }
     }
+
 }
 
