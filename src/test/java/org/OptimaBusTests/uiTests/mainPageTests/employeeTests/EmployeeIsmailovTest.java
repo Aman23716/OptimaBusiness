@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class EmployeeIsmailovTest extends BaseUiTests {
     @BeforeClass
-    public void changeTheCompany(){
+    public void changeCompany() {
         employees.ChooseImaratStroi1();
     }
 
