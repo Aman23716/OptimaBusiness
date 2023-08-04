@@ -59,7 +59,6 @@ public class EmployeeIsmailovTest extends BaseUiTests {
         webElementActions.refreshPage();
         webElementActions.pause(2000);
         customAssertions.asserText("", employeeIsmailov.ismailovInputSearchField, "norm");
-
     }
 
 
@@ -70,8 +69,6 @@ public class EmployeeIsmailovTest extends BaseUiTests {
         webElementActions.pause(2000);
         customAssertions.asserText("1090800067210129", employeeIsmailov.ismailovAccountNumber, "norm");
         customAssertions.asserText("Договор 002864-18", employeeIsmailov.ismailovNumberOfContract, "norm");
-
-
     }
 
     @Test(priority = 5, description = "Test the hidden icon")
@@ -80,7 +77,6 @@ public class EmployeeIsmailovTest extends BaseUiTests {
         webElementActions.pause(2000);
         employeeIsmailov.clickTheHiddenIcon();
         Assert.assertTrue(employeeIsmailov.accountsHiddenIcon.isEnabled(), "open accounts");
-
     }
 
     @Test(priority = 6,description = "Test the account with KGS")
