@@ -1,1 +1,0 @@
-{"uuid":"209ba056-da25-4610-8451-8fe88a47ce64","name":"org.OptimaBusTests.uiTests.LoginTests","children":["450e9ab3-f744-48a7-9510-b1b7db8e4c5a"],"befores":[{"name":"openLoginPage","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1689565438560,"stop":1689565447526}],"afters":[],"start":1689565438463,"stop":1689565447664}
