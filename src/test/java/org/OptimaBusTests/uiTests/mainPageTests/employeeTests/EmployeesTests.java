@@ -19,7 +19,7 @@ public class EmployeesTests extends BaseUiTests {
     }
 
     @Test//(priority = 0, description = "Verify that user can click to Сотрудники btn  on MainPage")
-    @Annotations.TestCase(id=1708)
+    @Annotations.TestCase(id = 1708)
     public void isEmployeesBtnClickable() {
         webElementActions.refreshPage();
         webElementActions.pause(2000);
@@ -27,6 +27,7 @@ public class EmployeesTests extends BaseUiTests {
         customAssertions.asserText("Сотрудники", employees.employeeText, "norm");
 
     }
+
     @Test//(priority = 1, description = "Сheck the required  texts on Employees Page")
     @Annotations.TestCase(id = 1709)
     public void checkRequiredTextsOnEmployeesPage() {
@@ -38,9 +39,6 @@ public class EmployeesTests extends BaseUiTests {
         customAssertions.asserText("Роль", employees.roleText, "norm");
         customAssertions.asserText("Статус", employees.statusText, "norm");
     }
-
-
-
 
     @Test//(priority = 3, description = "Сheck the data of registered users  on Employees Page")
     @Annotations.TestCase(id = 1710)
@@ -62,10 +60,6 @@ public class EmployeesTests extends BaseUiTests {
         customAssertions.asserText("Активен", employees.sivogrivovaStatusBtn, "norm");
     }
 
-
-
-
-
     @Test(priority = 0, description = "Verify that user can type text on search input field on Employees Page")
     @Annotations.TestCase(id = 1708)
     @Severity(SeverityLevel.NORMAL)
@@ -76,9 +70,8 @@ public class EmployeesTests extends BaseUiTests {
         Assert.assertEquals(employees.inputSearchOnEmployees.isDisplayed(), true);
         webElementActions.sendKeys(employees.inputSearchOnEmployees, "Исмаилов").click(employees.ismailovFIOBtn);
         customAssertions.asserText("Исмаилов Руслан Евгеньевич", employeeIsmailov.ismailovFIOText, "norm");
-        Assert.assertEquals(employees.ismailovCloseBtn.isDisplayed(),true);
+        Assert.assertEquals(employees.ismailovCloseBtn.isDisplayed(), true);
         employees.ismailovCloseBtn.click();
-
     }
 
     @Test(priority = 1, description = "Verify that user can type numbers on search input field on Employees Page")
@@ -91,8 +84,6 @@ public class EmployeesTests extends BaseUiTests {
         webElementActions.sendKeysLong(employees.inputSearchOnEmployees, 8L).click(employees.ismailovFIOBtn);
         customAssertions.asserText("Исмаилов Руслан Евгеньевич", employeeIsmailov.ismailovFIOText, "norm");
     }
-
-
 }
 
 
