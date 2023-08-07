@@ -15,6 +15,9 @@
 <!--            <class name="org.OptimaBusTests.uiTests.createBTNTest.MBPerevodValTest"/>-->
 <!--            <class name="org.OptimaBusTests.uiTests.createBTNTest.ConvertingTest"/>-->
             <class name="org.OptimaBusTests.uiTests.mainPageTests.employeeTests.EmployeesTests"/>
+            <class name="org.OptimaBusTests.uiTests.mainPageTests.employeeTests.EmployeeIsmailovTest"></class>
+            <class name="org.OptimaBusTests.uiTests.mainPageTests.employeeTests.EmployeeBegmatovaTest"></class>
+            <class name="org.OptimaBusTests.uiTests.mainPageTests.MoreTests"></class>
         </classes>
     </test>
 

@@ -6,7 +6,6 @@ import org.OptimaBus.UI.helper.Annotations;
 import org.OptimaBusTests.uiTests.BaseUiTests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 /**
@@ -18,7 +17,7 @@ public class EmployeesTests extends BaseUiTests {
         employees.ChooseImaratStroi1();
     }
 
-    @Test//(priority = 0, description = "Verify that user can click to Сотрудники btn  on MainPage")
+    @Test(priority = 0)
     @Annotations.TestCase(id = 1708)
     public void isEmployeesBtnClickable() {
         webElementActions.refreshPage();
@@ -28,7 +27,7 @@ public class EmployeesTests extends BaseUiTests {
 
     }
 
-    @Test//(priority = 1, description = "Сheck the required  texts on Employees Page")
+    @Test(priority = 1)
     @Annotations.TestCase(id = 1709)
     public void checkRequiredTextsOnEmployeesPage() {
         webElementActions.refreshPage();
@@ -40,7 +39,7 @@ public class EmployeesTests extends BaseUiTests {
         customAssertions.asserText("Статус", employees.statusText, "norm");
     }
 
-    @Test//(priority = 3, description = "Сheck the data of registered users  on Employees Page")
+    @Test(priority = 2)
     @Annotations.TestCase(id = 1710)
     public void checkDataOfRegisteredOnEmployeesPage() {
         webElementActions.refreshPage();
@@ -60,7 +59,7 @@ public class EmployeesTests extends BaseUiTests {
         customAssertions.asserText("Активен", employees.sivogrivovaStatusBtn, "norm");
     }
 
-    @Test(priority = 0, description = "Verify that user can type text on search input field on Employees Page")
+    @Test(priority = 3, description = "Verify that user can type text on search input field on Employees Page")
     @Annotations.TestCase(id = 1708)
     @Severity(SeverityLevel.NORMAL)
     public void typeTextOnInputSearch() {
@@ -74,7 +73,7 @@ public class EmployeesTests extends BaseUiTests {
         employees.ismailovCloseBtn.click();
     }
 
-    @Test(priority = 1, description = "Verify that user can type numbers on search input field on Employees Page")
+    @Test(priority = 4, description = "Verify that user can type numbers on search input field on Employees Page")
     @Annotations.TestCase(id = 1711)
     @Severity(SeverityLevel.NORMAL)
     public void typeNumberOnInputSearch() {
@@ -83,6 +82,15 @@ public class EmployeesTests extends BaseUiTests {
         webElementActions.click(employees.employeesBtn);
         webElementActions.sendKeysLong(employees.inputSearchOnEmployees, 8L).click(employees.ismailovFIOBtn);
         customAssertions.asserText("Исмаилов Руслан Евгеньевич", employeeIsmailov.ismailovFIOText, "norm");
+    }
+    @Test(priority = 5, description = "Verify that user can type numbers on search input field on Employees Page")
+    @Annotations.TestCase(id = 1711)
+    @Severity(SeverityLevel.NORMAL)
+    public void typeNegativeNumbersOnInputSearch() {
+        webElementActions.refreshPage();
+        webElementActions.pause(2000);
+        webElementActions.sendKeysWithClear(employees.inputSearchOnEmployees, "-8");
+        Assert.assertNotEquals("-8", "");
     }
 }
 
