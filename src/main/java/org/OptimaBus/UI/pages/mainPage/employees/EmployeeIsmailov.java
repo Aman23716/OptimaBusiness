@@ -100,9 +100,15 @@ public class EmployeeIsmailov extends BasePage {
     @FindBy(xpath = "(//div[@class='q-toggle cursor-pointer no-outline row inline no-wrap items-center q-toggle--dense ob-toggle full-width q-mb-md'])[4]")
     public WebElement sWIFTBtn;
 
+    @FindBy(xpath = "//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text- q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase ob-dialog__button ob-dialog__button_filled']")
+    public WebElement goBackBtnIsmailovPage;
     @FindBy(xpath = "(//span[@class='q-btn__content text-center col items-center q-anchor--skip justify-center row'])[9]")
-    public WebElement backBtn;
-  public  void clickTheHiddenIcon(){
+    public WebElement goBackIconToIsmailovPage;
+
+    @FindBy(xpath = "//button[@class='close']")
+    public WebElement backToEmployeesPage;
+
+    public  void clickTheHiddenIcon(){
       if (!accountsHiddenIcon.isDisplayed()) {
           accountsHiddenIcon.click();
            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));

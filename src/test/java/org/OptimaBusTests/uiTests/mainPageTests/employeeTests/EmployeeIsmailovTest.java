@@ -85,7 +85,7 @@ public class EmployeeIsmailovTest extends BaseUiTests {
         webElementActions.click(employeeIsmailov.ismailovAccountKGS);
         customAssertions.asserText("KGS", employeeIsmailov.ismailovAccountKGS, "norm");
         Assert.assertTrue(employeeIsmailov.accountNumberOnPageKGS.isDisplayed(),"open KGS");
-        employeeIsmailov.backBtn.click();
+        employeeIsmailov.goBackIconToIsmailovPage.click();
     }
     @Test(priority = 7, description = "Test the account with USD")
     public void clickTheAccountUSD() {
@@ -109,10 +109,12 @@ public class EmployeeIsmailovTest extends BaseUiTests {
     @Test(priority = 9)
     public void checkTheSaveBtn() {
         clickTheAccountUSD();
+
         webElementActions.click(employeeIsmailov.sWIFTBtn);
         webElementActions.click(employeeIsmailov.saveBtnOnPageKGS);
         Assert.assertTrue(employeeIsmailov.ismailovAccountUSD.isEnabled(), "open account");
-        employeeIsmailov.backBtn.click();
+        employeeIsmailov.goBackBtnIsmailovPage.click();
+        employeeIsmailov.backToEmployeesPage.click();
     }
 
 }
