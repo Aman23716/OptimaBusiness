@@ -37,7 +37,8 @@ public class MoreTests extends BaseUiTests {
     public void supportServiceWhatsApp() {
         webElementActions.refreshPage();
         more.openServiceOfSupportBtn();
-        more.whatsAppLinkBtn.click();
+        more.whatsAppPhoneBtn.click();
+        Assert.assertTrue(more.whatsAppPhoneBtn.isDisplayed(), "Phone number WhatsApp  button is not displayed on the page.");
         webElementActions.pause(3000);
     }
     @Test

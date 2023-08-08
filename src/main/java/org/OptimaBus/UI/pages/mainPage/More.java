@@ -23,8 +23,8 @@ public class More extends BasePage {
     public WebElement usersGuideText;
     @FindBy(xpath = "//button[@class='q-btn q-btn-item non-selectable no-outline q-btn--outline q-btn--rectangle text-primary q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase q-ml-md download lite-shadow']")
     public  WebElement downloadUsersGuideBtn;
-    @FindBy(xpath = "//a[@href='https://api.whatsapp.com/send?phone=+996 (701) 504 404']")
-    public  WebElement whatsAppLinkBtn;
+    @FindBy(xpath = "//a[contains(text(),'+996 (701) 504 404')]")
+    public  WebElement whatsAppPhoneBtn;
     @FindBy(xpath = "//a[@href='mailto:csonline@optimabank.kg']")
     public  WebElement emailLinkBtn;
     @FindBy(xpath = "(//div[@class='text-dark contacts'])[2]")

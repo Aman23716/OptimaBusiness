@@ -19,7 +19,7 @@ public class Documents extends BasePage {
     public WebElement IntervalDney;
     @FindBy(xpath = "(.//input[@class='q-field__native q-placeholder'])[1]")
     public WebElement DataInput;
-//    @FindBy(xpath = "")
+
 
 
 
