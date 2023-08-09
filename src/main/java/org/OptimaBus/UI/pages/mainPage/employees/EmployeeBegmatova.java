@@ -41,7 +41,7 @@ public class EmployeeBegmatova extends BasePage {
         elementActions.refreshPage();
         elementActions.pause(2000);
         elementActions.click(employees.employeesBtn);
-        elementActions.click(employees.begmatovaFIOBtn);
+        elementActions.click(employees.begmatovaFioBt);
         elementActions.click(begmatovaKGSBtn);
         return this;
     }

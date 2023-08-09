@@ -48,7 +48,8 @@ public class Employees extends BasePage {
     public WebElement ismailovStatusBtn;
     @FindBy(xpath = "//button[@class='close']")
     public WebElement ismailovCloseBtn;
-
+@FindBy(xpath = "(//tr[@class='cursor-pointer'])[2]")
+public WebElement begmatovaFioBt;
     @FindBy(xpath = "(//td[@class='text-left'])[3]")
     public WebElement begmatovaFIOBtn;
     @FindBy(xpath = "(//td[@class='text-left'])[4]")
@@ -69,6 +70,8 @@ public class Employees extends BasePage {
     public WebElement sivogrivovaStatusBtn;
     @FindBy(xpath = "(//tr[@class='cursor-pointer'])[3]")
     public WebElement sivogrivovaBtn;
+    @FindBy(xpath = "(//tr[@class='cursor-pointer'])[1]")
+    public WebElement ismailovFioBt;
 
 
 ////////////***************************************************************
@@ -93,6 +96,11 @@ public WebElement chooseCompany;
 
         }
         return this;}
+
+    public Employees clickIsmailovFioBtn(){
+        elementActions.click(ismailovFioBt);
+        return this;
+    }
 
 
     public void ChooseImaratStroi1() {
