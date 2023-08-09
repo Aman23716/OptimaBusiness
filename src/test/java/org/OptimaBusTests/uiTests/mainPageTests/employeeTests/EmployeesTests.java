@@ -21,7 +21,7 @@ public class EmployeesTests extends BaseUiTests {
     @Annotations.TestCase(id = 1708)
     public void isEmployeesBtnClickable() {
         webElementActions.refreshPage();
-        webElementActions.pause(2000);
+       // webElementActions.pause(2000);
         webElementActions.click(employees.employeesBtn);
         customAssertions.asserText("Сотрудники", employees.employeeText, "norm");
 

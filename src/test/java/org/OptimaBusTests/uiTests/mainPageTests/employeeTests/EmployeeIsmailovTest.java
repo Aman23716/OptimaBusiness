@@ -19,10 +19,10 @@ public class EmployeeIsmailovTest extends BaseUiTests {
    // @Annotations.TestCase(id = 1111)
     @Severity(SeverityLevel.MINOR)
     public void checkTheTexts() {
-        webElementActions.refreshPage();
-        webElementActions.pause(2000);
         webElementActions.click(employees.employeesBtn);
-        employees.staleElementException();
+        webElementActions.refreshPage();
+        employees.clickIsmailovFioBtn();
+        //employees.staleElementException();
         customAssertions.asserText("Вторая подпись", employeeIsmailov.ismailov2PodpisText, "norm");
         customAssertions.asserText("Номер телефона", employeeIsmailov.ismailovPhoneTitleText, "norm");
         customAssertions.asserText("E-mail", employeeIsmailov.ismailovEmailTitleText, "norm");
